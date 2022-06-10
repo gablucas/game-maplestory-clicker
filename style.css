@@ -1,0 +1,45 @@
+body {
+  font-family: 'Inter';
+}
+
+.barraxp {
+  width: 400px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 1rem/1 'Inter';
+  border: 1px solid grey;
+}
+
+.level {
+  display: block;
+  margin-top: 4px;
+  gap: 10px;
+  font: 400 1rem/1 'Inter';
+}
+
+.monstro {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.monstroCorpo {
+  margin-top: 4px;
+  width: 100px;
+  height: 100px;
+  background: lightgreen;
+  cursor: pointer;
+}
+
+.monstroMudar {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.monstroMudar span:hover {
+  font-weight: 600;
+}
+
