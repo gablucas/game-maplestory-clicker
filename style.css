@@ -45,13 +45,6 @@ img {
   align-self: end;
 }
 
-.monstroMudar {
-  display: inline-block;
-  justify-self: center;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
 .nomeMonstro {
   font-size: .875rem;
   margin-bottom: 10px;
@@ -59,14 +52,6 @@ img {
 
 .monstro-container img {
   align-self: end;
-}
-
-.monstroMudar span {
-  margin-top: 100px;
-
-  display: inline-block;
-  border: 1px solid #000000;
-  padding: 4px 20px;
 }
 
 .monstroMudar span:hover {
@@ -90,7 +75,7 @@ img {
   width: 50px;
   /* flex: 1 0 auto; */
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 
@@ -103,6 +88,10 @@ img {
   background: royalblue;
 
   cursor: pointer;
+}
+
+.monstrolista li.ativo {
+  display: flex;
 }
 
 .barraxp {
