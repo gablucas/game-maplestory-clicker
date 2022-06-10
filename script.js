@@ -15,33 +15,33 @@ barraXP.innerHTML = xpAtual +" / "+ xpProximoLevel
 
 
 // Monstro
-const monstro = document.querySelector('.js-monstroCorpo')
-const monstros= []
+const monstro = document.querySelector('.js-monstro img')
+const monstros = []
 
 // Função construtora para criar monstros
-function Monstro(nome, xp) {
+function Monstro(nome, xp, img) {
   this.nomeMonstro = nome;
-  this.monstroXP = xp;
-  monstro.push(this)
+  this.xpMonstro = xp;
+  this.imgMonstro = img;
+  monstros.push(this)
 }
 
 // Monstros criados
-const hopi = new Monstro('Hopi', 55);
-const goblin = new Monstro('Goblin', 4)
+const snail = new Monstro('Snail', 1, 'img/monsters/monster_snail.webp');
+const shroom = new Monstro('Shroom', 3, 'img/monsters/monster_shroom.webp');
+const stump = new Monstro('Stump', 5, 'img/monsters/monster_stump.webp');
 
-
-// Array com as infos dos montros
-const nomeMonstros = [hopi.nomeMonstro, goblin.nomeMonstro];
-const xpMonstros = [hopi.monstroXP, goblin.monstroXP];
 
 
 // Dados do monstro atual
 let nomeMonstroAtual = document.querySelector('.js-nomeMonstro');
+let imagemMonstroAtual = document.querySelector('.js-imgMonstro')
 let xpMonstroAtual;
 
-  // Define o nome e xp do monstro inicial
-  nomeMonstroAtual.innerText = nomeMonstros[0];
-  xpMonstroAtual = xpMonstros[0];
+  // Definir o monstro atual
+  nomeMonstroAtual.innerText = monstros[0].nomeMonstro;
+  imagemMonstroAtual.setAttribute('src', monstros[0].imgMonstro)
+  xpMonstroAtual = monstros[0].xpMonstro;
 
 // Permite trocar de monstro na função 'trocarMonstro'
 let indexMonstro = 0;
@@ -53,13 +53,15 @@ const trocarMonstro = document.querySelectorAll('.js-mudarMonstro span');
 function trocaMonstro(event) {
     if(event.currentTarget.innerText === 'Anterior') {
       --indexMonstro;
-      nomeMonstroAtual.innerText = nomeMonstros[indexMonstro];
-      xpMonstroAtual = xpMonstros[indexMonstro];
+      nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
+      imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
+      xpMonstroAtual = monstros[indexMonstro].xpMonstro;
 
     } else if(event.currentTarget.innerText === "Próximo") {
       ++indexMonstro
-      nomeMonstroAtual.innerText = nomeMonstros[indexMonstro];
-      xpMonstroAtual = xpMonstros[indexMonstro];
+      nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
+      imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
+      xpMonstroAtual = monstros[indexMonstro].xpMonstro;
     }
 
     console.log(event.currentTarget)

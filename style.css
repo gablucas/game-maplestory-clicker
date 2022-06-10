@@ -1,17 +1,23 @@
 body {
+  margin: 0 auto;
+  padding: 10px 20px; 
   font-family: 'Inter';
+  display: grid;
 }
 
-.barraxp {
-  width: 400px;
-  height: 20px;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font: 400 1rem/1 'Inter';
+.barrahp {
+  width: 200px;
+  height: 20px;
   border: 1px solid grey;
 }
+
+
 
 .level {
   display: block;
@@ -21,25 +27,29 @@ body {
 }
 
 .monstro {
-  display: flex;
-  flex-direction: column;
+  justify-self: center;
   margin-top: 40px;
 }
 
-.monstroCorpo {
-  margin-top: 4px;
-  width: 100px;
-  height: 100px;
-  background: lightgreen;
-  cursor: pointer;
-}
 
 .monstroMudar {
+  justify-self: center;
   margin-top: 10px;
   cursor: pointer;
 }
 
 .monstroMudar span:hover {
   font-weight: 600;
+}
+
+.barraxp {
+  margin-top: 100px;
+
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
 }
 
