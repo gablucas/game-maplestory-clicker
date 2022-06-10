@@ -1,3 +1,4 @@
+
 //XP
 let xpAtual = 0;
 
@@ -14,22 +15,27 @@ barraXP.innerHTML = xpAtual +" / "+ xpProximoLevel
 
 
 // Monstro
-const monstro = document.querySelector('.js-monstro img')
+const monstro = document.querySelector('.js-monstro')
 const monstros = []
 
 // Função construtora para criar monstros
-function Monstro(nome, xp, img) {
+function Monstro(nome, xp, img, level) {
   this.nomeMonstro = nome;
   this.xpMonstro = xp;
   this.imgMonstro = img;
+  this.levelMonstro = level;
   monstros.push(this)
 }
 
 // Monstros criados
-const snail = new Monstro('Snail', 1, 'img/monsters/monster_snail.webp');
-const shroom = new Monstro('Shroom', 3, 'img/monsters/monster_shroom.webp');
-const stump = new Monstro('Stump', 5, 'img/monsters/monster_stump.webp');
-
+const snail = new Monstro('Snail', 1, 'img/monsters/monster_snail.webp', 1);
+const shroom = new Monstro('Shroom', 3, 'img/monsters/monster_shroom.webp', 3);
+const stump = new Monstro('Stump', 5, 'img/monsters/monster_stump.webp', 5);
+const orangeMushroom = new Monstro('Orange Mushroom', 7, 'img/monsters/monster_orangemushroom.webp', 6);
+const slime = new Monstro('Slime', 9, 'img/monsters/monster_slime.webp', 7);
+const tiguru = new Monstro('Tiguru', 11, 'img/monsters/monster_tiguru.webp', 9);
+const greenmushroom = new Monstro('Green Mushroom', 13, 'img/monsters/monster_greenmushroom.webp', 10);
+const mano = new Monstro('Mano', 13, 'img/monsters/monster_mano.webp', 10);
 
 // Dados do monstro atual
 let nomeMonstroAtual = document.querySelector('.js-nomeMonstro');
@@ -44,29 +50,30 @@ let xpMonstroAtual;
 // Permite trocar de monstro na função 'trocarMonstro'
 let indexMonstro = 0;
 
+// Lista de monstros
+const containerListaMonstros = document.querySelector('.js-monstrolista')
 
-// Função para mudar de monstro
-const trocarMonstro = document.querySelectorAll('.js-mudarMonstro span');
+monstros.forEach((monstro) => {
+  containerListaMonstros.innerHTML += `<li>LV ${monstro.levelMonstro}</li>`;
+})
 
-function trocaMonstro(event) {
-    if(event.currentTarget.innerText === 'Anterior') {
-      --indexMonstro;
-      nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
-      imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
-      xpMonstroAtual = monstros[indexMonstro].xpMonstro;
+const listaMonstros = document.querySelectorAll('.js-monstrolista li')
 
-    } else if(event.currentTarget.innerText === "Próximo") {
-      ++indexMonstro
-      nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
-      imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
-      xpMonstroAtual = monstros[indexMonstro].xpMonstro;
+function selecionarMonstro(event) {
+  let levelLista = +event.currentTarget.innerText.slice(3);
+
+  monstros.forEach((monstro) => {
+    if(monstro.levelMonstro === levelLista) {
+      nomeMonstroAtual.innerText = monstro.nomeMonstro;
+      imagemMonstroAtual.setAttribute('src', monstro.imgMonstro)
+      xpMonstroAtual = monstro.xpMonstro;
     }
-
-    console.log(event.currentTarget)
+  })
 }
 
-trocarMonstro.forEach((item) => {
-  item.addEventListener('click', trocaMonstro)
+listaMonstros.forEach((monstro) => {
+  monstro.addEventListener('click', selecionarMonstro)
+  
 })
 
 

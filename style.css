@@ -5,6 +5,15 @@ body {
   display: grid;
 }
 
+h1, h2, h3, p, ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -27,7 +36,7 @@ img {
 
 .monstro {
   display: grid;
-  grid-template-rows: auto 80px;
+  grid-template-rows: auto 100px;
   justify-items: center;
   margin-top: 40px;
 }
@@ -64,11 +73,41 @@ img {
   font-weight: 600;
 }
 
+.monstrolista-container {
+  width: 370px;
+  overflow-x: scroll;
+}
+
+.monstrolista {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.monstrolista li {
+  height: 50px;
+  width: 50px;
+  flex: 1 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+
+  border-radius: 7px;
+  border: 1px solid #000000;
+
+  color: yellow;
+  background: royalblue;
+
+  cursor: pointer;
+}
+
 .barraxp {
   margin-top: 8px;
-
+  
   height: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
