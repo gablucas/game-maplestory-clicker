@@ -1,11 +1,10 @@
 //XP
 let xpAtual = 0;
 
-
 // Level
 let level = 1;
 let xpProximoLevel = 50;
-let exibirLevel = document.querySelector('.js-level div');
+let exibirLevel = document.querySelector('.js-level span');
 exibirLevel.innerHTML = level;
 
 
@@ -30,7 +29,6 @@ function Monstro(nome, xp, img) {
 const snail = new Monstro('Snail', 1, 'img/monsters/monster_snail.webp');
 const shroom = new Monstro('Shroom', 3, 'img/monsters/monster_shroom.webp');
 const stump = new Monstro('Stump', 5, 'img/monsters/monster_stump.webp');
-
 
 
 // Dados do monstro atual
@@ -79,7 +77,6 @@ function ganhaXP() {
   xpAtual += xpMonstroAtual;
 
   // Ações após subir de level
-  
   if(xpAtual > xpProximoLevel) {
     xpAtual -= xpProximoLevel;
     ++level;

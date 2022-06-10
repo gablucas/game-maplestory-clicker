@@ -14,10 +14,9 @@ img {
 .barrahp {
   width: 200px;
   height: 20px;
+  background: tomato;
   border: 1px solid grey;
 }
-
-
 
 .level {
   display: block;
@@ -27,15 +26,38 @@ img {
 }
 
 .monstro {
-  justify-self: center;
+  display: grid;
+  grid-template-rows: auto 80px;
+  justify-items: center;
   margin-top: 40px;
 }
 
+.monstro img {
+  align-self: end;
+}
 
 .monstroMudar {
+  display: inline-block;
   justify-self: center;
   margin-top: 10px;
   cursor: pointer;
+}
+
+.nomeMonstro {
+  font-size: .875rem;
+  margin-bottom: 10px;
+}
+
+.monstro-container img {
+  align-self: end;
+}
+
+.monstroMudar span {
+  margin-top: 100px;
+
+  display: inline-block;
+  border: 1px solid #000000;
+  padding: 4px 20px;
 }
 
 .monstroMudar span:hover {
@@ -43,7 +65,7 @@ img {
 }
 
 .barraxp {
-  margin-top: 100px;
+  margin-top: 8px;
 
   height: 20px;
 
