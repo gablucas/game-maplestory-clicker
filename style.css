@@ -34,6 +34,16 @@ img {
   font: 400 1rem/1 'Inter';
 }
 
+.display {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.display-seta {
+  align-self: center;
+  cursor: pointer;
+}
+
 .monstro {
   display: grid;
   grid-template-rows: auto 100px;
@@ -58,40 +68,32 @@ img {
   font-weight: 600;
 }
 
-.monstrolista-container {
-  
-  overflow-x: scroll;
-}
-
 .monstrolista {
   margin-top: 40px;
   margin-bottom: 10px;
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+
+  gap: 8px;
+  width: 1000px;
+
 }
 
 .monstrolista li {
   height: 50px;
   width: 50px;
-  /* flex: 1 0 auto; */
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
+  flex: 1 0 auto;
+  display: inline-block;
   font-weight: 700;
-
   border-radius: 7px;
   border: 1px solid #000000;
-
   color: yellow;
   background: royalblue;
-
   cursor: pointer;
 }
 
 .monstrolista li.ativo {
-  display: flex;
+  display: inline-block;
 }
 
 .barraxp {
