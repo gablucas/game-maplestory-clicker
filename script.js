@@ -35,7 +35,7 @@ const orangeMushroom = new Monstro('Orange Mushroom', 7, 'img/monsters/monster_o
 const slime = new Monstro('Slime', 9, 'img/monsters/monster_slime.webp', 7);
 const tiguru = new Monstro('Tiguru', 11, 'img/monsters/monster_tiguru.webp', 9);
 const greenmushroom = new Monstro('Green Mushroom', 13, 'img/monsters/monster_greenmushroom.webp', 10);
-const mano = new Monstro('Mano', 13, 'img/monsters/monster_mano.webp', 10);
+const mano = new Monstro('[BOSS] Mano', 13, 'img/monsters/monster_mano.webp', 11);
 
 // Dados do monstro atual
 let nomeMonstroAtual = document.querySelector('.js-nomeMonstro');
@@ -53,15 +53,24 @@ let indexMonstro = 0;
 // Lista de monstros
 const containerListaMonstros = document.querySelector('.js-monstrolista')
 
+// Cria a lista de monstros para selecionar
 monstros.forEach((monstro) => {
-  containerListaMonstros.innerHTML += `<li>LV ${monstro.levelMonstro}</li>`;
-})
+  if(monstro.nomeMonstro.includes('[BOSS]')) {
+    containerListaMonstros.innerHTML += `<li class="monstrolv${monstro.levelMonstro}">BOSS</li>`;
+  } else {
+    containerListaMonstros.innerHTML += `<li class="monstrolv${monstro.levelMonstro}">LV ${monstro.levelMonstro}</li>`;
+  }
+});
 
-const listaMonstros = document.querySelectorAll('.js-monstrolista li')
+let listaMonstros = document.querySelectorAll('.js-monstrolista li');
 
+// Selecionar e exibir o monstro
 function selecionarMonstro(event) {
-  let levelLista = +event.currentTarget.innerText.slice(3);
 
+  // Pega o level do monstro pela classe usando slice para tirar as letras
+  let levelLista = +event.currentTarget.getAttribute('class').slice(9);
+
+  // Verifica o level pego com o level do array de monstros
   monstros.forEach((monstro) => {
     if(monstro.levelMonstro === levelLista) {
       nomeMonstroAtual.innerText = monstro.nomeMonstro;

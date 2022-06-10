@@ -74,12 +74,13 @@ img {
 }
 
 .monstrolista-container {
-  width: 370px;
+  
   overflow-x: scroll;
 }
 
 .monstrolista {
   margin-top: 40px;
+  margin-bottom: 10px;
   display: flex;
   gap: 10px;
 }
@@ -87,7 +88,7 @@ img {
 .monstrolista li {
   height: 50px;
   width: 50px;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
 
   display: flex;
   align-items: center;
@@ -106,11 +107,18 @@ img {
 
 .barraxp {
   margin-top: 8px;
-  
+
   height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid grey;
+}
+
+@media(max-width: 425px) {
+  
+  .monstrolista li {
+    flex: 1 0 auto;
+  }
 }
 
