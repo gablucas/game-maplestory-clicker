@@ -1,8 +1,16 @@
 body {
   margin: 0 auto;
-  padding: 10px 20px; 
   font-family: 'Inter';
+  max-width: 1920px;
+}
 
+.bg {
+  margin: 0 auto;
+  background: url('img/mapa/stage1.jpg') center no-repeat;
+  height: 400px;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 h1, h2, h3, p, ul, li {
@@ -21,25 +29,30 @@ img {
   
 }
 
+.dados-personagem {
+ padding-top: 10px;
+ padding-left: 10px;
+}
+
 .barrahp {
   width: 200px;
   height: 20px;
-  background: tomato;
   border: 1px solid grey;
+  border-radius: 7px;
+  background: tomato;
 }
 
 .level {
-  display: block;
+  display: inline-block;
   margin-top: 4px;
   gap: 10px;
-  font: 400 1rem/1 'Inter';
+  font: 500 .875rem/1 'Inter';
 }
 
 .display {
   display: grid;
   grid-template-columns: auto 1fr auto;
   background-size: 800px;
-
 }
 
 .display-seta {
@@ -47,74 +60,47 @@ img {
   cursor: pointer;
 }
 
-.monstro {
-  display: grid;
-  grid-template-rows: 160px auto;
-  justify-items: center;
-  margin-top: 40px;
+.display-seta:first-child {
+  padding-left: 8px;
 }
 
-.monstro img {
+.display-seta:last-child {
+  padding-right: 8px;
+}
+
+.monstro {
+  display: grid;
+  justify-items: center;
   align-self: end;
+}
+
+.hpMonstro {
+  margin-bottom: 20px;
+
+  display: inline-block;
+  background: linear-gradient(#00d401 50%, #520c08);
+  width: 100px;
+  height: 10px;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 3px;
+
+  position: relative;
 }
 
 .nomeMonstro {
   margin-top: 10px;
-  padding: 2px 40px;
-  background: tomato;
-  border: 1px solid #000000;
-  font-size: .875rem;
-
-}
-
-.monstro-container img {
-  align-self: end;
-}
-
-.monstroMudar span:hover {
-  font-weight: 600;
-}
-
-.monstrolista {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-
-  gap: 8px;
-  width: 1000px;
-
-}
-
-.monstrolista li {
-  height: 50px;
-  width: 50px;
-  flex: 1 0 auto;
-  display: inline-block;
-  font-weight: 700;
-  border-radius: 7px;
-  border: 1px solid #000000;
+  padding: 2px 10px;
   color: yellow;
-  background: royalblue;
-  cursor: pointer;
-}
-
-.monstrolista li.ativo {
-  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: .875rem;
+  font-weight: 300;
 }
 
 .barraxp {
-  margin-top: 8px;
-
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid grey;
+  margin-top: 4px;
+  height: 4px;
+  border-top: 1px solid lightgrey;
 }
 
-@media(max-width: 425px) {
-  
-  
-}
 

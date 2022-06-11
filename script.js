@@ -9,8 +9,8 @@ let xpAtual = 0;
 
 // BarraXP
 let barraXP = document.querySelector('.js-barraxp')
-barraXP.innerHTML = xpAtual +" / "+ xpProximoLevel
+// barraXP.innerHTML = xpAtual +" / "+ xpProximoLevel
 
 // Ataque
-let ataque = 5;
+let ataque = 1;
 

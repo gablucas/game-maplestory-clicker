@@ -34,6 +34,7 @@ const mushmom = new Monstro(21, '[BOSS] Mushmom', 39, 33,'img/monsters/monster_m
 
 // Dados do monstro atual
 let nomeMonstro = document.querySelector('.js-nomeMonstro');
+let lifeMonstro = document.querySelector('.js-hpMonstro');
 let imagemMonstro = document.querySelector('.js-imgMonstro')
 let hpMonstro;
 let xpMonstro;

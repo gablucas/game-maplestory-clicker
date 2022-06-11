@@ -6,11 +6,11 @@ let hpReduzir = 0;
 
 // Ganhar XP ao clicar no monstro
 function ataqueMonstro() {
-  let hpPorcentagem = nomeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / ataque);
+  let hpPorcentagem = lifeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / ataque);
   hpMonstro -= ataque;
   hpReduzir += hpPorcentagem;
   console.log(hpReduzir)
-  nomeMonstro.style.boxShadow = `inset -${hpReduzir}px 0 white`;
+  lifeMonstro.style.boxShadow = `inset -${hpReduzir}px 0 black`;
 
   if(hpMonstro <= 0) {
 
@@ -44,8 +44,8 @@ function ataqueMonstro() {
   // Mostrar progresso do XP na barra
   // Faz o calculo da porcetagem referente ao tamanho da div, foi preciso arredondar o valor, pois alguns numeros quebrados causavam bug
   let xpPorcentagem = Math.round(xpAtual * barraXP.clientWidth / xpProximoLevel)
-  barraXP.style.boxShadow = `inset ${xpPorcentagem}px 0 green`;
-  barraXP.innerText = xpAtual +" / "+ xpProximoLevel
+  barraXP.style.boxShadow = `inset ${xpPorcentagem}px 0 yellow`;
+  // barraXP.innerText = xpAtual +" / "+ xpProximoLevel
 }
 
   monstro.addEventListener('click', ataqueMonstro)

@@ -8,29 +8,31 @@
 
 </head>
 <body>
-  <div>
-    <div class="barrahp js-barrahp"></div>
-    <span class="level js-level">LV <span></span></span>
-  </div>
-  
-  <div class="display">
-    <img class="display-seta js-display-seta-esquerda" src="" width="32px" alt="" onclick="voltarMonstro()">
+  <section class="bg">
 
-    <div class="monstro js-monstro">
-      
-      <img class="js-imgMonstro" src="" alt="">
-      <span class="nomeMonstro js-nomeMonstro"></span>
+    <!-- HP, LEVEL -->
+    <div class="dados-personagem">
+      <div class="barrahp js-barrahp"></div>
+      <span class="level js-level">LV <span></span></span>
     </div>
     
-    <img class="display-seta js-display-seta-direita" src="img/buttons/seta_direita_lock.png" width="32px" alt="" onclick="">
-  </div>
-  
-  <div class="monstrolista-container">
-    <ul class="monstrolista js-monstrolista">
+    <!-- TELA GAME -->
+    <div class="display">
+      <img class="display-seta js-display-seta-esquerda" src="" width="32px" alt="" onclick="voltarMonstro()">
+
+      <div class="monstro js-monstro">
+        <span class="hpMonstro js-hpMonstro"></span>
+        <img class="js-imgMonstro" src="" alt="">
+        <span class="nomeMonstro js-nomeMonstro"></span>
+    </div>
     
-    </ul>
-  </div>
-  <div class="barraxp js-barraxp"></div>
+      <img class="display-seta js-display-seta-direita" src="img/buttons/seta_direita_lock.png" width="32px" alt="" onclick="">
+    </div>
+    
+    <!-- BARRA XP -->
+    <div class="barraxp js-barraxp"></div>
+  </section>
+
   <script src="script.js"></script>
   <script src="js/monstros.js"></script>
   <script src="js/acoes.js"></script>
