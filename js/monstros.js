@@ -12,7 +12,7 @@ function Monstro(nome, xp, img, level) {
 }
 
 // Monstros criados
-const snail = new Monstro('Snail', 1, 'img/monsters/monster_snail.webp', 1);
+const snail = new Monstro('Snail', 1000, 'img/monsters/monster_snail.webp', 1);
 const shroom = new Monstro('Shroom', 3, 'img/monsters/monster_shroom.webp', 3);
 const stump = new Monstro('Stump', 5, 'img/monsters/monster_stump.webp', 5);
 const orangeMushroom = new Monstro('Orange Mushroom', 7, 'img/monsters/monster_orangemushroom.webp', 6);
@@ -31,38 +31,11 @@ nomeMonstroAtual.innerText = monstros[0].nomeMonstro;
 imagemMonstroAtual.setAttribute('src', monstros[0].imgMonstro);
 xpMonstroAtual = monstros[0].xpMonstro;
 
+
 // Lista de monstros
-const mudarMonstro = document.querySelectorAll('.js-display-seta');
-let indexMonstro = 0;
+const setaEsquerda = document.querySelector('.js-display-seta-esquerda');
+const setaDireita = document.querySelector('.js-display-seta-direita');
 
-// Selecionar e exibir o monstro
-function selecionarMonstro(event) {
-  const setaEsquerda = event.currentTarget.getAttribute('src').includes('esquerda');
-  const setaDireita = event.currentTarget.getAttribute('src').includes('direita');
-  
-  if(setaEsquerda && indexMonstro > 0) {
-    --indexMonstro;
-    nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
-    imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
-    xpMonstroAtual = monstros[indexMonstro].xpMonstro;
-
-  } else if(setaDireita && indexMonstro < monstros.length - 1) {
-    
-    ++indexMonstro;
-    nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
-    imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
-    xpMonstroAtual = monstros[indexMonstro].xpMonstro;
-    mudarMonstro[0].setAttribute('src', 'img/buttons/seta_esquerda.png');
-  }
-
-  if(indexMonstro === 0) {
-    mudarMonstro[0].setAttribute('src', '');
-  }
-}
-
-  mudarMonstro.forEach((monstro) => {
-    monstro.addEventListener('click', selecionarMonstro)
-  })
 
  
 

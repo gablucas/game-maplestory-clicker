@@ -2,7 +2,6 @@ body {
   margin: 0 auto;
   padding: 10px 20px; 
   font-family: 'Inter';
-  display: grid;
 }
 
 h1, h2, h3, p, ul, li {
@@ -108,8 +107,6 @@ img {
 
 @media(max-width: 425px) {
   
-  .monstrolista li {
-    flex: 1 0 auto;
-  }
+  
 }
 
