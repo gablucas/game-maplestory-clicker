@@ -12,7 +12,7 @@ function ganhaXP() {
     ++level;
     xpAtual -= xpProximoLevel;
     exibirLevel.innerText = level;
-    xpProximoLevel = Math.round(level * 0.25 * xpProximoLevel + 100);
+    xpProximoLevel = Math.round(xpProximoLevel + 25);
   }
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem

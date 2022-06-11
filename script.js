@@ -3,7 +3,7 @@ let xpAtual = 0;
 
 // Level
 let level = 1;
-let xpProximoLevel = 50;
+let xpProximoLevel = 25;
 let exibirLevel = document.querySelector('.js-level span');
 exibirLevel.innerHTML = level;
 
