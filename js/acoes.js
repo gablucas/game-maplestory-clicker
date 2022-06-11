@@ -1,18 +1,28 @@
 // Define o index a percorrer
 let indexMonstro = 0;
 
+// Ataque
+let hpReduzir = 0;
+
 // Ganhar XP ao clicar no monstro
-function ganhaXP() {
+function ataqueMonstro() {
+  let hpPorcentagem = nomeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / ataque);
+  hpMonstro -= ataque;
+  hpReduzir += hpPorcentagem;
+  console.log(hpPorcentagem)
+  nomeMonstro.style.boxShadow = `inset -${hpReduzir}px 0 white`;
+
+  if(hpMonstro <= 0) {
 
   // Adicionar XP
-  xpAtual += xpMonstroAtual;
+  xpAtual += xpMonstro;
 
   // Ações após subir de level
   if(xpAtual > xpProximoLevel) {
     ++level;
     xpAtual -= xpProximoLevel;
     exibirLevel.innerText = level;
-    xpProximoLevel = Math.round(xpProximoLevel + 25);
+    xpProximoLevel = Math.round(xpProximoLevel + 10);
   }
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
@@ -23,16 +33,21 @@ function ganhaXP() {
     }
   }
 
+  // Restaurar HP do
+  hpMonstro = monstros[indexMonstro].hpMonstro;
+  hpReduzir = 0;
+
+}
   // Verfica se o item anterior 
     
   // Mostrar progresso do XP na barra
   // Faz o calculo da porcetagem referente ao tamanho da div, foi preciso arredondar o valor, pois alguns numeros quebrados causavam bug
   let xpPorcentagem = Math.round(xpAtual * barraXP.clientWidth / xpProximoLevel)
-  barraXP.style.boxShadow = "inset "+xpPorcentagem+ "px 0 green";
+  barraXP.style.boxShadow = `inset ${xpPorcentagem}px 0 green`;
   barraXP.innerText = xpAtual +" / "+ xpProximoLevel
 }
 
-monstro.addEventListener('click', ganhaXP)
+  monstro.addEventListener('click', ataqueMonstro)
 
 
 
@@ -50,9 +65,12 @@ function voltarMonstro() {
   setaEsquerda.setAttribute('src', '');
   }
 
-  nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
-  imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
-  xpMonstroAtual = monstros[indexMonstro].xpMonstro;
+  nomeMonstro.innerText = monstros[indexMonstro].nomeMonstro;
+  imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro);
+  hpMonstro = monstros[indexMonstro].xpMonstro;
+  hpReduzir = 0;
+  nomeMonstro.style.boxShadow = `inset 0px 0px white`;
+  xpMonstro = monstros[indexMonstro].xpMonstro;
 }
 
 function proximoMonstro() {
@@ -69,9 +87,13 @@ function proximoMonstro() {
       setaDireita.setAttribute('onclick', 'proximoMonstro()');
     }
   }
-  nomeMonstroAtual.innerText = monstros[indexMonstro].nomeMonstro;
-  imagemMonstroAtual.setAttribute('src', monstros[indexMonstro].imgMonstro)
-  xpMonstroAtual = monstros[indexMonstro].xpMonstro;
-
+  nomeMonstro.innerText = monstros[indexMonstro].nomeMonstro;
+  imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro)
+  hpMonstro = monstros[indexMonstro].hpMonstro;
+  hpReduzir = 0;
+  nomeMonstro.style.boxShadow = `inset 0px 0px white`;
+  xpMonstro = monstros[indexMonstro].xpMonstro;
 }
+
+
 

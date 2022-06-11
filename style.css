@@ -45,7 +45,7 @@ img {
 
 .monstro {
   display: grid;
-  grid-template-rows: auto 100px;
+  grid-template-rows: auto 160px;
   justify-items: center;
   margin-top: 40px;
 }
@@ -55,8 +55,11 @@ img {
 }
 
 .nomeMonstro {
+  padding: 2px 40px;
+  background: tomato;
+  border: 1px solid #000000;
   font-size: .875rem;
-  margin-bottom: 10px;
+
 }
 
 .monstro-container img {
