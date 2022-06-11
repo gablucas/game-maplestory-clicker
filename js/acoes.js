@@ -9,7 +9,7 @@ function ataqueMonstro() {
   let hpPorcentagem = nomeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / ataque);
   hpMonstro -= ataque;
   hpReduzir += hpPorcentagem;
-  console.log(hpPorcentagem)
+  console.log(hpReduzir)
   nomeMonstro.style.boxShadow = `inset -${hpReduzir}px 0 white`;
 
   if(hpMonstro <= 0) {
@@ -18,7 +18,7 @@ function ataqueMonstro() {
   xpAtual += xpMonstro;
 
   // Ações após subir de level
-  if(xpAtual > xpProximoLevel) {
+  if(xpAtual >= xpProximoLevel) {
     ++level;
     xpAtual -= xpProximoLevel;
     exibirLevel.innerText = level;
@@ -34,12 +34,13 @@ function ataqueMonstro() {
   }
 
   // Restaurar HP do
+  nomeMonstro.style.boxShadow = `inset 0px 0px white`;
   hpMonstro = monstros[indexMonstro].hpMonstro;
   hpReduzir = 0;
-
 }
-  // Verfica se o item anterior 
-    
+
+
+
   // Mostrar progresso do XP na barra
   // Faz o calculo da porcetagem referente ao tamanho da div, foi preciso arredondar o valor, pois alguns numeros quebrados causavam bug
   let xpPorcentagem = Math.round(xpAtual * barraXP.clientWidth / xpProximoLevel)

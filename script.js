@@ -1,5 +1,5 @@
 // Level
-let level = 1;
+let level = 50;
 let xpProximoLevel = 10;
 let exibirLevel = document.querySelector('.js-level span');
 exibirLevel.innerHTML = level;
@@ -12,5 +12,5 @@ let barraXP = document.querySelector('.js-barraxp')
 barraXP.innerHTML = xpAtual +" / "+ xpProximoLevel
 
 // Ataque
-let ataque = 1;
+let ataque = 5;
 

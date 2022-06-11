@@ -3,34 +3,34 @@ const monstro = document.querySelector('.js-monstro')
 const monstros = []
 
 // Função construtora para criar monstros
-function Monstro(nome, hp, xp, img, level) {
+function Monstro(level, nome, hp, xp, img) {
+  this.levelMonstro = level;
   this.nomeMonstro = nome;
   this.hpMonstro = hp;
   this.xpMonstro = xp;
   this.imgMonstro = img;
-  this.levelMonstro = level;
   monstros.push(this)
 }
 
 // Monstros criados
-const snail = new Monstro('Snail', 5, 1, 'img/monsters/monster_snail.webp', 1);
-const shroom = new Monstro('Shroom', 7, 3, 'img/monsters/monster_shroom.webp', 3);
-const stump = new Monstro('Stump', 9, 5, 'img/monsters/monster_stump.webp', 5);
-const orangeMushroom = new Monstro('Orange Mushroom', 11, 7, 'img/monsters/monster_orangemushroom.webp', 6);
-const slime = new Monstro('Slime', 13, 9, 'img/monsters/monster_slime.webp', 7);
-const tiguru = new Monstro('Tiguru', 15, 11, 'img/monsters/monster_tiguru.webp', 9);
-const greenmushroom = new Monstro('Green Mushroom', 17, 13, 'img/monsters/monster_greenmushroom.webp', 10);
-const mano = new Monstro('[BOSS] Mano', 50, 30, 'img/monsters/monster_mano.webp', 11);
-const strangerpig = new Monstro('Stranger Pig', 21, 15, 'img/monsters/monster_strangerpig.webp', 11);
-const hornymushroom = new Monstro('Horny Mushroom', 23, 17, 'img/monsters/monster_hornymushroom.webp', 12);
-const rottingkobold = new Monstro('Rotting Kobold', 25, 19, 'img/monsters/monster_rottingkobold.webp', 13);
-const patrolrobot = new Monstro('Patrol Robot', 27, 21, 'img/monsters/monster_patrolrobot.webp', 14);
-const stonegolem = new Monstro('Stone Golem', 29, 23,'img/monsters/monster_stonegolem.webp', 15);
-const darkstonegolem = new Monstro('Dark Stone Golem', 31, 25,'img/monsters/monster_darkstonegolem.webp', 16);
-const mixedgolem = new Monstro('Mixed Golem', 33, 27,'img/monsters/monster_mixedgolem.webp', 17);
-const odascout = new Monstro('Oda Scout', 35 ,29,'img/monsters/monster_odascout.webp', 18);
-const odaadvancedscout = new Monstro('Oda Advanced Scout', 37, 31,'img/monsters/monster_odaadvancedscout.webp', 19);
-const mushmom = new Monstro('[BOSS] Mushmom', 39, 33,'img/monsters/monster_mushmom.webp', 20);
+const snail = new Monstro(1, 'Snail', 5, 1, 'img/monsters/monster_snail.webp');
+const shroom = new Monstro(3, 'Shroom', 7, 3, 'img/monsters/monster_shroom.webp');
+const stump = new Monstro(5, 'Stump', 9, 5, 'img/monsters/monster_stump.webp');
+const orangeMushroom = new Monstro(6, 'Orange Mushroom', 11, 7, 'img/monsters/monster_orangemushroom.webp');
+const slime = new Monstro(7, 'Slime', 13, 9, 'img/monsters/monster_slime.webp');
+const tiguru = new Monstro(9, 'Tiguru', 15, 11, 'img/monsters/monster_tiguru.webp');
+const greenmushroom = new Monstro(10, 'Green Mushroom', 17, 13, 'img/monsters/monster_greenmushroom.webp');
+const mano = new Monstro(11, '[BOSS] Mano', 50, 30, 'img/monsters/monster_mano.webp');
+const strangerpig = new Monstro(12, 'Stranger Pig', 21, 15, 'img/monsters/monster_strangerpig.webp');
+const hornymushroom = new Monstro(13, 'Horny Mushroom', 23, 17, 'img/monsters/monster_hornymushroom.webp');
+const rottingkobold = new Monstro(14, 'Rotting Kobold', 25, 19, 'img/monsters/monster_rottingkobold.webp');
+const patrolrobot = new Monstro(15, 'Patrol Robot', 27, 21, 'img/monsters/monster_patrolrobot.webp');
+const stonegolem = new Monstro(16, 'Stone Golem', 29, 23,'img/monsters/monster_stonegolem.webp');
+const darkstonegolem = new Monstro(17,'Dark Stone Golem', 31, 25,'img/monsters/monster_darkstonegolem.webp');
+const mixedgolem = new Monstro(18, 'Mixed Golem', 33, 27,'img/monsters/monster_mixedgolem.webp');
+const odascout = new Monstro(19, 'Oda Scout', 35 ,29,'img/monsters/monster_odascout.webp');
+const odaadvancedscout = new Monstro(20, 'Oda Advanced Scout', 37, 31,'img/monsters/monster_odaadvancedscout.webp');
+const mushmom = new Monstro(21, '[BOSS] Mushmom', 39, 33,'img/monsters/monster_mushmom.webp');
 
 // Dados do monstro atual
 let nomeMonstro = document.querySelector('.js-nomeMonstro');
