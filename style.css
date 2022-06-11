@@ -6,11 +6,12 @@ body {
 
 .bg {
   margin: 0 auto;
-  background: url('img/mapa/stage1.jpg') center no-repeat;
+  background: url('img/mapa/stage1.jpg') no-repeat;
+  background-attachment: scroll;
   display: grid;
   grid-template-rows: 1fr 50px;
-  gap: 4px;
-  height: 600px;
+  gap: 20px;
+  height: 100vh;
 }
 
 h1, h2, h3, p, ul, li {
@@ -105,7 +106,9 @@ img {
   align-content: center;
   column-gap: 8px;
   align-items: center;
+}
 
+.menu-personagem .titulo {
   font-weight: 700;
   text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
   color: white;
@@ -113,13 +116,18 @@ img {
 
 .barrahp,
 .barraxp {
-  padding: 6px 0px;
-
+  font: 600 .75rem/1 'Courier';
+  color: white;
+  text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
+  letter-spacing: 1px;
+  text-align: end;
+  padding: 2px 8px;
   border: 1px solid grey;
+  box-sizing: border-box;
 }
 
 .barrahp {
-  background: tomato;
+  background: #e60134;
 }
 
 .menu-shop {

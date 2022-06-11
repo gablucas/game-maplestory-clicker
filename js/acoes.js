@@ -9,7 +9,6 @@ function ataqueMonstro() {
   let hpPorcentagem = lifeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / ataque);
   hpMonstro -= ataque;
   hpReduzir += hpPorcentagem;
-  console.log(hpReduzir)
   lifeMonstro.style.boxShadow = `inset -${hpReduzir}px 0 black`;
 
   if(hpMonstro <= 0) {
@@ -33,19 +32,17 @@ function ataqueMonstro() {
     }
   }
 
-  // Restaurar HP do
+  // Restaurar HP do monstro
   nomeMonstro.style.boxShadow = `inset 0px 0px white`;
   hpMonstro = monstros[indexMonstro].hpMonstro;
   hpReduzir = 0;
 }
 
-
-
   // Mostrar progresso do XP na barra
   // Faz o calculo da porcetagem referente ao tamanho da div, foi preciso arredondar o valor, pois alguns numeros quebrados causavam bug
   let xpPorcentagem = Math.round(xpAtual * barraXP.clientWidth / xpProximoLevel)
   barraXP.style.boxShadow = `inset ${xpPorcentagem}px 0 yellow`;
-  // barraXP.innerText = xpAtual +" / "+ xpProximoLevel
+  barraXP.innerText = xpAtual +" / "+ xpProximoLevel
 }
 
   monstro.addEventListener('click', ataqueMonstro)
