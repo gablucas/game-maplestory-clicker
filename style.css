@@ -2,15 +2,15 @@ body {
   margin: 0 auto;
   font-family: 'Inter';
   max-width: 1920px;
+  
 }
 
-.bg {
+.game {
   margin: 0 auto;
-  background: url('img/mapa/stage1.jpg') no-repeat;
-  background-attachment: scroll;
+  background: url('img/mapa/stage1.jpg') bottom no-repeat;
   display: grid;
   grid-template-rows: 1fr 50px;
-  gap: 20px;
+  gap: 108px;
   height: 100vh;
 }
 
@@ -18,6 +18,7 @@ h1, h2, h3, p, ul, li {
   margin: 0px;
   padding: 0px;
 }
+
 
 li {
   list-style: none;
@@ -50,7 +51,7 @@ img {
 
 .monstro {
   display: grid;
-  grid-template-rows: minmax(auto, 495px) auto auto;
+  grid-template-rows: 300px auto auto;
   justify-items: center;
   align-self: end;
 }
