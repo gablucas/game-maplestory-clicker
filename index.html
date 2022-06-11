@@ -10,27 +10,27 @@
 <body>
   <section class="bg">
 
-    <!-- HP, LEVEL -->
-    <div class="dados-personagem">
-      <div class="barrahp js-barrahp"></div>
-      <span class="level js-level">LV <span></span></span>
-    </div>
-    
     <!-- TELA GAME -->
-    <div class="display">
+    <div class="display js-display">
       <img class="display-seta js-display-seta-esquerda" src="" width="32px" alt="" onclick="voltarMonstro()">
 
       <div class="monstro js-monstro">
+        <img class="imgMonstro js-imgMonstro" src="" alt="">
         <span class="hpMonstro js-hpMonstro"></span>
-        <img class="js-imgMonstro" src="" alt="">
         <span class="nomeMonstro js-nomeMonstro"></span>
     </div>
     
       <img class="display-seta js-display-seta-direita" src="img/buttons/seta_direita_lock.png" width="32px" alt="" onclick="">
     </div>
     
-    <!-- BARRA XP -->
-    <div class="barraxp js-barraxp"></div>
+    <!-- MENU -->
+    <div class="menu">
+      <span class="level js-level">LV. <span></span></span>
+      <div class="menu-personagem">
+        <span>HP.</span><span class="barrahp js-barrahp"></span>
+        <span>EXP.</span><span class="barraxp js-barraxp"></span>
+      </div>
+      <div class="menu-shop"><span>SHOP</span></div>
   </section>
 
   <script src="script.js"></script>

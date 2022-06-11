@@ -70,7 +70,7 @@ function voltarMonstro() {
   imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro);
   hpMonstro = monstros[indexMonstro].xpMonstro;
   hpReduzir = 0;
-  nomeMonstro.style.boxShadow = `inset 0px 0px white`;
+  lifeMonstro.style.boxShadow = `inset 0px 0px white`;
   xpMonstro = monstros[indexMonstro].xpMonstro;
 }
 
@@ -92,7 +92,7 @@ function proximoMonstro() {
   imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro)
   hpMonstro = monstros[indexMonstro].hpMonstro;
   hpReduzir = 0;
-  nomeMonstro.style.boxShadow = `inset 0px 0px white`;
+  lifeMonstro.style.boxShadow = `inset 0px 0px white`;
   xpMonstro = monstros[indexMonstro].xpMonstro;
 }
 
