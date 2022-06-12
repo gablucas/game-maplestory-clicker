@@ -50,17 +50,23 @@ function ataqueMonstro() {
 
 
 function voltarMonstro() {
+
   setaEsquerda.setAttribute('src', 'img/buttons/seta_esquerda.png');
 
   indexMonstro--;
+  
  // Verifica se o proximo monstro tem o mesmo level que o persosagem
  if(level >= monstros[indexMonstro + 1].levelMonstro) {
   setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
   setaDireita.setAttribute('onclick', 'proximoMonstro()');
-}
+  }
   
   if(indexMonstro === 0) {
   setaEsquerda.setAttribute('src', '');
+  }
+
+  if(indexMonstro > 0 && (indexMonstro) % 10 === 0) {
+    background.style.backgroundImage = `url('img/mapa/stage${indexMonstro / 10}.jpg')`;
   }
 
   nomeMonstro.innerText = monstros[indexMonstro].nomeMonstro;
@@ -77,7 +83,7 @@ function proximoMonstro() {
   setaEsquerda.setAttribute('src', 'img/buttons/seta_esquerda.png');
 
   indexMonstro++;
-
+  console.log(indexMonstro)
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
   if(indexMonstro + 1 < monstros.length) {
     if(level >= monstros[indexMonstro + 1].levelMonstro) {
@@ -85,6 +91,12 @@ function proximoMonstro() {
       setaDireita.setAttribute('onclick', 'proximoMonstro()');
     }
   }
+
+  if(indexMonstro > 1 && (indexMonstro - 1) % 10 === 0) {
+    background.style.backgroundImage = `url('img/mapa/stage${(indexMonstro - 1) / 10 + 1}.jpg')`;
+  }
+
+
   nomeMonstro.innerText = monstros[indexMonstro].nomeMonstro;
   imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro)
   hpMonstro = monstros[indexMonstro].hpMonstro;

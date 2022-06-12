@@ -14,3 +14,6 @@ barraXP.innerHTML = xpAtual +" / "+ xpProximoLevel
 // Ataque
 let ataque = 1;
 
+// Background
+const background = document.querySelector('.js-game');
+
