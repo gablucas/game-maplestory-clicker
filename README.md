@@ -1,1 +1,3 @@
 # Maple Story Clicker
+
+# Atualizações
