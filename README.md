@@ -1,1 +1,1 @@
-# projeto-javascript-clicker-game
+# Maple Story Clicker
