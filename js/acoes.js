@@ -86,7 +86,7 @@ function proximoMonstro() {
   setaEsquerda.setAttribute('src', 'img/buttons/seta_esquerda.png');
 
   indexMonstro++;
-  console.log(indexMonstro)
+
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
   if(indexMonstro + 1 < monstros.length) {
     if(level >= monstros[indexMonstro + 1].levelMonstro) {
@@ -108,5 +108,18 @@ function proximoMonstro() {
   xpMonstro = monstros[indexMonstro].xpMonstro;
 }
 
+function atalhos(event) {
+  
+    // Atalho para voltar o monstro
+  if(indexMonstro > 0 && setaEsquerda.getAttribute('onclick').includes('voltarMonstro') && event.key === 'ArrowLeft') {
+    voltarMonstro();
 
+    // Atalho para o próximo monstro
+  } else if(indexMonstro < monstros.length && setaDireita.getAttribute('onclick').includes('proximoMonstro') && event.key === 'ArrowRight') {
+    proximoMonstro();
+  }
+}
+
+
+window.addEventListener('keydown', atalhos)
 
