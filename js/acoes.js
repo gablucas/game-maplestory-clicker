@@ -8,35 +8,32 @@ let hpReduzir = 0;
 function ataqueMonstro() {
 
   // Calcula a porcentagem de HP do monstro de acordo com o tamanho do container
-  let hpPorcentagem = lifeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / ataque);
-  hpMonstro -= ataque;
+  let hpPorcentagem = lifeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / player.atk);
+  hpMonstro -= player.atk;
 
   // Incrementa a porcentagem acima e reduz graficamente a vida do monstro
   hpReduzir += hpPorcentagem;
   lifeMonstro.style.boxShadow = `inset -${hpReduzir}px 0 rgba(0, 0, 0, 0.6)`;
 
   // Mostrar progresso do XP na barra
-  // Faz o calculo da porcetagem de acordo com o tamanho do container, foi preciso arredondar o valor, pois alguns numeros quebrados causavam bug.
-  let xpPorcentagem = Math.round(xpAtual * barraXP.clientWidth / xpProximoLevel)
-  barraXP.style.boxShadow = `inset ${xpPorcentagem}px 0 yellow`;
-  barraXP.innerText = xpAtual +" / "+ xpProximoLevel
+  hud.xp();
 
   /** AÇÃO QUANDO O MONSTRO MORRE */
   if(hpMonstro <= 0) {
 
   // Adiciona XP
-  xpAtual += xpMonstro;
+  player.xpActual += xpMonstro;
 
   // Ação quando sobre de nivel
-  if(xpAtual >= xpProximoLevel) {
-    ++level;
-    xpAtual -= xpProximoLevel;
-    exibirLevel.innerText = level;
-    xpProximoLevel = Math.round(xpProximoLevel + 10);
+  if(player.xpActual >= player.xpNextLevel) {
+    ++player.level;
+    player.xpActual -= player.xpNextLevel;
+    hud.level();
+    player.xpNextLevel = Math.round(player.xpNextLevel + 10);
   }
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
-  if(indexMonstro + 1 < monstros.length && level >= monstros[indexMonstro + 1].levelMonstro) {
+  if(indexMonstro + 1 < monstros.length && player.level >= monstros[indexMonstro + 1].levelMonstro) {
     setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
     setaDireita.setAttribute('onclick', 'proximoMonstro()');
   }
@@ -59,7 +56,7 @@ function voltarMonstro() {
   indexMonstro--;
   
  // Verifica se o proximo monstro tem o mesmo level que o persosagem
- if(level >= monstros[indexMonstro + 1].levelMonstro) {
+ if(player.level >= monstros[indexMonstro + 1].levelMonstro) {
   setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
   setaDireita.setAttribute('onclick', 'proximoMonstro()');
   }
@@ -89,7 +86,7 @@ function proximoMonstro() {
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
   if(indexMonstro + 1 < monstros.length) {
-    if(level >= monstros[indexMonstro + 1].levelMonstro) {
+    if(player.level >= monstros[indexMonstro + 1].levelMonstro) {
       setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
       setaDireita.setAttribute('onclick', 'proximoMonstro()');
     }
