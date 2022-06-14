@@ -5,9 +5,19 @@ const player = {
   level: 100,
   hp: 20,
   mp: 10,
-  xpActual : 0,
+  xpCurrent : 0,
   xpNextLevel : 10,
   atk: 1,
+
+  earnXP() {
+    this.xpCurrent += monstros[indexMonstro].xp;
+  },
+
+  levelUP() {
+    ++this.level;
+    this.xpCurrent -= this.xpNextLevel;
+    player.xpNextLevel = Math.round(player.xpNextLevel + 10);
+  }
 }
 
 const hud = {
@@ -20,21 +30,20 @@ const hud = {
     this.levelbar.innerHTML = player.level;
     this.hpbar.innerText = player.hp;
     this.mpbar.innerText = player.mp;
-    this.xpbar.style.boxShadow = `inset ${Math.round(player.xpActual * this.xpbar.clientWidth / player.xpNextLevel)}px 0 yellow`;
-    this.xpbar.innerHTML = player.xpActual +" / "+ player.xpNextLevel;
+    this.xpbar.style.boxShadow = `inset ${Math.round(player.xpCurrent * this.xpbar.clientWidth / player.xpNextLevel)}px 0 yellow`;
+    this.xpbar.innerHTML = player.xpCurrent +" / "+ player.xpNextLevel;
   },
 }
 
 hud.atualizar();
 
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+// Ajusta o tamanho da tela para dispositivos moveis, para que não haja scroll.
 let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-// We listen to the resize event
+// Executa o mesmo evento acima quando a tela é redimensionada
 window.addEventListener('resize', () => {
-    // We execute the same script as before
+
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });

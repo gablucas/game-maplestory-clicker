@@ -2,31 +2,31 @@ function battle() {
 
   // Dano ao monstro
   monsterDamage();
-  hud.atualizar();
 
-  /** AÇÃO QUANDO O MONSTRO MORRE */
+  // Dano ao player
+  
+  /** AÇÕES QUANDO O MONSTRO MORRE */
   if(hpMonstro <= 0) {
 
-  // Adiciona XP
-  player.xpActual += xpMonstro;
-  hud.atualizar();
+  // Ganha XP
+  player.earnXP() 
 
-  // Ação quando sobre de nivel
-  if(player.xpActual >= player.xpNextLevel) {
-    ++player.level;
-    player.xpActual -= player.xpNextLevel;
-    hud.atualizar();
-    player.xpNextLevel = Math.round(player.xpNextLevel + 10);
+  // Ação quando sobe de level
+  if(player.xpCurrent >= player.xpNextLevel) {
+    player.levelUP();
   }
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
-  if(indexMonstro + 1 < monstros.length && player.level >= monstros[indexMonstro + 1].levelMonstro) {
+  if(indexMonstro + 1 < monstros.length && player.level >= monstros[indexMonstro + 1].level) {
     setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
     setaDireita.setAttribute('onclick', 'proximoMonstro()');
   }
   
-  // Nasce um novo monstro
+    // Nasce um novo monstro
     monsterReborn();
+
+    // Atualizar os eventos no HUD
+    hud.atualizar();
   }
 }
 
@@ -41,7 +41,7 @@ function voltarMonstro() {
   indexMonstro--;
   
  // Verifica se o proximo monstro tem o mesmo level que o persosagem
- if(player.level >= monstros[indexMonstro + 1].levelMonstro) {
+ if(player.level >= monstros[indexMonstro + 1].level) {
   setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
   setaDireita.setAttribute('onclick', 'proximoMonstro()');
   }
@@ -68,7 +68,7 @@ function proximoMonstro() {
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
   if(indexMonstro + 1 < monstros.length) {
-    if(player.level >= monstros[indexMonstro + 1].levelMonstro) {
+    if(player.level >= monstros[indexMonstro + 1].level) {
       setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
       setaDireita.setAttribute('onclick', 'proximoMonstro()');
     }

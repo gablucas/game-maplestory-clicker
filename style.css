@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
   font-family: 'Inter';
   max-width: 1920px;
-  
+  user-select: none;
 }
 
 h1, h2, h3, p, ul, li {

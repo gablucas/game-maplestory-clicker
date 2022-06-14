@@ -4,12 +4,12 @@ const monstros = []
 
 // Função construtora para criar monstros
 function Monstro(level, nome, hp, atk, xp, img) {
-  this.levelMonstro = level;
-  this.nomeMonstro = nome;
-  this.hpMonstro = hp;
-  this.xpMonstro = xp;
+  this.level = level;
+  this.name = nome;
+  this.hp = hp;
+  this.xp = xp;
   this.atk = atk;
-  this.imgMonstro = img;
+  this.img = img;
   monstros.push(this)
 }
 
@@ -63,10 +63,9 @@ let hpPorcentagem = 0;
 
 // Função ao trocar de monstro
 function switchMonster() {
-  nomeMonstro.innerText = monstros[indexMonstro].nomeMonstro;                     // Altera o nome
-  imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro);           // Altera a imagem
-  hpMonstro = monstros[indexMonstro].hpMonstro;                                   // Altera o HP
-  xpMonstro = monstros[indexMonstro].xpMonstro;                                   // Altera o XP
+  nomeMonstro.innerText = monstros[indexMonstro].name;                            // Altera o nome
+  imagemMonstro.setAttribute('src', monstros[indexMonstro].img);                  // Altera a imagem
+  hpMonstro = monstros[indexMonstro].hp;                                          // Altera o HP
   hpPorcentagem = 0;                                                              // Reseta a porcentagem da barra de vida
   lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`; // Enche graficamente a barra de vida do monstro
 }
@@ -74,13 +73,13 @@ function switchMonster() {
 switchMonster();
 
 function monsterDamage() {
-  hpMonstro -= player.atk;                                                                      // Reduz a vida do monstro
-  hpPorcentagem += lifeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / player.atk);   // Define a porcentagem da barra de vida 
-  lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`;               // Reduz graficamente a barra de vida do monstro
+  hpMonstro -= player.atk;                                                               // Reduz a vida do monstro
+  hpPorcentagem += lifeMonstro.clientWidth / (monstros[indexMonstro].hp / player.atk);   // Define a porcentagem da barra de vida 
+  lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`;        // Reduz graficamente a barra de vida do monstro
 }
 
 function monsterReborn() {
-  hpMonstro = monstros[indexMonstro].hpMonstro // Retorna a vida maxima do monstro
+  hpMonstro = monstros[indexMonstro].hp // Retorna a vida maxima do monstro
   hpPorcentagem = 0; // Reseta a porcentagem para preencher a barra de vida do monstro
   lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`; // Preenche a barra de vida do monstro
 }
