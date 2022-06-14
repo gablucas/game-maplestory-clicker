@@ -1,100 +1,64 @@
 function battle() {
 
-  // Dano ao monstro
-  monsterDamage();
+  monsterDamage();  // Dano ao monstro
 
-  // Dano ao player
-  
-  /** AÇÕES QUANDO O MONSTRO MORRE */
+  // Ação quando o monstro morre
   if(hpMonstro <= 0) {
 
-  // Ganha XP
-  player.earnXP() 
+    player.earnXP() // Ganha XP
+    monsterReborn();  // Nasce um novo monstro
+    hud.atualizar();  // Atualizar os eventos no HUD
 
-  // Ação quando sobe de level
-  if(player.xpCurrent >= player.xpNextLevel) {
-    player.levelUP();
-  }
+    // Ação quando sobe de level
+    if(player.xpCurrent > player.xpNextLevel) {
+      player.levelUP();
+    }
 
-  // Verifica se o proximo monstro tem o mesmo level que o persosagem
-  if(indexMonstro + 1 < monstros.length && player.level >= monstros[indexMonstro + 1].level) {
-    setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
-    setaDireita.setAttribute('onclick', 'proximoMonstro()');
-  }
-  
-    // Nasce um novo monstro
-    monsterReborn();
-
-    // Atualizar os eventos no HUD
-    hud.atualizar();
+    // Verifica se o proximo monstro tem o mesmo level que o persosagem
+    if(indexMonstro + 1 < monstros.length && player.level >= monstros[indexMonstro + 1].level) {
+      activeRightArrow();
+    }
   }
 }
 
   monstro.addEventListener('click', battle)
 
 
-
 function voltarMonstro() {
-
-  setaEsquerda.setAttribute('src', 'img/buttons/seta_esquerda.png');
+  activeLeftArrow();
 
   indexMonstro--;
-  
+  switchMonster();
+
  // Verifica se o proximo monstro tem o mesmo level que o persosagem
  if(player.level >= monstros[indexMonstro + 1].level) {
-  setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
-  setaDireita.setAttribute('onclick', 'proximoMonstro()');
+    activeRightArrow();
   }
   
+  // Caso esteja no primeiro monstro, retira o botao esquerdo
   if(indexMonstro === 0) {
   setaEsquerda.setAttribute('src', '');
   }
 
-  // Troca o mapa
-  if(indexMonstro > 0 && (indexMonstro) % 10 === 0) {
-    background.style.backgroundImage = `url('img/mapa/stage${indexMonstro / 10}.jpg')`;
-  }
-
-    switchMonster();
-
+  switchMap();
 }
 
 function proximoMonstro() {
-  setaDireita.setAttribute('src', 'img/buttons/seta_direita_lock.png')
-  setaDireita.setAttribute('onclick', '')
-  setaEsquerda.setAttribute('src', 'img/buttons/seta_esquerda.png');
-
+  disableRightArrow();
+  activeLeftArrow();
+  
   indexMonstro++;
+  switchMonster();
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
   if(indexMonstro + 1 < monstros.length) {
     if(player.level >= monstros[indexMonstro + 1].level) {
-      setaDireita.setAttribute('src', 'img/buttons/seta_direita.png');
-      setaDireita.setAttribute('onclick', 'proximoMonstro()');
+      activeRightArrow()
     }
   }
 
-  // Troca o mapa
-  if(indexMonstro > 1 && (indexMonstro - 1) % 10 === 0) {
-    background.style.backgroundImage = `url('img/mapa/stage${(indexMonstro - 1) / 10 + 1}.jpg')`;
-  }
-
-    switchMonster();
-
-}
-
-function atalhos(event) {
-  
-    // Atalho para voltar o monstro
-  if(indexMonstro > 0 && setaEsquerda.getAttribute('onclick').includes('voltarMonstro') && event.key === 'ArrowLeft') {
-    voltarMonstro();
-
-    // Atalho para o próximo monstro
-  } else if(indexMonstro < monstros.length && setaDireita.getAttribute('onclick').includes('proximoMonstro') && event.key === 'ArrowRight') {
-    proximoMonstro();
-  }
+  switchMap();
 }
 
 
-window.addEventListener('keydown', atalhos)
 

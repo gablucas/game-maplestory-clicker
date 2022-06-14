@@ -1,12 +1,10 @@
-// Background
-const background = document.querySelector('.js-game');
 
 const player = {
-  level: 100,
+  level: 3,
   hp: 20,
   mp: 10,
   xpCurrent : 0,
-  xpNextLevel : 10,
+  xpNextLevel : 30,
   atk: 1,
 
   earnXP() {
@@ -14,9 +12,11 @@ const player = {
   },
 
   levelUP() {
-    ++this.level;
-    this.xpCurrent -= this.xpNextLevel;
-    player.xpNextLevel = Math.round(player.xpNextLevel + 10);
+    do{
+      ++this.level;
+      this.xpCurrent -= this.xpNextLevel;
+      player.xpNextLevel = Math.round(player.xpNextLevel + 10);
+    }while (this.xpCurrent <= this.xpNextLevel)
   }
 }
 
