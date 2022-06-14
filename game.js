@@ -2,30 +2,30 @@
 const background = document.querySelector('.js-game');
 
 const player = {
-  level: 1,
+  level: 100,
+  hp: 20,
+  mp: 10,
   xpActual : 0,
   xpNextLevel : 10,
   atk: 1,
 }
 
 const hud = {
-  levelbar : document.querySelector('.js-level span'),
+  levelbar : document.querySelector('.js-level'),
   hpbar : document.querySelector('.js-barrahp'),
   mpbar : document.querySelector('.js-barramp'),
   xpbar : document.querySelector('.js-barraxp'),
 
-  level() {
+  atualizar() {
     this.levelbar.innerHTML = player.level;
-  },
-
-  xp() {
+    this.hpbar.innerText = player.hp;
+    this.mpbar.innerText = player.mp;
     this.xpbar.style.boxShadow = `inset ${Math.round(player.xpActual * this.xpbar.clientWidth / player.xpNextLevel)}px 0 yellow`;
     this.xpbar.innerHTML = player.xpActual +" / "+ player.xpNextLevel;
   },
 }
 
-hud.level();
-hud.xp();
+hud.atualizar();
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;

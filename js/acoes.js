@@ -1,34 +1,21 @@
-// Define o index a percorrer pelo array de monstros
-let indexMonstro = 0;
+function battle() {
 
-// Ataque
-let hpReduzir = 0;
-
-/** AÇÃO AO ATACAR O MONSTRO */
-function ataqueMonstro() {
-
-  // Calcula a porcentagem de HP do monstro de acordo com o tamanho do container
-  let hpPorcentagem = lifeMonstro.clientWidth / (monstros[indexMonstro].hpMonstro / player.atk);
-  hpMonstro -= player.atk;
-
-  // Incrementa a porcentagem acima e reduz graficamente a vida do monstro
-  hpReduzir += hpPorcentagem;
-  lifeMonstro.style.boxShadow = `inset -${hpReduzir}px 0 rgba(0, 0, 0, 0.6)`;
-
-  // Mostrar progresso do XP na barra
-  hud.xp();
+  // Dano ao monstro
+  monsterDamage();
+  hud.atualizar();
 
   /** AÇÃO QUANDO O MONSTRO MORRE */
   if(hpMonstro <= 0) {
 
   // Adiciona XP
   player.xpActual += xpMonstro;
+  hud.atualizar();
 
   // Ação quando sobre de nivel
   if(player.xpActual >= player.xpNextLevel) {
     ++player.level;
     player.xpActual -= player.xpNextLevel;
-    hud.level();
+    hud.atualizar();
     player.xpNextLevel = Math.round(player.xpNextLevel + 10);
   }
 
@@ -38,14 +25,12 @@ function ataqueMonstro() {
     setaDireita.setAttribute('onclick', 'proximoMonstro()');
   }
   
-  // Restaurar HP do monstro
-  nomeMonstro.style.boxShadow = `inset 0px 0px white`;
-  hpMonstro = monstros[indexMonstro].hpMonstro;
-  hpReduzir = 0;
+  // Nasce um novo monstro
+    monsterReborn();
   }
 }
 
-  monstro.addEventListener('click', ataqueMonstro)
+  monstro.addEventListener('click', battle)
 
 
 
@@ -65,16 +50,13 @@ function voltarMonstro() {
   setaEsquerda.setAttribute('src', '');
   }
 
+  // Troca o mapa
   if(indexMonstro > 0 && (indexMonstro) % 10 === 0) {
     background.style.backgroundImage = `url('img/mapa/stage${indexMonstro / 10}.jpg')`;
   }
 
-  nomeMonstro.innerText = monstros[indexMonstro].nomeMonstro;
-  imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro);
-  hpMonstro = monstros[indexMonstro].xpMonstro;
-  hpReduzir = 0;
-  lifeMonstro.style.boxShadow = `inset 0px 0px white`;
-  xpMonstro = monstros[indexMonstro].xpMonstro;
+    switchMonster();
+
 }
 
 function proximoMonstro() {
@@ -92,17 +74,13 @@ function proximoMonstro() {
     }
   }
 
+  // Troca o mapa
   if(indexMonstro > 1 && (indexMonstro - 1) % 10 === 0) {
     background.style.backgroundImage = `url('img/mapa/stage${(indexMonstro - 1) / 10 + 1}.jpg')`;
   }
 
+    switchMonster();
 
-  nomeMonstro.innerText = monstros[indexMonstro].nomeMonstro;
-  imagemMonstro.setAttribute('src', monstros[indexMonstro].imgMonstro)
-  hpMonstro = monstros[indexMonstro].hpMonstro;
-  hpReduzir = 0;
-  lifeMonstro.style.boxShadow = `inset 0px 0px white`;
-  xpMonstro = monstros[indexMonstro].xpMonstro;
 }
 
 function atalhos(event) {
