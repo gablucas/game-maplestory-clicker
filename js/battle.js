@@ -1,5 +1,5 @@
 function battle() {
-
+  mostrarDano();
   monsterDamage();  // Dano ao monstro
 
   // Ação quando o monstro morre
@@ -22,7 +22,6 @@ function battle() {
 }
 
   monstro.addEventListener('click', battle)
-
 
 function voltarMonstro() {
   activeLeftArrow();

@@ -45,3 +45,14 @@ function atalhos(event) {
 }
 
 window.addEventListener('keydown', atalhos)
+
+// Dano monstro
+const danoMonstro = document.querySelector('.js-danoMonstro');
+
+function mostrarDano() {
+
+  danoMonstro.innerHTML = `<li>${player.atk}</li>`;
+  danoMonstro.addEventListener('animationend', () => {
+  danoMonstro.innerText = ``;
+  })
+}

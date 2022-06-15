@@ -31,7 +31,6 @@ button {
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 1fr auto;
-  /* gap: 108px; */
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
@@ -60,6 +59,33 @@ button {
   grid-template-rows: 300px auto auto;
   justify-items: center;
   align-self: end;
+}
+
+.danoMonstro {
+  width: 200px;
+  position: relative;
+}
+
+.danoMonstro li {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(#e4310f, #eacc11 50%);
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  animation: animacao 1s normal;
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #00000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animacao {
+  from {opacity: 1; bottom: 0;}
+  to   {opacity: 0; bottom: 100px;}
 }
 
 .imgMonstro {
