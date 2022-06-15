@@ -10,7 +10,7 @@ function battle() {
     hud.atualizar();  // Atualizar os eventos no HUD
     
     // Ação quando sobe de level
-    if(player.xpCurrent > player.xpNextLevel) {
+    if(player.xpCurrent >= player.xpNextLevel) {
       player.levelUP();
     }
 
@@ -23,6 +23,8 @@ function battle() {
 
   monstro.addEventListener('click', battle)
 
+
+  
 function voltarMonstro() {
   activeLeftArrow();
 

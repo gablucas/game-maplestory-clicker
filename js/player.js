@@ -4,7 +4,7 @@ const player = {
   hp: 20,
   mp: 10,
   xpCurrent : 0,
-  xpNextLevel : 30,
+  xpNextLevel : 10,
   atk: 1,
 
   earnXP() {

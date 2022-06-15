@@ -31,7 +31,7 @@ button {
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 1fr auto;
-  /* height: 100vh; */
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
 
@@ -62,6 +62,7 @@ button {
 }
 
 .danoMonstro {
+  height: 200px;
   width: 200px;
   position: relative;
 }
