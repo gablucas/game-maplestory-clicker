@@ -14,7 +14,7 @@ function Monstro(level, nome, hp, atk, xp, img) {
 }
 
 // Monstros criados
-const snail = new Monstro(1, 'Snail', 4, 1, 40, 'img/monsters/monster_snail.webp');
+const snail = new Monstro(1, 'Snail', 4, 1, 400, 'img/monsters/monster_snail.webp');
 const bluesnail = new Monstro(2, 'Blue Snail', 6, 1, 2, 'img/monsters/monster_bluesnail.webp');
 const shroom = new Monstro(3, 'Shroom', 8, 1, 3, 'img/monsters/monster_shroom.webp');
 const tino = new Monstro(4, 'Tino', 10, 1, 3, 'img/monsters/monster_tino.webp');

@@ -1,6 +1,6 @@
 
 const player = {
-  level: 3,
+  level: 1,
   hp: 20,
   mp: 10,
   xpCurrent : 0,
@@ -13,10 +13,13 @@ const player = {
 
   levelUP() {
     do{
+      console.log('oi')
       ++this.level;
       this.xpCurrent -= this.xpNextLevel;
       player.xpNextLevel = Math.round(player.xpNextLevel + 10);
-    }while (this.xpCurrent <= this.xpNextLevel)
+    }while(this.xpCurrent > this.xpNextLevel)
+    
+    hud.atualizar();
   }
 }
 

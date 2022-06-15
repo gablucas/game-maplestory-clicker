@@ -8,7 +8,7 @@ function battle() {
     player.earnXP() // Ganha XP
     monsterReborn();  // Nasce um novo monstro
     hud.atualizar();  // Atualizar os eventos no HUD
-
+    
     // Ação quando sobe de level
     if(player.xpCurrent > player.xpNextLevel) {
       player.levelUP();
