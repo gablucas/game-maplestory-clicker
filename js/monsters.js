@@ -1,8 +1,13 @@
-// Monstros
+/** ELEMENTOS MONSTRO */
 const monstro = document.querySelector('.js-monstro')
+const nomeMonstro = document.querySelector('.js-nomeMonstro');
+const lifeMonstro = document.querySelector('.js-hpMonstro');
+const imagemMonstro = document.querySelector('.js-imgMonstro');
+
+/** ARRAY DE MONSTROS */
 const monstros = []
 
-// Função construtora para criar monstros
+/** FUNÇÃO CONSTRUTORA DE MONSTROS */
 function Monstro(level, nome, hp, atk, xp, img) {
   this.level = level;
   this.name = nome;
@@ -13,18 +18,18 @@ function Monstro(level, nome, hp, atk, xp, img) {
   monstros.push(this)
 }
 
-// Monstros criados
+/** MONSTROS */
 const snail = new Monstro(1, 'Snail', 4, 1, 1, 'img/monsters/monster_snail.webp');
-const bluesnail = new Monstro(2, 'Blue Snail', 6, 1, 2, 'img/monsters/monster_bluesnail.webp');
-const shroom = new Monstro(3, 'Shroom', 8, 1, 3, 'img/monsters/monster_shroom.webp');
-const tino = new Monstro(4, 'Tino', 10, 1, 3, 'img/monsters/monster_tino.webp');
-const stump = new Monstro(5, 'Stump', 12, 1, 5, 'img/monsters/monster_stump.webp');
-const orangeMushroom = new Monstro(6, 'Orange Mushroom', 14, 1, 7, 'img/monsters/monster_orangemushroom.webp');
-const slime = new Monstro(7, 'Slime', 16, 1, 9, 'img/monsters/monster_slime.webp');
-const murukun = new Monstro(8, 'Murukum', 18, 1, 9, 'img/monsters/monster_murukun.webp');
-const tiguru = new Monstro(9, 'Tiguru', 20, 1, 11, 'img/monsters/monster_tiguru.webp');
-const greenmushroom = new Monstro(10, 'Green Mushroom', 22, 1, 13, 'img/monsters/monster_greenmushroom.webp');
-const mano = new Monstro(11, '[BOSS] Mano', 50, 1, 30, 'img/monsters/monster_mano.webp');
+const bluesnail = new Monstro(2, 'Blue Snail', 8, 2, 2, 'img/monsters/monster_bluesnail.webp');
+const shroom = new Monstro(3, 'Shroom', 12, 3, 3, 'img/monsters/monster_shroom.webp');
+const tino = new Monstro(4, 'Tino', 16, 4, 3, 'img/monsters/monster_tino.webp');
+const stump = new Monstro(5, 'Stump', 20, 5, 5, 'img/monsters/monster_stump.webp');
+const orangeMushroom = new Monstro(6, 'Orange Mushroom', 24, 6, 7, 'img/monsters/monster_orangemushroom.webp');
+const slime = new Monstro(7, 'Slime', 28, 7, 9, 'img/monsters/monster_slime.webp');
+const murukun = new Monstro(8, 'Murukum', 32, 8, 9, 'img/monsters/monster_murukun.webp');
+const tiguru = new Monstro(9, 'Tiguru', 36, 9, 11, 'img/monsters/monster_tiguru.webp');
+const greenmushroom = new Monstro(10, 'Green Mushroom', 40, 10, 13, 'img/monsters/monster_greenmushroom.webp');
+const mano = new Monstro(11, '[BOSS] Mano', 50, 15, 30, 'img/monsters/monster_mano.webp');
 
 const strangerpig = new Monstro(12, 'Stranger Pig', 24, 1, 15, 'img/monsters/monster_strangerpig.webp');
 const hornymushroom = new Monstro(13, 'Horny Mushroom', 26, 1, 17, 'img/monsters/monster_hornymushroom.webp');
@@ -48,20 +53,15 @@ const nefariousmonkmaster = new Monstro(29, 'Nefarious Monk Master', 38, 1, 29,'
 const countsswordsman = new Monstro(30, 'Counts Swordsman', 40, 1, 31,'img/monsters/monster_countsswordsman.webp');
 const stumpy = new Monstro(31, '[BOSS] Stumpy', 100, 1, 33,'img/monsters/monster_stumpy.webp');
 
-// Define o index a percorrer pelo array de monstros
+/** INDEX QUE PERCORRE PELOS MONSTROS */
 let indexMonstro = 0;
 
-// Elementos do monstro
-let nomeMonstro = document.querySelector('.js-nomeMonstro');
-let lifeMonstro = document.querySelector('.js-hpMonstro');
-let imagemMonstro = document.querySelector('.js-imgMonstro');
-
-// Variaveis que receberam os valores do monstro para serem modificadas
+/** VARIAVEIS MONSTROS */
 let hpMonstro = 0;
 let xpMonstro = 0;
 let hpPorcentagem = 0;
 
-// Função ao trocar de monstro
+/** FUNÇÃO TROCAR DE MONSTRO */
 function switchMonster() {
   nomeMonstro.innerText = monstros[indexMonstro].name;                            // Altera o nome
   imagemMonstro.setAttribute('src', monstros[indexMonstro].img);                  // Altera a imagem
@@ -70,14 +70,13 @@ function switchMonster() {
   lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`; // Enche graficamente a barra de vida do monstro
 }
 
+// Ativar a função inicialmente
 switchMonster();
 
-function monsterDamage() {
-  hpMonstro -= player.atk;                                                               // Reduz a vida do monstro
-  hpPorcentagem += lifeMonstro.clientWidth / (monstros[indexMonstro].hp / player.atk);   // Define a porcentagem da barra de vida 
-  lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`;        // Reduz graficamente a barra de vida do monstro
-}
+/** DANO AO PLAYER */
 
+
+/** MONSTRO RENASCE */
 function monsterReborn() {
   hpMonstro = monstros[indexMonstro].hp // Retorna a vida maxima do monstro
   hpPorcentagem = 0; // Reseta a porcentagem para preencher a barra de vida do monstro

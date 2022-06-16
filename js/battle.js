@@ -1,17 +1,21 @@
+// Atualizar a HUD inicialmente
+hud.atualizar();
+
 function battle() {
-  mostrarDano();
+
+  mostrarDano();  // Exibe o dano desferido ao monstro
   monsterDamage();  // Dano ao monstro
+  playerDamage(); // Dano ao player
 
   // Ação quando o monstro morre
   if(hpMonstro <= 0) {
 
-    player.earnXP() // Ganha XP
-    monsterReborn();  // Nasce um novo monstro
-    hud.atualizar();  // Atualizar os eventos no HUD
-    
+      player.earnXP() // Ganha XP
+      monsterReborn();  // Nasce um novo monstro
+      
     // Ação quando sobe de level
-    if(player.xpCurrent >= player.xpNextLevel) {
-      player.levelUP();
+    if(player.xpCurrent >= player.xpNextLevel()) {
+      player.levelUP(); // Sobre o level do player
     }
 
     // Verifica se o proximo monstro tem o mesmo level que o persosagem
@@ -19,47 +23,8 @@ function battle() {
       activeRightArrow();
     }
   }
+
+  hud.atualizar();  // Atualiza os eventos no HUD
 }
 
   monstro.addEventListener('click', battle)
-
-
-  
-function voltarMonstro() {
-  activeLeftArrow();
-
-  indexMonstro--;
-  switchMonster();
-
- // Verifica se o proximo monstro tem o mesmo level que o persosagem
- if(player.level >= monstros[indexMonstro + 1].level) {
-    activeRightArrow();
-  }
-  
-  // Caso esteja no primeiro monstro, retira o botao esquerdo
-  if(indexMonstro === 0) {
-  setaEsquerda.setAttribute('src', '');
-  }
-
-  switchMap();
-}
-
-function proximoMonstro() {
-  disableRightArrow();
-  activeLeftArrow();
-  
-  indexMonstro++;
-  switchMonster();
-
-  // Verifica se o proximo monstro tem o mesmo level que o persosagem
-  if(indexMonstro + 1 < monstros.length) {
-    if(player.level >= monstros[indexMonstro + 1].level) {
-      activeRightArrow()
-    }
-  }
-
-  switchMap();
-}
-
-
-
