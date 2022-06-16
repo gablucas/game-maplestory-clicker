@@ -8,7 +8,7 @@ function battle() {
   playerDamage(); // Dano ao player
 
   // Ação quando o monstro morre
-  if(hpMonstro <= 0) {
+  if(monsterHP <= 0) {
 
       player.earnXP() // Ganha XP
       monsterReborn();  // Nasce um novo monstro
@@ -19,7 +19,7 @@ function battle() {
     }
 
     // Verifica se o proximo monstro tem o mesmo level que o persosagem
-    if(indexMonstro + 1 < monstros.length && player.level >= monstros[indexMonstro + 1].level) {
+    if(indexMonster + 1 < monstros.length && player.level >= monstros[indexMonster + 1].level) {
       activeRightArrow();
     }
   }

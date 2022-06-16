@@ -1,16 +1,22 @@
 const player = {
   level: 1,
-  hp: 20,
-  mp: 10,
   xpCurrent : 0,
   atk: 1,
 
+  hp() {
+    return Math.floor((this.level / 0.08) * 1);
+  },
+
+  mp() {
+    return Math.floor((this.level / 0.15) * 1);
+  },
+
   earnXP() {
-    this.xpCurrent += monstros[indexMonstro].xp;
+    this.xpCurrent += monstros[indexMonster].xp;
   },
 
   xpNextLevel() {
-    return Math.floor((this.level / 0.5) * 2);
+    return Math.floor((this.level / 0.3) * 2);
   },
 
   levelUP() {
@@ -20,34 +26,43 @@ const player = {
       this.xpNextLevel();
     }while(this.xpCurrent > this.xpNextLevel())
     
+    playerHP = player.hp();
+    calcPlayerHP = 0;
+
+    playerMP = player.mp();
+    calcPlayerMP = 0;
   }
 }
 
 /** VARIAVEIS */
-let playerHP = player.hp;
+let playerHP = player.hp();
 let calcPlayerHP = 0;
 
-/** DANO AO PLAYER */
-function playerDamage() {
-  playerHP -= monstros[indexMonstro].atk;
-  calcPlayerHP += hud.hpbar.clientWidth / (player.hp / monstros[indexMonstro].atk);
-  hud.hpbar.style.boxShadow = `inset -${calcPlayerHP}px 0 rgba(0, 0, 0, 0.6)`;  
-}
+let playerMP = player.mp();
+let calcPlayerMP = 0;
 
 /** DANO AO MONSTRO */
 function monsterDamage() {
-  hpMonstro -= player.atk;                                                               // Reduz a vida do monstro
-  hpPorcentagem += lifeMonstro.clientWidth / (monstros[indexMonstro].hp / player.atk);   // Define a porcentagem da barra de vida 
-  lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`;        // Reduz graficamente a barra de vida do monstro
+  monsterHP -= player.atk;                                                               // Reduz a vida do monstro
+  calcMonsterHP += lifeMonstro.clientWidth / (monstros[indexMonster].hp / player.atk);   // Define a porcentagem da barra de vida 
+  lifeMonstro.style.boxShadow = `inset -${calcMonsterHP}px 0 rgba(0, 0, 0, 0.6)`;        // Reduz graficamente a barra de vida do monstro
 }
 
-/** AJUSTE PARA DIPOSITIVOS MOVEIS */
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+/** SKILLS */
+function heal() {
+  if(playerMP >= 6) {
+    playerMP -= 6;
+    calcPlayerMP += hud.mpbar.clientWidth / player.mp() * 6;
 
-// Executa a mesma ação acima quando a tela é redimensionada
-window.addEventListener('resize', () => {
+    if(player.hp() - playerHP <= 10) {
+      playerHP = player.hp();
+      calcPlayerHP = 0;
+      
+    } else {
+      playerHP += 10;
+      calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * 10);
+    }
 
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
+    hud.atualizar();
+  }
+}

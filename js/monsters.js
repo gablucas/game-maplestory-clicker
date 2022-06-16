@@ -1,7 +1,7 @@
 /** ELEMENTOS MONSTRO */
 const monstro = document.querySelector('.js-monstro')
 const nomeMonstro = document.querySelector('.js-nomeMonstro');
-const lifeMonstro = document.querySelector('.js-hpMonstro');
+const lifeMonstro = document.querySelector('.js-monsterHP');
 const imagemMonstro = document.querySelector('.js-imgMonstro');
 
 /** ARRAY DE MONSTROS */
@@ -54,33 +54,36 @@ const countsswordsman = new Monstro(30, 'Counts Swordsman', 40, 1, 31,'img/monst
 const stumpy = new Monstro(31, '[BOSS] Stumpy', 100, 1, 33,'img/monsters/monster_stumpy.webp');
 
 /** INDEX QUE PERCORRE PELOS MONSTROS */
-let indexMonstro = 0;
+let indexMonster = 0;
 
 /** VARIAVEIS MONSTROS */
-let hpMonstro = 0;
-let xpMonstro = 0;
-let hpPorcentagem = 0;
+let monsterHP = 0;
+let monstroXP = 0;
+let calcMonsterHP = 0;
 
 /** FUNÇÃO TROCAR DE MONSTRO */
 function switchMonster() {
-  nomeMonstro.innerText = monstros[indexMonstro].name;                            // Altera o nome
-  imagemMonstro.setAttribute('src', monstros[indexMonstro].img);                  // Altera a imagem
-  hpMonstro = monstros[indexMonstro].hp;                                          // Altera o HP
-  hpPorcentagem = 0;                                                              // Reseta a porcentagem da barra de vida
-  lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`; // Enche graficamente a barra de vida do monstro
+  nomeMonstro.innerText = monstros[indexMonster].name;                            // Altera o nome
+  imagemMonstro.setAttribute('src', monstros[indexMonster].img);                  // Altera a imagem
+  monsterHP = monstros[indexMonster].hp;                                          // Altera o HP
+  calcMonsterHP = 0;                                                              // Reseta a porcentagem da barra de vida
+  lifeMonstro.style.boxShadow = `inset -${calcMonsterHP}px 0 rgba(0, 0, 0, 0.6)`; // Enche graficamente a barra de vida do monstro
 }
 
 // Ativar a função inicialmente
 switchMonster();
 
 /** DANO AO PLAYER */
-
+function playerDamage() {
+  calcPlayerHP += hud.hpbar.clientWidth / (player.hp() / monstros[indexMonster].atk);
+  playerHP -= monstros[indexMonster].atk;
+}
 
 /** MONSTRO RENASCE */
 function monsterReborn() {
-  hpMonstro = monstros[indexMonstro].hp // Retorna a vida maxima do monstro
-  hpPorcentagem = 0; // Reseta a porcentagem para preencher a barra de vida do monstro
-  lifeMonstro.style.boxShadow = `inset -${hpPorcentagem}px 0 rgba(0, 0, 0, 0.6)`; // Preenche a barra de vida do monstro
+  monsterHP = monstros[indexMonster].hp // Retorna a vida maxima do monstro
+  calcMonsterHP = 0; // Reseta a porcentagem para preencher a barra de vida do monstro
+  lifeMonstro.style.boxShadow = `inset -${calcMonsterHP}px 0 rgba(0, 0, 0, 0.6)`; // Preenche a barra de vida do monstro
 }
 
 

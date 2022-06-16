@@ -2,11 +2,11 @@
 const background = document.querySelector('.js-game');
 
 function switchMap() {
-  if(indexMonstro > 0 && (indexMonstro) % 10 === 0) {
-    background.style.backgroundImage = `url('img/mapa/stage${indexMonstro / 10}.jpg')`;
+  if(indexMonster > 0 && (indexMonster) % 10 === 0) {
+    background.style.backgroundImage = `url('img/mapa/stage${indexMonster / 10}.jpg')`;
 
-  } else if(indexMonstro > 1 && (indexMonstro - 1) % 10 === 0) {
-    background.style.backgroundImage = `url('img/mapa/stage${(indexMonstro - 1) / 10 + 1}.jpg')`;
+  } else if(indexMonster > 1 && (indexMonster - 1) % 10 === 0) {
+    background.style.backgroundImage = `url('img/mapa/stage${(indexMonster - 1) / 10 + 1}.jpg')`;
     
   }
 }
@@ -20,10 +20,15 @@ const hud = {
 
   atualizar() {
     this.levelbar.innerHTML = player.level;
-    this.hpbar.innerText = playerHP;
-    this.mpbar.innerText = player.mp;
-    this.xpbar.style.boxShadow = `inset ${Math.round(player.xpCurrent * this.xpbar.clientWidth / player.xpNextLevel())}px 0 yellow`;
+
+    this.hpbar.innerText = `${playerHP}/${player.hp()}`;
+    this.hpbar.style.boxShadow = `inset -${calcPlayerHP}px 0 rgba(0, 0, 0, 0.6)`;
+
+    this.mpbar.innerText = `${playerMP}/${player.mp()}`;
+    this.mpbar.style.boxShadow = `inset -${calcPlayerMP}px 0 rgba(0, 0, 0, 0.6)`;
+    
     this.xpbar.innerHTML = player.xpCurrent +" / "+ player.xpNextLevel();
+    this.xpbar.style.boxShadow = `inset ${Math.round(player.xpCurrent * this.xpbar.clientWidth / player.xpNextLevel())}px 0 yellow`;
   },
 }
 
@@ -51,12 +56,12 @@ function activeLeftArrow() {
 function atalhos(event) {
 
   // Atalho para voltar o monstro
-  if(indexMonstro > 0 && setaEsquerda.getAttribute('onclick').includes('voltarMonstro') && event.key === 'ArrowLeft') {
+  if(indexMonster > 0 && setaEsquerda.getAttribute('onclick').includes('voltarMonstro') && event.key === 'ArrowLeft') {
     voltarMonstro();
-    console.log(indexMonstro)
+    console.log(indexMonster)
     
   // Atalho para o próximo monstro
-  } else if(indexMonstro < monstros.length && setaDireita.getAttribute('onclick').includes('proximoMonstro') && event.key === 'ArrowRight') {
+  } else if(indexMonster < monstros.length && setaDireita.getAttribute('onclick').includes('proximoMonstro') && event.key === 'ArrowRight') {
     proximoMonstro();
   }
 }
@@ -78,16 +83,16 @@ function mostrarDano() {
 function voltarMonstro() {
   activeLeftArrow();
 
-  indexMonstro--;
+  indexMonster--;
   switchMonster();
 
  // Verifica se o proximo monstro tem o mesmo level que o persosagem
- if(player.level >= monstros[indexMonstro + 1].level) {
+ if(player.level >= monstros[indexMonster + 1].level) {
     activeRightArrow();
   }
   
   // Caso esteja no primeiro monstro, retira o botao esquerdo
-  if(indexMonstro === 0) {
+  if(indexMonster === 0) {
   setaEsquerda.setAttribute('src', '');
   }
 
@@ -99,12 +104,12 @@ function proximoMonstro() {
   disableRightArrow();
   activeLeftArrow();
   
-  indexMonstro++;
+  indexMonster++;
   switchMonster();
 
   // Verifica se o proximo monstro tem o mesmo level que o persosagem
-  if(indexMonstro + 1 < monstros.length) {
-    if(player.level >= monstros[indexMonstro + 1].level) {
+  if(indexMonster + 1 < monstros.length) {
+    if(player.level >= monstros[indexMonster + 1].level) {
       activeRightArrow()
     }
   }
@@ -112,3 +117,13 @@ function proximoMonstro() {
   switchMap();
 }
 
+/** AJUSTE PARA DIPOSITIVOS MOVEIS */
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// Executa a mesma ação acima quando a tela é redimensionada
+window.addEventListener('resize', () => {
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });

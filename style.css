@@ -93,7 +93,7 @@ button {
   align-self: end;
 }
 
-.hpMonstro {
+.monsterHP {
   margin-top: 4px;
   display: inline-block;
   background: linear-gradient(#ff487c, #d81c51);
@@ -115,9 +115,16 @@ button {
   font-weight: 300;
 }
 
+#skills {
+  display: grid;
+  gap: 10px;
+  margin-top: 40px;
+  padding-left: 8px;
+}
+
 .menu {
   display: grid;
-  margin-top: 80px;
+  margin-top: 10px;
   padding: 8px;
   grid-template-columns: 80px 1fr auto 1fr;
   gap: 20px;
