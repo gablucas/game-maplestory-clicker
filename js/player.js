@@ -2,6 +2,7 @@ const player = {
   level: 1,
   xpCurrent : 0,
   atk: 1,
+  meso: 0,
 
   hp() {
     return Math.floor((this.level / 0.08) * 1);
@@ -65,4 +66,17 @@ function heal() {
 
     hud.atualizar();
   }
+}
+
+/** HEAL */
+function healhp() {
+  playerHP = player.hp();
+  calcPlayerHP = 0;
+  hud.atualizar();
+}
+
+function healmp() {
+  playerMP = player.mp();
+  calcPlayerMP = 0;
+  hud.atualizar();
 }

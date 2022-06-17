@@ -1,3 +1,3 @@
 function inventory() {
-  document.querySelector('#inventory').classList.toggle('ativo');
+  document.querySelector('#inventory').classList.toggle('desativado');
 }

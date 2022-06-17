@@ -29,8 +29,8 @@
     <div>
       <ul id="atalhos">
         <li><img src="img/skills/heal.png" alt="" width="44px" height="44px" onclick="heal()"></li>
-        <li></li>
-        <li></li>
+        <li><img src="img/itens/potions/hp2.png" onclick="healhp()" alt=""></li>
+        <li><img src="img/itens/potions/mp2.png" onclick="healmp()" alt=""></li>
         <li></li>
         <li></li>
         <li></li>
@@ -55,19 +55,23 @@
       <span class="barraxp js-barraxp"></span></span>
   </section>
 
-  <div id="inventory">
+  <!-- Inventario -->
+  <div id="inventory" class="desativado">
     <h1>Inventory</h1>
+    <img class="fechar-inventario" src="img/buttons/x.png" alt="" onclick="inventory()">
+
     <div class="container">
       <ul class="equip">
-        <li class="helmet">Helmet</li>
-        <li class="armor">Armor</li>
-        <li class="pants">Pants</li>
-        <li class="boots">Boots</li>
-        <li class="weapon">Weapon</li>
+        <li id="helmet_equip"><span>Helmet</span></li>
+        <li id="armor_equip"><span>Armor</span></li>
+        <li id="pants_equip"><span>Pants</span></li>
+        <li id="boots_equip"><span>Boots</span></li>
+        <li id="weapon_equip"><span>Weapon</span></li>
       </ul>
+
       <ul class="itens">
-        <li></li>
-        <li></li>
+        <li><img src="img/itens/potions/elixir5.png" alt=""></li>
+        <li><img src="img/itens/potions/hp4.png" alt=""></li>
         <li></li>
         <li></li>
         <li></li>
@@ -102,6 +106,11 @@
         <li></li>
         <li></li>
       </ul>
+
+      <div class="meso">
+        <span><img src="img/itens/meso/meso2.png" alt="">MESO</span>
+        <span>0</span>
+      </div>
     </div>
   </div>
 
