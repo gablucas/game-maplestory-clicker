@@ -1,0 +1,64 @@
+#inventory.ativo {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 350px;
+  height: 414px;
+  top: 100px;
+  left: 100px;
+  border-radius: 7px;
+}
+
+#inventory h1 {
+  grid-column: 1/-1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  justify-self: center;
+  text-align: center;
+  font: 600 .75rem/1 'Courier';
+  color: #C5C250;
+}
+
+#inventory .container {
+  margin: auto;
+  width: 300px;
+  height: 350px;
+  border-radius: 7px;
+  background: #FEFEFE;
+  padding: 12px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 12px;
+  column-gap: 20px;
+}
+
+
+
+#inventory .container .equip {
+  display: grid;
+  grid-template-rows: repeat(5, 44px);
+  grid-template-columns: 44px;
+  gap: 20px;
+
+  font: 600 .65rem/1 'Courier';
+  text-align: center;
+  color: #868688;
+}
+
+#inventory .container .equip li {
+  border-radius: 7px;
+  box-shadow: inset 0px 1px 1px rgba(204, 204, 204, 1);
+  background: rgba(204, 204, 204, 0.7);
+}
+
+#inventory .container .itens {
+  display: grid;
+  grid-template-columns: repeat(5, 44px);
+  grid-auto-rows: 44px;
+  gap: 4px;
+}
+
+#inventory .container .itens li {  
+  box-shadow: inset 0px 6px 8px #CCCCCC;
+
+}

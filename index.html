@@ -25,9 +25,17 @@
       <img class="display-seta js-display-seta-direita" src="img/buttons/seta_direita_lock.png" width="32px" alt="" onclick="">
     </div>
     
-    <!-- SKILLS -->
-    <div id="skills">
-      <img src="img/skills/heal.png" alt="" width="32px" onclick="heal()">
+    <!-- ATALHOS -->
+    <div>
+      <ul id="atalhos">
+        <li><img src="img/skills/heal.png" alt="" width="44px" height="44px" onclick="heal()"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
     </div>
 
     <!-- MENU -->
@@ -38,7 +46,7 @@
         <span class="titulo">MP.</span><span class="barramana js-barramp"></span>
       </div>
       <div class="menu-shop">
-        <button><img src="img/buttons/user.png" alt="" width="24px" height="24px"></button>
+        <button><img src="img/buttons/user.png" alt="" width="24px" height="24px" onclick="inventory()"></button>
         <button><img src="img/buttons/store.png" alt="" width="24px" height="24px"></button>
         <button><img src="img/buttons/gear.png" alt="" width="24px" height="24px"></button>
       </div>
@@ -47,9 +55,60 @@
       <span class="barraxp js-barraxp"></span></span>
   </section>
 
+  <div id="inventory">
+    <h1>Inventory</h1>
+    <div class="container">
+      <ul class="equip">
+        <li class="helmet">Helmet</li>
+        <li class="armor">Armor</li>
+        <li class="pants">Pants</li>
+        <li class="boots">Boots</li>
+        <li class="weapon">Weapon</li>
+      </ul>
+      <ul class="itens">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
   <script src="js/display.js"></script>
   <script src="js/player.js"></script>
   <script src="js/monsters.js"></script>
   <script src="js/battle.js"></script>
+  <script src="js/inventory.js"></script>
 </body>
 </html>

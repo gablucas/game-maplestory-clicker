@@ -1,0 +1,98 @@
+.game {
+  margin: 0 auto;
+  background-image: url('../img/mapa/stage1.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.display {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  background-size: 800px;
+}
+
+.display-seta {
+  align-self: center;
+  cursor: pointer;
+}
+
+.display-seta:first-child {
+  padding-left: 8px;
+}
+
+.display-seta:last-child {
+  padding-right: 8px;
+}
+
+.monstro {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  justify-items: center;
+  align-self: end;
+}
+
+.danoMonstro {
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
+
+.danoMonstro li {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(#e4310f, #eacc11 50%);
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  animation: animacao 1s normal;
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #00000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animacao {
+  from {opacity: 1; bottom: 0;}
+  to   {opacity: 0; bottom: 100px;}
+}
+
+.imgMonstro {
+  align-self: end;
+}
+
+.monsterHP {
+  margin-top: 4px;
+  display: inline-block;
+  background: linear-gradient(#ff487c, #d81c51);
+  width: 100px;
+  height: 10px;
+  position: relative;
+  border: 1px solid #000000;
+  border-radius: 3px;
+
+  position: relative;
+}
+
+.nomeMonstro {
+  margin-top: 8px;
+  padding: 2px 10px;
+  color: yellow;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: .875rem;
+  font-weight: 300;
+}
+
+@media(max-width: 720px) {
+
+  .game {
+    grid-template-rows: 1fr auto auto;
+  }
+
+}

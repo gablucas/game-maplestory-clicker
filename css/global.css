@@ -1,0 +1,27 @@
+body {
+  margin: 0 auto;
+  font-family: 'Inter';
+  max-width: 1920px;
+  user-select: none;
+
+  position: relative;
+}
+
+h1, h2, h3, p, ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+}

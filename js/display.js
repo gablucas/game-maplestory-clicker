@@ -59,10 +59,16 @@ function atalhos(event) {
   if(indexMonster > 0 && setaEsquerda.getAttribute('onclick').includes('voltarMonstro') && event.key === 'ArrowLeft') {
     voltarMonstro();
     console.log(indexMonster)
-    
+  }
+
   // Atalho para o próximo monstro
-  } else if(indexMonster < monstros.length && setaDireita.getAttribute('onclick').includes('proximoMonstro') && event.key === 'ArrowRight') {
+  if(indexMonster < monstros.length && setaDireita.getAttribute('onclick').includes('proximoMonstro') && event.key === 'ArrowRight') {
     proximoMonstro();
+  }
+
+  // Atalho para abrir o inventario
+  if(event.key === 'i') {
+    inventory();
   }
 }
 

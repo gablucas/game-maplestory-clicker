@@ -54,13 +54,13 @@ function heal() {
     playerMP -= 6;
     calcPlayerMP += hud.mpbar.clientWidth / player.mp() * 6;
 
-    if(player.hp() - playerHP <= 10) {
+    if(player.hp() - playerHP <= 15) {
       playerHP = player.hp();
       calcPlayerHP = 0;
       
     } else {
-      playerHP += 10;
-      calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * 10);
+      playerHP += 15;
+      calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * 15);
     }
 
     hud.atualizar();
