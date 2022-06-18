@@ -10,7 +10,7 @@ function battle() {
   // Ação quando o monstro morre
   if(monsterHP <= 0) {
 
-      player.earnXP() // Ganha XP
+      player.earnReward() // Ganha XP e GOLD
       monsterReborn();  // Nasce um novo monstro
       
     // Ação quando sobe de level

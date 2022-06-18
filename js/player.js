@@ -12,8 +12,9 @@ const player = {
     return Math.floor((this.level / 0.15) * 1);
   },
 
-  earnXP() {
+  earnReward() {
     this.xpCurrent += monstros[indexMonster].xp;
+    this.meso += monstros[indexMonster].meso;
   },
 
   xpNextLevel() {

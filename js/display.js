@@ -17,6 +17,7 @@ const hud = {
   hpbar : document.querySelector('.js-barrahp'),
   mpbar : document.querySelector('.js-barramp'),
   xpbar : document.querySelector('.js-barraxp'),
+  goldbar : document.querySelector('.js-barrameso'),
 
   atualizar() {
     this.levelbar.innerHTML = player.level;
@@ -29,6 +30,8 @@ const hud = {
     
     this.xpbar.innerHTML = player.xpCurrent +" / "+ player.xpNextLevel();
     this.xpbar.style.boxShadow = `inset ${Math.round(player.xpCurrent * this.xpbar.clientWidth / player.xpNextLevel())}px 0 yellow`;
+
+    this.goldbar.innerText = player.meso;
   },
 }
 
@@ -69,6 +72,24 @@ function atalhos(event) {
   // Atalho para abrir o inventario
   if(event.key === 'i') {
     inventory();
+  }
+
+  // Atalho atacar com espaço
+  if(event.key === ' ') {
+    battle();
+  }
+
+  // Atalho das hotkeys
+  if(event.key === '1') {
+    new Function('return ' + document.querySelector('#hotkeys li:first-child img').getAttribute('onclick'))();
+  } else if(event.key === '2') {
+    new Function('return ' + document.querySelector('#hotkeys li:nth-child(2) img').getAttribute('onclick'))();
+  } else if(event.key === '3') {
+    new Function('return ' + document.querySelector('#hotkeys li:nth-child(3) img').getAttribute('onclick'))();
+  } else if(event.key === '4') {
+    new Function('return ' + document.querySelector('#hotkeys li:nth-child(4) img').getAttribute('onclick'))();
+  } else if(event.key === '5') {
+    new Function('return ' + document.querySelector('#hotkeys li:nth-child(5) img').getAttribute('onclick'))();
   }
 }
 
