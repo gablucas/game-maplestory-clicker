@@ -21,7 +21,7 @@
 }
 
 #inventory h1 {
-  grid-column: 1/-1;
+  /* grid-column: 1/-1; */
   padding-top: 4px;
   padding-bottom: 4px;
   justify-self: center;

@@ -74,6 +74,11 @@ function atalhos(event) {
     inventory();
   }
 
+  // Atalho para abrir o shop
+  if(event.key === 's') {
+    shop();
+  }
+
   // Atalho atacar com espaço
   if(event.key === ' ') {
     battle();

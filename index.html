@@ -47,7 +47,7 @@
       </div>
       <div class="menu-shop">
         <button><img src="img/buttons/user.png" alt="" width="24px" height="24px" onclick="inventory()"></button>
-        <button><img src="img/buttons/store.png" alt="" width="24px" height="24px"></button>
+        <button><img src="img/buttons/store.png" alt="" width="24px" height="24px" onclick="shop()"></button>
         <button><img src="img/buttons/gear.png" alt="" width="24px" height="24px"></button>
       </div>
     </div>
@@ -70,8 +70,8 @@
       </ul>
 
       <ul class="itens">
-        <li><img src="img/itens/potions/elixir5.png" alt=""></li>
-        <li><img src="img/itens/potions/hp4.png" alt=""></li>
+        <li></li>
+        <li></li>
         <li></li>
         <li></li>
         <li></li>
@@ -114,10 +114,46 @@
     </div>
   </div>
 
+  <!-- Shop -->
+  <div id="shop" class="desativado">
+    <h1>Shop</h1>
+    <img class="fechar-shop" src="img/buttons/x.png" alt="" onclick="shop()">
+    <div class="container">
+      <ul class="menu-shop">
+        <li class="weapon"><h2>Weapons</h2></li>
+        <li class="defense"><h2>Defense</h2></li>
+        <li class="potion"><h2>Potion</h2></li>
+      </ul>
+
+      <ul class="potion-shop desativado">
+        <li><img src="img/itens/potions/hp1.png" alt=""></li>
+        <li><img src="img/itens/potions/mp1.png" alt=""></li>
+        <li><img src="img/itens/potions/hp2.png" alt=""></li>
+        <li><img src="img/itens/potions/mp2.png" alt=""></li>
+        <li><img src="img/itens/potions/hp3.png" alt=""></li>
+        <li><img src="img/itens/potions/mp3.png" alt=""></li>
+        <li><img src="img/itens/potions/hp4.png" alt=""></li>
+        <li><img src="img/itens/potions/mp4.png" alt=""></li>
+        <li><img src="img/itens/potions/hp5.png" alt=""></li>
+        <li><img src="img/itens/potions/mp5.png" alt=""></li>
+        <li><img src="img/itens/potions/hp6.png" alt=""></li>
+        <li><img src="img/itens/potions/mp6.png" alt=""></li>
+        <li><img src="img/itens/potions/hp7.png" alt=""></li>
+        <li><img src="img/itens/potions/mp7.png" alt=""></li>
+        <li><img src="img/itens/potions/hp8.png" alt=""></li>
+        <li><img src="img/itens/potions/mp8.png" alt=""></li>
+      </ul>
+
+    </div>
+  </div>
+
+
   <script src="js/display.js"></script>
   <script src="js/player.js"></script>
   <script src="js/monsters.js"></script>
   <script src="js/battle.js"></script>
   <script src="js/inventory.js"></script>
+  <script src="js/itens.js"></script>
+  <script src="js/shop.js"></script>
 </body>
 </html>
