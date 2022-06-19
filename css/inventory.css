@@ -133,3 +133,11 @@
   box-shadow: inset 1px 0px #666666, inset 0px 1px #666666;
   background: #FFFFFF;
 }
+
+@media(max-width: 720px) {
+  #inventory {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

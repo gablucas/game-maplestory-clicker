@@ -75,7 +75,13 @@ box-shadow: inset 0px 6px 8px #CCCCCC,
               inset 1px 1px #888888;
 }
 
-
+@media(max-width: 720px) {
+    #shop {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 
 
 

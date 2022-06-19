@@ -48,7 +48,7 @@
   background: linear-gradient(#e4310f, #eacc11 50%);
   bottom: 0px;
   left: 50%;
-  transform: translateX(-50%);
+  z
   position: absolute;
   animation: animacao 1s normal;
 
