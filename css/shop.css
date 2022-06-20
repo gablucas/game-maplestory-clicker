@@ -1,85 +1,105 @@
 #shop.desativado {
-    display: none;
+  display: none;
 }
 
 #shop {
-position: absolute;
-top: 40px;
-left: 100px;
-padding: 4px 10px 20px 10px;
-border-radius: 7px;
-box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3);
-background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  padding: 4px 10px 20px 10px;
+  border-radius: 7px;
+  box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #shop img {
-    width: 32px;
-    margin: auto;
-    z-index: 2;
-  }
+  width: 32px;
+  margin: auto;
+  z-index: 2;
+}
 
 #shop h1 {
-grid-column: 1/-1;
-padding-top: 4px;
-padding-bottom: 4px;
-justify-self: center;
-text-align: center;
-font: 600 .75rem/1 'Courier';
-color: #F2DA3A;
+  grid-column: 1/-1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  justify-self: center;
+  text-align: center;
+  font: 600 .75rem/1 'Courier';
+  color: #F2DA3A;
 }
 
 /* Botão de fechar o inventario */
 #shop .fechar-shop {
-position: absolute;
-width: 12px;
-height: 12px;
-right: 10px;
-top: 6px;
-cursor: pointer;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 10px;
+  top: 6px;
+  cursor: pointer;
 }
 
 #shop .container {
-margin: auto;
+  margin: auto;
 
-border-radius: 7px;
-background: #EEEEEE;
-padding: 12px;
+  border-radius: 7px;
+  background: #EEEEEE;
+  padding: 12px;
 }
 
 #shop .menu-shop.desativado {
-display: none;
+  display: none;
 }
 
 #shop .menu-shop {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-row-gap: 12px;
-column-gap: 20px;
-text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 12px;
+  column-gap: 20px;
+  text-align: center;
 }
 
-.potion-shop.desativado {
+.item-shop.desativado {
     display: none;
 }
 
-.potion-shop {
-display: grid;
-grid-template-columns: repeat(6, 44px);
-grid-auto-rows: 44px;
-gap: 4px;
+.item-shop {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 44px);
+  gap: 4px;
+  padding-right: 10px;
+  height: 270px;
+  overflow-y: scroll;
 }
 
-.potion-shop li {
-display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
-box-shadow: inset 0px 6px 8px #CCCCCC, 
-              inset 1px 1px #888888;
+.item-shop li {
+  display: grid;
+  grid-template-columns: 44px 200px;
+}
+
+.item-shop div {
+  grid-row: span 2;
+  display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
+  box-shadow: inset 0px 6px 8px #CCCCCC;
+}
+
+.item-shop div + span {
+  border-bottom: 1px dotted #868583;
+}
+
+.item-shop li span {
+  align-self: center;
+  background: #CCCCCC;
+  padding-top: 4.60px;
+  padding-bottom: 4.60px;
+  padding-left: 4px;
+  font: 400 .7rem/1 'Inter';
 }
 
 @media(max-width: 720px) {
-    #shop {
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+  #shop {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     }
   }
 

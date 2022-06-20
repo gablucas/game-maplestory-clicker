@@ -108,12 +108,12 @@
   box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.3);
 }
 
-.menu-shop {
+.menu-hud {
   display: flex;
   gap: 12px;
 }
 
-.menu-shop > button {
+.menu-hud > button {
   display: inline-block;
   padding: 8px;
   box-shadow: 0px 3px 0px #0364A1;
@@ -135,12 +135,12 @@
     padding: 12px;
   }
 
-  .menu-shop {
+  .menu-hud {
     grid-row: 1;
     grid-column: 1 / -1;
   }
 
-  .menu-shop > span {
+  .menu-hud > span {
     padding: 12px;
   }
 }
