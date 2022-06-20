@@ -76,7 +76,7 @@ function atalhos(event) {
 
   // Atalho para abrir o shop
   if(event.key === 's') {
-    shop();
+    windowShop();
   }
 
   // Atalho atacar com espaço

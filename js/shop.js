@@ -1,14 +1,25 @@
+const shop = document.querySelector('#shop');
+const menushop = document.querySelector('.menu-shop');
+const itemshop = document.querySelector('.item-shop');
+const itensmenushop = document.querySelectorAll('.menu-shop li');
+
 /** ABRIR JANELA DO SHOP */
-function shop() {
-  document.querySelector('#shop').classList.toggle('desativado');
+function windowShop() {
+  shop.classList.toggle('desativado');
+
+  if(menushop.classList.contains('desativado')) {
+    menushop.classList.remove('desativado')
+    itemshop.classList.add('desativado')
+  }
 }
 
-/** ABRIR ABA DO ITENS SELECIONADO */
-function selectedItemShop(item) {
-  document.querySelector('.menu-shop').classList.add('desativado'); 
-  document.querySelector('.item-shop').classList.remove('desativado');
+/** ABRIR ABA DO ITENS SELECIONADO, ESSA FUNÇÃO É USADA NA AÇÃO ABAIXO*/
+function selectedItem(item) {
+  menushop.classList.add('desativado'); 
+  itemshop.classList.remove('desativado');
+
   item.forEach((item) => {
-    document.querySelector('.item-shop').innerHTML +=
+    itemshop.innerHTML +=
        `<li><div><img src=${item.img} alt=""></img></div>
        <span>${item.name}</span>
        <span>${item.price} mesos</span></li>`
@@ -16,21 +27,19 @@ function selectedItemShop(item) {
 }
 
 /** AÇÃO AO SELECIONAR O TIPO DE ITEM NO SHOP */
-const menushop = document.querySelectorAll('.menu-shop li');
-
 function selecionarMenu(event) {
   const menu = event.currentTarget.getAttribute('class');
 
   if(menu === 'weapon') {
-    selectedItemShop(weapons);
+    selectedItem(weapons);
   }else if(menu === 'defense') {
-    selectedItemShop(defenses);
+    selectedItem(defenses);
   }else if(menu === 'potion') {
-    selectedItemShop(potions);
+    selectedItem(potions);
   }
 }
 
-menushop.forEach((menu) => {
+itensmenushop.forEach((menu) => {
   menu.addEventListener('click', selecionarMenu)
 })
 
