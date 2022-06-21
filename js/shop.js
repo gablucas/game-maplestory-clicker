@@ -1,5 +1,8 @@
-// Variaveis do Menu Shop
+// Variaveis do Shop
 const shop = document.querySelector('#shop');
+const setaVoltar = document.querySelector('#shop .voltar-shop');
+
+// Variaveis do Menu Shop
 const menuShop = document.querySelector('.menu-shop');
 const menuShopOpcoes = document.querySelectorAll('.menu-shop li');
 
@@ -17,6 +20,13 @@ function windowShop() {
     itemShop.classList.add('desativado');
     exibirItens.innerHTML = "";
   }
+}
+
+function returnShop() {
+  setaVoltar.classList.remove('ativado')
+  menuShop.classList.remove('desativado');
+  itemShop.classList.add('desativado');
+  exibirItens.innerHTML = "";
 }
 
 /** INSERE OS ITENS DE ACORDO COM O TIPO SELECIONADO */
@@ -56,6 +66,8 @@ function selecionarMenu(event) {
     selectedItem(potions);
     descriptionItem(potions, 'Heal', 0);
   }
+
+  setaVoltar.classList.add('ativado');
 
   // Armazena todos os itens da opção selecionada pelo usuario
   const itensExibidos = document.querySelectorAll('.itens-shop-exibir li');
