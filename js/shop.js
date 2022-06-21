@@ -8,8 +8,9 @@ function windowShop() {
   shop.classList.toggle('desativado');
 
   if(menushop.classList.contains('desativado')) {
-    menushop.classList.remove('desativado')
-    itemshop.classList.add('desativado')
+    menushop.classList.remove('desativado');
+    itemshop.classList.add('desativado');
+    itemshop.innerHTML = "";
   }
 }
 

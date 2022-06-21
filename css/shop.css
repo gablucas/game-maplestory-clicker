@@ -46,17 +46,42 @@
   padding: 12px;
 }
 
-#shop .menu-shop.desativado {
+.menu-shop.desativado {
   display: none;
 }
 
-#shop .menu-shop {
+.menu-shop {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 12px;
-  column-gap: 20px;
+  column-gap: 10px;
   text-align: center;
 }
+
+.menu-shop div {
+  position: relative;
+  filter: grayscale(100%);
+}
+
+.menu-shop div:hover {
+  filter: none;
+}
+
+.menu-shop img {
+  width: 100px !important;
+  border-radius: 7px;
+}
+
+.menu-shop div h2 {
+  font-size: 1.45rem;
+  color: #FFFFFF;
+  text-shadow: -2px 0 darkslategrey, 0 2px darkslategrey, 2px 0 darkslategrey, 0 -2px darkslategrey;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 .item-shop.desativado {
     display: none;
