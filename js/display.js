@@ -70,12 +70,12 @@ function atalhos(event) {
   }
 
   // Atalho para abrir o inventario
-  if(event.key === 'i') {
+  if(event.key === 'i' || event.key === 'I') {
     inventory();
   }
 
   // Atalho para abrir o shop
-  if(event.key === 's') {
+  if(event.key === 's' || event.key === 'S') {
     windowShop();
   }
 

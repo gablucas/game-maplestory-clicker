@@ -2,10 +2,10 @@ const weapons = [];
 const defenses = [];
 const potions = [];
 
-function weaponsFactory(name, level, atk, price, img) {
+function weaponsFactory(name, level, attribute, price, img) {
   this.name = name;
   this.level = level;
-  this.atk = atk;
+  this.attribute = attribute;
   this.price = price;
   this.img = img;
   weapons.push(this);
@@ -53,10 +53,10 @@ const wp39 = new weaponsFactory('AbsoLab Broad Saber', 1, 1, 100, 'img/itens/wea
 const wp40 = new weaponsFactory('Fafnir Penitent Tears', 1, 1, 100, 'img/itens/weapons/fafnirpenitenttears.png');
 const wp41 = new weaponsFactory('Sealed Genesis', 1, 1, 100, 'img/itens/weapons/sealedgenesis.png');
 
-function defensesFactory(name, level, def, price, type, img) {
+function defensesFactory(name, level, attribute, price, type, img) {
   this.name = name;
   this.level = level;
-  this.def = def;
+  this.attribute = attribute;
   this.price = price;
   this.type = type;
   this.img = img;
@@ -230,10 +230,10 @@ const dp26 = new defensesFactory('Black Knucklevest Pants', 1, 1, 1, 'pants', 'i
 const dp27 = new defensesFactory('Dark Brown Stealer Pants', 1, 1, 1, 'pants', 'img/itens/defenses/darkbrownstealerpants.png');
 
 
-function potionsFactory(name, level, restore, price, img) {
+function potionsFactory(name, level, attribute, price, img) {
   this.name = name;
   this.level = level;
-  this.restore = restore;
+  this.attribute = attribute;
   this.price = price;
   this.img = img;
   potions.push(this);

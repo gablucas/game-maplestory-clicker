@@ -82,12 +82,16 @@
   transform: translate(-50%, -50%);
 }
 
-
 .item-shop.desativado {
     display: none;
 }
 
 .item-shop {
+  display: grid;
+  gap: 4px;
+}
+
+.itens-shop-exibir {
   display: grid;
   grid-template-rows: repeat(auto-fill, 44px);
   gap: 4px;
@@ -96,22 +100,22 @@
   overflow-y: scroll;
 }
 
-.item-shop li {
+.itens-shop-exibir li {
   display: grid;
   grid-template-columns: 44px 200px;
 }
 
-.item-shop div {
+.itens-shop-exibir div {
   grid-row: span 2;
   display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
   box-shadow: inset 0px 6px 8px #CCCCCC;
 }
 
-.item-shop div + span {
+.itens-shop-exibir div + span {
   border-bottom: 1px dotted #868583;
 }
 
-.item-shop li span {
+.itens-shop-exibir li span {
   align-self: center;
   background: #CCCCCC;
   padding-top: 4.60px;
@@ -119,6 +123,29 @@
   padding-left: 4px;
   font: 400 .7rem/1 'Inter';
 }
+
+.item-shop-descricao {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  padding: 4px 0px 4px 10px;
+  border-radius: 0px 0px 7px 7px;
+  font-size: .8rem;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0px 1px 4px rgba(255, 255, 255, 0.5);
+}
+
+.item-shop-descricao img {
+  grid-area: 1 / 1 / 5 
+}
+
+.item-shop-descricao span:first-child {
+  font-weight: 600;
+  color: orange;
+}
+
+
 
 @media(max-width: 720px) {
   #shop {
