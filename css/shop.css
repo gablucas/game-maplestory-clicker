@@ -114,6 +114,10 @@
   overflow-y: scroll;
 }
 
+.itens-shop-exibir li.nofilter {
+  display: none;
+}
+
 .itens-shop-exibir li {
   display: grid;
   grid-template-columns: 44px 200px;

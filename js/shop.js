@@ -6,94 +6,89 @@ const setaVoltar = document.querySelector('#shop .voltar-shop');
 const menuShop = document.querySelector('.menu-shop');
 const menuShopOpcoes = document.querySelectorAll('.menu-shop li');
 const menuShopMesoPlayer = document.querySelector('#shop .meso');
+let menuSelected;
 
 // Variaveis dos itens do Menu Shop
 const itemShop = document.querySelector('.item-shop');
-const exibirItens = document.querySelector('.itens-shop-exibir')
-const descricaoItens = document.querySelector('.item-shop-descricao')
+const descriptionItem = document.querySelector('.item-shop-descricao')
+const selectedItens = document.querySelectorAll('.itens-shop-exibir li');
+
+
+// Funções usadas na funcao windowShop() e returnShop();
+function inicialShopScreen() {
+  setaVoltar.classList.add('desativado');
+  itemShop.classList.add('desativado');
+  menuShopMesoPlayer.classList.add('desativado');
+  menuShop.classList.remove('desativado');
+}
+
+function resetFilterItens() {
+  selectedItens.forEach((item) => {
+    if(!item.classList.contains('nofilter')) {
+      item.classList.add('nofilter')
+    }
+  })
+}
 
 /** ABRIR JANELA DO SHOP */
 function windowShop() {
   shop.classList.toggle('desativado');
 
   if(menuShop.classList.contains('desativado')) {
-    setaVoltar.classList.add('desativado');
-    menuShopMesoPlayer.classList.add('desativado');
-    itemShop.classList.add('desativado');
-    menuShop.classList.remove('desativado');
-    exibirItens.innerHTML = "";
-  }
+    inicialShopScreen();
+    }
+
+    resetFilterItens();
 }
 
 function returnShop() {
-  setaVoltar.classList.add('desativado')
-  itemShop.classList.add('desativado');
-  menuShopMesoPlayer.classList.add('desativado');
-  menuShop.classList.remove('desativado');
-  exibirItens.innerHTML = "";
+  inicialShopScreen();
+  resetFilterItens();
 }
 
-/** INSERE OS ITENS DE ACORDO COM O TIPO SELECIONADO */
-function selectedItem(tipoItem) {
-  menuShop.classList.add('desativado'); 
-  itemShop.classList.remove('desativado');
-
-  tipoItem.forEach((item, index) => {
-    exibirItens.innerHTML +=
-       `<li class="${index}"><div><img src=${item.img} alt=""></img></div>
-       <span>${item.name}</span>
-       <span>${item.price} mesos</span></li>`
-  })
-}
 
 /** ADICIONA A DESCRICAO DOS ITEM */
-function descriptionItem(tipoItem, atribute, indexItem) {
-  descricaoItens.innerHTML = `<span>${tipoItem[indexItem].name}</span>
-                              <span>${atribute}: ${tipoItem[indexItem].attribute[0]}</span>
-                              <span>Level: ${tipoItem[indexItem].level}</span>
-                              <span>Price: ${tipoItem[indexItem].price} mesos</span>
-                              <img src=${tipoItem[indexItem].img} alt="">
+function descriptionItem(item) {
+  descriptionItem.innerHTML = `<span>${item.name}</span>
+                              <span>${item.attribute[1]}: ${item.attribute[0]}</span>
+                              <span>Level: ${item.level}</span>
+                              <span>Price: ${item.price} mesos</span>
+                              <img src=${item.img} alt="">
                               <button onclick="buyItem()">COMPRAR</button>`
 }
 
 /** AÇÃO AO SELECIONAR O TIPO DE ITEM NO SHOP */
 function selecionarMenu(event) {
-  const menu = event.currentTarget.getAttribute('id');
-  
+  menuShop.classList.add('desativado'); 
+  itemShop.classList.remove('desativado');
+  menuSelected = event.currentTarget.getAttribute('id');
+  descriptionItem(itens[0]);
+
 
   // Verifica o tipo do item selecionado, exibe todos itens, e adiciona o primeiro item na descricao
-  itens.forEach((tipoItem) => {
-    if(tipoItem[0].id === menu) {
-      selectedItem(tipoItem)
-      descriptionItem(tipoItem, tipoItem[0].attribute[1], 0);
+  itens.forEach((tipoItem, index) => {
+    if(tipoItem.id === menuSelected) {
+      selectedItens[index].classList.remove('nofilter')
     }
   })
 
   // Ativar elementos
   setaVoltar.classList.remove('desativado');
   menuShopMesoPlayer.classList.remove('desativado');
-
-  // Armazena todos os itens da opção selecionada pelo usuario
-  const itensExibidos = document.querySelectorAll('.itens-shop-exibir li');
-
-  // Mostra a descricao do item quando clica sobre o mesmo
-  function descricaoItem(event) {
-    const arrayItem = event.currentTarget.getAttribute('class');
-    
-    itens.forEach((tipoItem) => {
-      if(tipoItem[0].id === menu) {
-        descriptionItem(tipoItem, tipoItem[0].attribute[1], arrayItem);
-      }
-    })
-  }
-
-  itensExibidos.forEach((item) => {
-    item.addEventListener('click', descricaoItem)
-  })
 }
 
 menuShopOpcoes.forEach((menu) => {
   menu.addEventListener('click', selecionarMenu)
+})
+
+
+function itemDescription(event) {
+  const arrayItem = event.currentTarget.getAttribute('id')
+  descriptionItem(itens[arrayItem])
+}
+
+selectedItens.forEach((item) => {
+  item.addEventListener('click', itemDescription)
 })
 
 /** AÇÃO AO COMPRAR O ITEM */
