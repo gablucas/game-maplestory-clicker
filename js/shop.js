@@ -5,6 +5,7 @@ const setaVoltar = document.querySelector('#shop .voltar-shop');
 // Variaveis do Menu Shop
 const menuShop = document.querySelector('.menu-shop');
 const menuShopOpcoes = document.querySelectorAll('.menu-shop li');
+const menuShopMesoPlayer = document.querySelector('#shop .meso');
 
 // Variaveis dos itens do Menu Shop
 const itemShop = document.querySelector('.item-shop');
@@ -16,16 +17,19 @@ function windowShop() {
   shop.classList.toggle('desativado');
 
   if(menuShop.classList.contains('desativado')) {
-    menuShop.classList.remove('desativado');
+    setaVoltar.classList.add('desativado');
+    menuShopMesoPlayer.classList.add('desativado');
     itemShop.classList.add('desativado');
+    menuShop.classList.remove('desativado');
     exibirItens.innerHTML = "";
   }
 }
 
 function returnShop() {
-  setaVoltar.classList.remove('ativado')
-  menuShop.classList.remove('desativado');
+  setaVoltar.classList.add('desativado')
   itemShop.classList.add('desativado');
+  menuShopMesoPlayer.classList.add('desativado');
+  menuShop.classList.remove('desativado');
   exibirItens.innerHTML = "";
 }
 
@@ -46,9 +50,10 @@ function selectedItem(tipoItem) {
 function descriptionItem(tipoItem, atribute, indexItem) {
   descricaoItens.innerHTML = `<span>${tipoItem[indexItem].name}</span>
                               <span>${atribute}: ${tipoItem[indexItem].attribute}</span>
-                              <span>Price: ${tipoItem[indexItem].price} mesos</span>
                               <span>Level: ${tipoItem[indexItem].level}</span>
-                              <img src=${tipoItem[indexItem].img} alt="">`
+                              <span>Price: ${tipoItem[indexItem].price} mesos</span>
+                              <img src=${tipoItem[indexItem].img} alt="">
+                              <button onclick="buyItem()">COMPRAR</button>`
 }
 
 /** AÇÃO AO SELECIONAR O TIPO DE ITEM NO SHOP */
@@ -67,7 +72,9 @@ function selecionarMenu(event) {
     descriptionItem(potions, 'Heal', 0);
   }
 
-  setaVoltar.classList.add('ativado');
+  // Ativar elementos
+  setaVoltar.classList.remove('desativado');
+  menuShopMesoPlayer.classList.remove('desativado');
 
   // Armazena todos os itens da opção selecionada pelo usuario
   const itensExibidos = document.querySelectorAll('.itens-shop-exibir li');
@@ -93,6 +100,11 @@ function selecionarMenu(event) {
 menuShopOpcoes.forEach((menu) => {
   menu.addEventListener('click', selecionarMenu)
 })
+
+/** AÇÃO AO COMPRAR O ITEM */
+function buyItem() {
+  console.log('item comprado')
+}
 
 
 

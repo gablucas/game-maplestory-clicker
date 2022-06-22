@@ -25,3 +25,52 @@ img {
 button {
   border: none;
 }
+
+/* Indicador do dinheiro do player */
+.meso {
+  grid-column: -1/1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.meso span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px;
+
+  font: 600 .75rem/1 'Courier';
+  text-shadow: -1px 0 #666666, 0 1px #666666, 1px 0 #666666, 0 -1px #666666;
+  color: #FFFFFF;
+
+  border-radius: 7px;
+  border: 1px solid #666666;
+  
+  background: linear-gradient(#BBBBBB, #666666);
+}
+
+.meso span:first-child img {
+  width: 18px;
+  height: 18px;
+}
+
+.meso span:last-child {
+  width: 128px;
+  height: 14px;
+  padding: 4px;
+  font: 600 .8rem/1 'Inter';
+  text-align: end;
+  border-radius: 3px;
+  box-shadow: inset 1px 0px #666666, inset 0px 1px #666666;
+  background: #FFFFFF;
+}
+
+#shop .meso.desativado {
+  display: none;
+}
+
+#shop .meso {
+  margin-top: 4px;
+}

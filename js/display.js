@@ -17,7 +17,7 @@ const hud = {
   hpbar : document.querySelector('.js-barrahp'),
   mpbar : document.querySelector('.js-barramp'),
   xpbar : document.querySelector('.js-barraxp'),
-  goldbar : document.querySelector('.js-barrameso'),
+  goldbar : document.querySelectorAll('.js-barrameso'),
 
   atualizar() {
     this.levelbar.innerHTML = player.level;
@@ -31,7 +31,10 @@ const hud = {
     this.xpbar.innerHTML = player.xpCurrent +" / "+ player.xpNextLevel();
     this.xpbar.style.boxShadow = `inset ${Math.round(player.xpCurrent * this.xpbar.clientWidth / player.xpNextLevel())}px 0 yellow`;
 
-    this.goldbar.innerText = player.meso;
+    this.goldbar.forEach((goldbar) => {
+      goldbar.innerText = player.meso;
+    })
+
   },
 }
 

@@ -38,11 +38,11 @@
   cursor: pointer;
 }
 
-#shop .voltar-shop {
+#shop .voltar-shop.desativado {
   display: none;
 }
 
-#shop .voltar-shop.ativado {
+#shop .voltar-shop {
   display: initial;
   position: absolute;
   width: 12px;
@@ -156,7 +156,20 @@
 
 .item-shop-descricao span:first-child {
   font-weight: 600;
-  color: orange;
+  color: #FFA500;
+}
+
+.item-shop-descricao button {
+  grid-area: 5 / 2;
+  justify-self: start;
+  cursor: pointer;
+  margin-top: 4px;
+  padding: 2px 4px;
+  font-weight: 800;
+  font-size: .7rem;
+  color: #803506;
+  border-radius: 4px;
+  background: #FFA500;
 }
 
 @media(max-width: 720px) {
