@@ -28,7 +28,7 @@ button {
 
 /* Indicador do dinheiro do player */
 .meso {
-  grid-column: -1/1;
+  /* grid-column: -1/1; */
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px;
@@ -52,7 +52,7 @@ button {
 }
 
 .meso span:first-child img {
-  width: 18px;
+  width: 18px !important;
   height: 18px;
 }
 

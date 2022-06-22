@@ -2,12 +2,15 @@ const weapons = [];
 const defenses = [];
 const potions = [];
 
+const itens = [weapons, defenses, potions]
+
 function weaponsFactory(name, level, attribute, price, img) {
   this.name = name;
   this.level = level;
-  this.attribute = attribute;
+  this.attribute = [attribute, 'Atk'];
   this.price = price;
   this.img = img;
+  this.id = 'weapon';
   weapons.push(this);
 }
 
@@ -56,10 +59,11 @@ const wp41 = new weaponsFactory('Sealed Genesis', 1, 1, 100, 'img/itens/weapons/
 function defensesFactory(name, level, attribute, price, type, img) {
   this.name = name;
   this.level = level;
-  this.attribute = attribute;
+  this.attribute = [attribute, 'Def'];
   this.price = price;
   this.type = type;
   this.img = img;
+  this.id = 'defense';
   defenses.push(this);
 }
 
@@ -233,9 +237,10 @@ const dp27 = new defensesFactory('Dark Brown Stealer Pants', 1, 1, 1, 'pants', '
 function potionsFactory(name, level, attribute, price, img) {
   this.name = name;
   this.level = level;
-  this.attribute = attribute;
+  this.attribute = [attribute, 'Heal'];
   this.price = price;
   this.img = img;
+  this.id = 'potion';
   potions.push(this);
 }
 

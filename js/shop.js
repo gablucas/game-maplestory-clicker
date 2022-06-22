@@ -49,7 +49,7 @@ function selectedItem(tipoItem) {
 /** ADICIONA A DESCRICAO DOS ITEM */
 function descriptionItem(tipoItem, atribute, indexItem) {
   descricaoItens.innerHTML = `<span>${tipoItem[indexItem].name}</span>
-                              <span>${atribute}: ${tipoItem[indexItem].attribute}</span>
+                              <span>${atribute}: ${tipoItem[indexItem].attribute[0]}</span>
                               <span>Level: ${tipoItem[indexItem].level}</span>
                               <span>Price: ${tipoItem[indexItem].price} mesos</span>
                               <img src=${tipoItem[indexItem].img} alt="">
@@ -58,19 +58,16 @@ function descriptionItem(tipoItem, atribute, indexItem) {
 
 /** AÇÃO AO SELECIONAR O TIPO DE ITEM NO SHOP */
 function selecionarMenu(event) {
-  const menu = event.currentTarget.getAttribute('class');
+  const menu = event.currentTarget.getAttribute('id');
+  
 
   // Verifica o tipo do item selecionado, exibe todos itens, e adiciona o primeiro item na descricao
-  if(menu === 'weapon') {
-    selectedItem(weapons);
-    descriptionItem(weapons, 'Atk', 0);
-  }else if(menu === 'defense') {
-    selectedItem(defenses);
-    descriptionItem(defenses, 'Def', 0);
-  }else if(menu === 'potion') {
-    selectedItem(potions);
-    descriptionItem(potions, 'Heal', 0);
-  }
+  itens.forEach((tipoItem) => {
+    if(tipoItem[0].id === menu) {
+      selectedItem(tipoItem)
+      descriptionItem(tipoItem, tipoItem[0].attribute[1], 0);
+    }
+  })
 
   // Ativar elementos
   setaVoltar.classList.remove('desativado');
@@ -83,13 +80,11 @@ function selecionarMenu(event) {
   function descricaoItem(event) {
     const arrayItem = event.currentTarget.getAttribute('class');
     
-    if(menu === 'weapon') {
-      descriptionItem(weapons, 'Atk', arrayItem);
-    }else if(menu === 'defense') {
-      descriptionItem(defenses, 'Def', arrayItem);
-    }else if(menu === 'potion') {
-      descriptionItem(potions, 'Heal', arrayItem);
-    }
+    itens.forEach((tipoItem) => {
+      if(tipoItem[0].id === menu) {
+        descriptionItem(tipoItem, tipoItem[0].attribute[1], arrayItem);
+      }
+    })
   }
 
   itensExibidos.forEach((item) => {
@@ -103,7 +98,7 @@ menuShopOpcoes.forEach((menu) => {
 
 /** AÇÃO AO COMPRAR O ITEM */
 function buyItem() {
-  console.log('item comprado')
+  
 }
 
 

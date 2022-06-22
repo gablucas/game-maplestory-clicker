@@ -140,7 +140,7 @@
 
 .item-shop-descricao {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr 1fr;
   column-gap: 8px;
   padding: 4px 0px 4px 10px;
   border-radius: 0px 0px 7px 7px;
@@ -155,16 +155,16 @@
 }
 
 .item-shop-descricao span:first-child {
+  grid-area: 1 / 2 / 1 / -1;
   font-weight: 600;
   color: #FFA500;
 }
 
 .item-shop-descricao button {
-  grid-area: 5 / 2;
-  justify-self: start;
+  grid-area: 2 / 3 / 5;
+  place-self: center;
   cursor: pointer;
-  margin-top: 4px;
-  padding: 2px 4px;
+  padding: 4px;
   font-weight: 800;
   font-size: .7rem;
   color: #803506;
