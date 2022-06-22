@@ -80,14 +80,14 @@
 }
 
 /* Bau de itens do player */
-#inventory .itens {
+#inventory #bag {
   display: grid;
   grid-template-columns: repeat(5, 44px);
   grid-auto-rows: 44px;
   gap: 4px;
 }
 
-#inventory .itens li { 
+#inventory #bag li { 
   display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
   box-shadow: inset 0px 6px 8px #CCCCCC, 
               inset 1px 1px #888888;

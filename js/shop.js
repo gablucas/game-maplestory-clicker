@@ -10,8 +10,9 @@ let menuSelected;
 
 // Variaveis dos itens do Menu Shop
 const itemShop = document.querySelector('.item-shop');
-const descriptionItem = document.querySelector('.item-shop-descricao')
+const descriptionItemElement = document.querySelector('.item-shop-descricao')
 const selectedItens = document.querySelectorAll('.itens-shop-exibir li');
+let arrayItem = 0;
 
 
 // Funções usadas na funcao windowShop() e returnShop();
@@ -46,10 +47,9 @@ function returnShop() {
   resetFilterItens();
 }
 
-
 /** ADICIONA A DESCRICAO DOS ITEM */
 function descriptionItem(item) {
-  descriptionItem.innerHTML = `<span>${item.name}</span>
+  descriptionItemElement.innerHTML = `<span>${item.name}</span>
                               <span>${item.attribute[1]}: ${item.attribute[0]}</span>
                               <span>Level: ${item.level}</span>
                               <span>Price: ${item.price} mesos</span>
@@ -83,7 +83,7 @@ menuShopOpcoes.forEach((menu) => {
 
 
 function itemDescription(event) {
-  const arrayItem = event.currentTarget.getAttribute('id')
+  arrayItem = event.currentTarget.getAttribute('id')
   descriptionItem(itens[arrayItem])
 }
 
@@ -93,8 +93,12 @@ selectedItens.forEach((item) => {
 
 /** AÇÃO AO COMPRAR O ITEM */
 function buyItem() {
-  
+  const emptySlot = bagInventory.findIndex(slot => slot.innerHTML === "");
+
+  if(player.meso >= itens[arrayItem].price){
+    player.meso -= itens[arrayItem].price
+    hud.atualizar();
+    bagInventory[emptySlot].innerHTML = `<img class="${arrayItem}" src=${itens[arrayItem].img}>`;
+  }
 }
-
-
 

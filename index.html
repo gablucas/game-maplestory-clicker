@@ -58,7 +58,7 @@
   <!-- Inventario -->
   <div id="inventory" class="desativado">
     <h1>Inventory</h1>
-    <img class="fechar-inventario" src="img/buttons/x.png" alt="" onclick="inventory()">
+    <img class="fechar-inventario" src="img/buttons/x.png" alt="" onclick="windowInventory()">
 
     <div class="container">
       <ul class="equip">
@@ -69,7 +69,7 @@
         <li id="weapon_equip"><span>Weapon</span></li>
       </ul>
 
-      <ul class="itens">
+      <ul id="bag">
         <li></li>
         <li></li>
         <li></li>
@@ -153,5 +153,6 @@
   <script src="js/inventory.js"></script>
   <script src="js/itens.js"></script>
   <script src="js/shop.js"></script>
+  
 </body>
 </html>

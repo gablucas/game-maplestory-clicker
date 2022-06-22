@@ -74,7 +74,7 @@ function atalhos(event) {
 
   // Atalho para abrir o inventario
   if(event.key === 'i' || event.key === 'I') {
-    inventory();
+    windowInventory();
   }
 
   // Atalho para abrir o shop
