@@ -15,15 +15,15 @@ const selectedItens = document.querySelectorAll('.itens-shop-exibir li');
 let arrayItem = 0;
 
 
-// Funções usadas na funcao windowShop() e returnShop();
+/** FUNÇÕES USADAS DENTRO DE OUTRAS FUNÇÕES */
+
+// Exibe a tela inicial do shop e reseta o filtro de itens - Usada nas funções windowShop() e returnShop();
 function inicialShopScreen() {
   setaVoltar.classList.add('desativado');
   itemShop.classList.add('desativado');
   menuShopMesoPlayer.classList.add('desativado');
   menuShop.classList.remove('desativado');
-}
 
-function resetFilterItens() {
   selectedItens.forEach((item) => {
     if(!item.classList.contains('nofilter')) {
       item.classList.add('nofilter')
@@ -31,23 +31,18 @@ function resetFilterItens() {
   })
 }
 
-/** ABRIR JANELA DO SHOP */
-function windowShop() {
-  shop.classList.toggle('desativado');
-
-  if(menuShop.classList.contains('desativado')) {
-    inicialShopScreen();
-    }
-
-    resetFilterItens();
+// Mostra o item selecionado - Usado na função itemDescription()
+function displaySelectedItem(action) {
+  if(action === "remove") {
+    selectedItens[arrayItem].children[1].classList.remove('selected');
+    selectedItens[arrayItem].children[2].classList.remove('selected');
+  } else if(action === "add") {
+    selectedItens[arrayItem].children[1].classList.add('selected');
+    selectedItens[arrayItem].children[2].classList.add('selected');
+  }
 }
 
-function returnShop() {
-  inicialShopScreen();
-  resetFilterItens();
-}
-
-/** ADICIONA A DESCRICAO DOS ITEM */
+// Exibe a descrição do item - Usada na função itemDescription()
 function descriptionItem(item) {
   descriptionItemElement.innerHTML = `<span>${item.name}</span>
                               <span>${item.attribute[1]}: ${item.attribute[0]}</span>
@@ -57,15 +52,32 @@ function descriptionItem(item) {
                               <button onclick="buyItem()">COMPRAR</button>`
 }
 
-/** AÇÃO AO SELECIONAR O TIPO DE ITEM NO SHOP */
-function selecionarMenu(event) {
+
+/** FUNÇÕES PRINCIPAIS */
+
+// Abrir a janela do shop
+function windowShop() {
+  shop.classList.toggle('desativado');
+
+  if(menuShop.classList.contains('desativado')) {
+    inicialShopScreen();
+    }
+}
+
+// Voltar para a janela inicial do shop 
+function returnShop() {
+  inicialShopScreen();
+}
+
+// Ação ao selecionar o tipo de item no shop
+function selectMenu(event) {
   menuShop.classList.add('desativado'); 
   itemShop.classList.remove('desativado');
   menuSelected = event.currentTarget.getAttribute('id');
   descriptionItem(itens[0]);
 
 
-  // Verifica o tipo do item selecionado, exibe todos itens, e adiciona o primeiro item na descricao
+  // Exibe os itens de acordo com o tipo de item selecionado 
   itens.forEach((tipoItem, index) => {
     if(tipoItem.id === menuSelected) {
       selectedItens[index].classList.remove('nofilter')
@@ -78,20 +90,24 @@ function selecionarMenu(event) {
 }
 
 menuShopOpcoes.forEach((menu) => {
-  menu.addEventListener('click', selecionarMenu)
+  menu.addEventListener('click', selectMenu)
 })
 
 
+// Mostra a descrição dos item quando selecionado
 function itemDescription(event) {
+  displaySelectedItem("remove")
+
   arrayItem = event.currentTarget.getAttribute('id')
   descriptionItem(itens[arrayItem])
+  displaySelectedItem("add")
 }
 
 selectedItens.forEach((item) => {
   item.addEventListener('click', itemDescription)
 })
 
-/** AÇÃO AO COMPRAR O ITEM */
+// Comprar item
 function buyItem() {
   const emptySlot = bagInventory.findIndex(slot => slot.innerHTML === "");
 

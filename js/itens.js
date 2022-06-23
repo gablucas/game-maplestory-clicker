@@ -267,9 +267,9 @@ const exibirItens = document.querySelector('.itens-shop-exibir')
 
 itens.forEach((item, index) => {
   exibirItens.innerHTML +=
-     `<li id="${index}" class="nofilter"><div><img src=${item.img} alt=""></img></div>
-     <span>${item.name}</span>
-     <span>${item.price} mesos</span></li>`
+     `<li id="${index}" class="nofilter"><div class="img-item"><img src=${item.img} alt=""></img></div>
+     <span class="item-info">${item.name}</span>
+     <span class="item-info">${item.price} mesos</span></li>`
 })
 
 

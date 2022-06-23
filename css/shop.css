@@ -121,25 +121,30 @@
 .itens-shop-exibir li {
   display: grid;
   grid-template-columns: 44px 200px;
+  grid-row: 1fr 1fr;
 }
 
-.itens-shop-exibir div {
+.itens-shop-exibir li .img-item {
   grid-row: span 2;
   display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
   box-shadow: inset 0px 6px 8px #CCCCCC;
 }
 
-.itens-shop-exibir div + span {
-  border-bottom: 1px dotted #868583;
+.itens-shop-exibir li .item-info {
+  display: flex;
+  align-items: center;
+  background: #CCCCCC;
+  font: 400 .7rem/1 'Inter';
 }
 
-.itens-shop-exibir li span {
-  align-self: center;
-  background: #CCCCCC;
-  padding-top: 4.60px;
-  padding-bottom: 4.60px;
-  padding-left: 4px;
-  font: 400 .7rem/1 'Inter';
+.itens-shop-exibir li .item-info + .item-info {
+  border-top: 1px solid black;
+}
+
+
+.itens-shop-exibir li .item-info.selected {
+  background-color: orange;
+  font-weight: 600;
 }
 
 .item-shop-descricao {
