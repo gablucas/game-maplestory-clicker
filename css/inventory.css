@@ -66,18 +66,48 @@
   width: 44px;
   height: 44px;
   border-radius: 4px;
-  color: #e7e7e7;
   box-shadow: inset 2px 2px 2px #888888;
-  background: linear-gradient(#aaaaaa, #d6d6d6);
   display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
   position: relative;
+  background: linear-gradient(#aaaaaa, #d6d6d6);;
 }
 
-#inventory .equip li > span {
+#helmet-equip:before,
+#armor-equip:before,
+#pants-equip:before,
+#boots-equip:before,
+#weapon-equip:before {
+  content: "";
   position: absolute;
-  top: 2px;
-  left: 5px;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  filter: grayscale(100%);
+  opacity: 0.2;
 }
+
+#helmet-equip:before {
+  background: url('/img/itens/defenses/arcaneumbraknighthat.png') no-repeat center/32px;
+}
+
+#armor-equip:before {
+  background: url('/img/itens/defenses/arcaneumbraknightsuit.png') no-repeat center/32px;
+}
+
+#pants-equip:before {
+  background: url('/img/itens/defenses/blackneopants.png') no-repeat center/32px;
+}
+
+#boots-equip:before {
+  background: url('/img/itens/defenses/arcaneumbraknightshoes.png') no-repeat center/32px;
+}
+
+#weapon-equip:before {
+  background: url('/img/itens/weapons/arcaneumbra.png') no-repeat center/32px;
+}
+
+
+
+
 
 /* Bau de itens do player */
 #inventory #bag {

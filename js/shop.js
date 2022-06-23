@@ -109,8 +109,6 @@ selectedItens.forEach((item) => {
 
 // Comprar item
 function buyItem() {
-  const emptySlot = bagInventory.findIndex(slot => slot.innerHTML === "");
-
   if(player.meso >= itens[arrayItem].price){
     player.meso -= itens[arrayItem].price
     hud.atualizar();
