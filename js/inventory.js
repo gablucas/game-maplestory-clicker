@@ -13,14 +13,11 @@ function teste(teste, teste2) {
 
 // Equipar item
 function equipItem(event) {
-  const itemID = event.currentTarget.firstElementChild.getAttribute('class');
+  // const itemID = event.currentTarget.firstElementChild.getAttribute('class');
   let selectedItem = event.currentTarget.firstElementChild;
-  teste(itens[itemID].id, selectedItem)
+  // teste(itens[itemID].id, selectedItem)
 
-
-
-
-  // equipInventory[0].appendChild(selectedItem)
+  equipInventory[0].appendChild(selectedItem)
 }
 
 bagInventory.forEach((item) => {
