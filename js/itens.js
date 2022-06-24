@@ -262,8 +262,9 @@ const hp8 = new potionsFactory('Forged By Gods HP', 10, 40, 10, 'HP', 'img/itens
 const mp8 = new potionsFactory('Forged By Gods MP', 10, 40, 10, 'MP', 'img/itens/potions/mp8.png');
 
 
-const itens = weapons.concat(defenses, potions)
-const exibirItens = document.querySelector('.itens-shop-exibir')
+const itens = weapons.concat(defenses, potions);
+const exibirItens = document.querySelector('.item-shop-exibir');
+
 
 itens.forEach((item, index) => {
   exibirItens.innerHTML +=
@@ -271,6 +272,7 @@ itens.forEach((item, index) => {
      <span class="item-info">${item.name}</span>
      <span class="item-info">${item.price} mesos</span></li>`
 })
+
 
 
 

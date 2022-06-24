@@ -11,7 +11,10 @@ let menuSelected;
 // Variaveis dos itens do Menu Shop
 const itemShop = document.querySelector('.item-shop');
 const descriptionItemElement = document.querySelector('.item-shop-descricao')
-const selectedItens = document.querySelectorAll('.itens-shop-exibir li');
+const selectedItens = document.querySelectorAll('.item-shop-exibir li');
+const filterItens = document.querySelector('.item-shop-filter');
+const filterTab = new Set(itens.map(arrayItens => arrayItens.id));
+
 let arrayItem = 0;
 
 
@@ -76,13 +79,51 @@ function selectMenu(event) {
   menuSelected = event.currentTarget.getAttribute('id');
   descriptionItem(itens[0]);
 
+  // Adiciona as tabs de filtro de acordo com o tipo do item
+  filterItens.innerHTML = `<li class="all checked">All</li>`;
+  filterTab.forEach((type) => {
+    const arrayType = type.split('_');
+    if(arrayType[0] === menuSelected) {
+      filterItens.innerHTML += `<li class="${arrayType[1]}">${arrayType[1]}</li>`;
+    }
+  })
+
 
   // Exibe os itens de acordo com o tipo de item selecionado 
   itens.forEach((tipoItem, index) => {
-
     if(tipoItem.id.includes(menuSelected)) {
       selectedItens[index].classList.remove('nofilter')
     }
+  });
+
+  // Filtrar os itens
+  const listFilterItens = document.querySelectorAll('.item-shop-filter li')
+
+
+  function filter(event) {
+
+  selectedItens.forEach((item) => {
+    if(!item.classList.contains('nofilter')) {
+      item.classList.add('nofilter')
+    }
+  })
+
+    const classFilter = event.currentTarget.getAttribute('class');
+    event.currentTarget.classList.add('checked');
+
+
+    itens.forEach((tipoItem, index) => {
+      if(classFilter.includes(tipoItem.type)) {
+        selectedItens[index].classList.remove('nofilter')
+      } else if(classFilter.includes('all') && tipoItem.id.includes(menuSelected)) {
+        selectedItens[index].classList.remove('nofilter')
+      }
+    });
+    
+  }
+  
+  listFilterItens.forEach((tab) => {
+    tab.addEventListener('click', filter)
   })
 
   // Ativar elementos
@@ -94,6 +135,7 @@ menuShopOpcoes.forEach((menu) => {
   menu.addEventListener('click', selectMenu)
 })
 
+// Ação para filtrar os itens
 
 // Mostra a descrição dos item quando selecionado
 function itemDescription(event) {
@@ -117,4 +159,3 @@ function buyItem() {
     bagInventory[emptySlot()].innerHTML = `<img class="${arrayItem}" src=${itens[arrayItem].img}>`;
   }
 }
-

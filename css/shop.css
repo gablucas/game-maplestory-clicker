@@ -105,7 +105,40 @@
   gap: 4px;
 }
 
-.itens-shop-exibir {
+.item-shop-filter {
+  display: flex;
+  gap: 4px;
+  
+}
+
+.item-shop-filter li {
+  background: #999999;
+  padding: 4px;
+  font:600 .75rem/1 'Courier';
+  color: #FFFFFF;
+  text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
+  border: 1px solid #999999;
+  border-radius: 5px 5px 0px 0px;
+  position: relative;
+}
+
+.item-shop-filter li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+.item-shop-filter li.checked {
+  background: #FFA802;
+  border: 1px solid #EA9844;
+}
+
+
+.item-shop-exibir {
   display: grid;
   gap: 4px;
   padding-right: 10px;
@@ -113,23 +146,23 @@
   overflow-y: scroll;
 }
 
-.itens-shop-exibir li.nofilter {
+.item-shop-exibir li.nofilter {
   display: none;
 }
 
-.itens-shop-exibir li {
+.item-shop-exibir li {
   display: grid;
   height: 44px;
   grid-template-columns: 44px 200px;
 }
 
-.itens-shop-exibir li .img-item {
+.item-shop-exibir li .img-item {
   grid-row: 1 / 3;
   display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
   box-shadow: inset 0px 6px 8px #CCCCCC;
 }
 
-.itens-shop-exibir li .item-info {
+.item-shop-exibir li .item-info {
   display: flex;
   align-items: center;
   padding-left: 4px;
@@ -137,12 +170,12 @@
   font: 400 .7rem/1 'Inter';
 }
 
-.itens-shop-exibir li .item-info + .item-info {
+.item-shop-exibir li .item-info + .item-info {
   border-top: 1px solid #999999;
 }
 
 
-.itens-shop-exibir li .item-info.selected {
+.item-shop-exibir li .item-info.selected {
   background-color: orange;
   font-weight: 600;
 }
