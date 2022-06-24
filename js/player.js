@@ -2,6 +2,7 @@ const player = {
   level: 1,
   xpCurrent : 0,
   atk: 1,
+  def: 0,
   meso: 1000,
 
   hp() {
@@ -81,3 +82,24 @@ function healmp() {
   calcPlayerMP = 0;
   hud.atualizar();
 }
+
+function itensAttributes() {
+  player.atk = 1;
+  player.def = 0;
+
+  equipInventory.forEach((equip) => {
+    if(!!equip.firstElementChild) {
+      const equipType = equip.getAttribute('id').split('-')[0];
+      const idItemEquiped = equip.firstElementChild.getAttribute('class');
+      console.log(equipType)
+      
+      if(equipType === 'weapon'){
+        player.atk += itens[idItemEquiped].attribute[0];
+      }else if(equipType === 'defense'){
+        player.def += itens[idItemEquiped].attribute[0];
+      }
+    }
+  })
+}
+
+

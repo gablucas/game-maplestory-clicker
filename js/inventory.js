@@ -9,6 +9,7 @@ function emptySlot() {
   return Array.from(bagInventory).findIndex(slot => slot.innerHTML === "");
 }
 
+
 /** FUNÇÕES PRINCIPAIS */
 
 // Abre e fecha a janela do inventorio
@@ -20,12 +21,12 @@ function windowInventory() {
 function equipItem(event) {
 
   // Só vai executar a função caso o item selecionado não esteja vazio
-  if(event.currentTarget.innerHTML) {
+  if(!!event.currentTarget.innerHTML) {
     const indexItem = event.currentTarget.firstElementChild.getAttribute('class');
     let selectedItem = event.currentTarget.firstElementChild;
 
     equipInventory.forEach((equip) => {
-      const equipType = equip.getAttribute('id').split('-')[0];
+      const equipType = equip.getAttribute('id').split('-')[1];
 
       // Desequipa o item e equipa o item selecionado
       if((itens[indexItem].id.includes(equipType)) && !!equip.innerHTML) {
@@ -37,6 +38,8 @@ function equipItem(event) {
         equip.appendChild(selectedItem)
       }
     })
+    
+    itensAttributes();
   }
 }
 
@@ -47,8 +50,11 @@ bagInventory.forEach((item) => {
 
 // Desequipar iten
 function unequipItem(event) {
-  let selectedItem = event.currentTarget.firstElementChild;
-  bagInventory[emptySlot()].appendChild(selectedItem)
+  if(!!event.currentTarget.innerHTML) {
+    let selectedItem = event.currentTarget.firstElementChild;
+    bagInventory[emptySlot()].appendChild(selectedItem)
+    itensAttributes();
+  }
 }
 
 equipInventory.forEach((slot) => {

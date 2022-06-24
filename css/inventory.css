@@ -72,11 +72,11 @@
   background: linear-gradient(#aaaaaa, #d6d6d6);;
 }
 
-#helmet-equip:before,
-#armor-equip:before,
-#pants-equip:before,
-#boots-equip:before,
-#weapon-equip:before {
+#defense-helmet-equip:before,
+#defense-armor-equip:before,
+#defense-pants-equip:before,
+#defense-boots-equip:before,
+#weapon-weapon-equip:before {
   content: "";
   position: absolute;
   top: 0; left: 0;
@@ -85,23 +85,23 @@
   opacity: 0.2;
 }
 
-#helmet-equip:before {
+#defense-helmet-equip:before {
   background: url('../img/itens/defenses/arcaneumbraknighthat.png') no-repeat center/32px;
 }
 
-#armor-equip:before {
+#defense-armor-equip:before {
   background: url('../img/itens/defenses/arcaneumbraknightsuit.png') no-repeat center/32px;
 }
 
-#pants-equip:before {
+#defense-pants-equip:before {
   background: url('../img/itens/defenses/blackneopants.png') no-repeat center/32px;
 }
 
-#boots-equip:before {
+#defense-boots-equip:before {
   background: url('../img/itens/defenses/arcaneumbraknightshoes.png') no-repeat center/32px;
 }
 
-#weapon-equip:before {
+#weapon-weapon-equip:before {
   background: url('../img/itens/weapons/arcaneumbra.png') no-repeat center/32px;
 }
 

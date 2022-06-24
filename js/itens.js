@@ -14,10 +14,10 @@ function weaponsFactory(name, level, attribute, price, type, img) {
 }
 
 const wp1 = new weaponsFactory('Wooden Sword', 1, 1, 100, 'sword', 'img/itens/weapons/woodensword.png');
-const wp2 = new weaponsFactory('Two-Handed Sword', 1, 1, 100, 'sword', 'img/itens/weapons/twohandedsword.png');
-const wp3 = new weaponsFactory('Scimitar', 1, 1, 100, 'sword', 'img/itens/weapons/scimitar.png');
-const wp4 = new weaponsFactory('Lionheart', 1, 1, 100, 'sword', 'img/itens/weapons/lionheart.png');
-const wp5 = new weaponsFactory('Sparta', 1, 1, 100, 'sword', 'img/itens/weapons/sparta.png');
+const wp2 = new weaponsFactory('Two-Handed Sword', 1, 2, 100, 'sword', 'img/itens/weapons/twohandedsword.png');
+const wp3 = new weaponsFactory('Scimitar', 1, 3, 100, 'sword', 'img/itens/weapons/scimitar.png');
+const wp4 = new weaponsFactory('Lionheart', 1, 4, 100, 'sword', 'img/itens/weapons/lionheart.png');
+const wp5 = new weaponsFactory('Sparta', 1, 5, 100, 'sword', 'img/itens/weapons/sparta.png');
 const wp6 = new weaponsFactory('Broadsword', 1, 1, 100, 'sword', 'img/itens/weapons/broadsword.png');
 const wp7 = new weaponsFactory('Zard', 1, 1, 100, 'sword', 'img/itens/weapons/zard.png');
 const wp8 = new weaponsFactory('Berseker', 1, 1, 100, 'sword', 'img/itens/weapons/berseker.png');
