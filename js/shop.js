@@ -55,7 +55,7 @@ function descriptionItem(item) {
 
 /** FUNÇÕES PRINCIPAIS */
 
-// Abrir a janela do shop
+// Abre e fecha a janela do shop
 function windowShop() {
   shop.classList.toggle('desativado');
 
@@ -79,7 +79,8 @@ function selectMenu(event) {
 
   // Exibe os itens de acordo com o tipo de item selecionado 
   itens.forEach((tipoItem, index) => {
-    if(tipoItem.id === menuSelected) {
+
+    if(tipoItem.id.includes(menuSelected)) {
       selectedItens[index].classList.remove('nofilter')
     }
   })
@@ -109,10 +110,11 @@ selectedItens.forEach((item) => {
 
 // Comprar item
 function buyItem() {
+
   if(player.meso >= itens[arrayItem].price){
     player.meso -= itens[arrayItem].price
     hud.atualizar();
-    bagInventory[emptySlot].innerHTML = `<img class="${arrayItem}" src=${itens[arrayItem].img}>`;
+    bagInventory[emptySlot()].innerHTML = `<img class="${arrayItem}" src=${itens[arrayItem].img}>`;
   }
 }
 

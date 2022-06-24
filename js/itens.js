@@ -8,7 +8,7 @@ function weaponsFactory(name, level, attribute, price, type, img) {
   this.attribute = [attribute, 'Atk'];
   this.price = price;
   this.type = type;
-  this.id = 'weapon';
+  this.id = `weapon_${this.type}`;
   this.img = img;
   weapons.push(this);
 }
@@ -62,7 +62,7 @@ function defensesFactory(name, level, attribute, price, type, img) {
   this.price = price;
   this.type = type;
   this.img = img;
-  this.id = 'defense';
+  this.id = `defense_${this.type}`;
   defenses.push(this);
 }
 
@@ -183,28 +183,28 @@ const da58 = new defensesFactory('Warriors Armor', 1, 1, 1, 'armor', 'img/itens/
 const da59 = new defensesFactory('Kasumigiri Armor', 1, 1, 1, 'armor', 'img/itens/defenses/kasumigiriarmor.png');
 const da60 = new defensesFactory('Arcane Umbra Knight Suit', 1, 1, 1, 'armor', 'img/itens/defenses/arcaneumbraknightsuit.png');
 const da61 = new defensesFactory('Lake Monster Invincible Armor', 1, 1, 1, 'armor', 'img/itens/defenses/lakemonsterinvinciblearmor.png');
-const db1 = new defensesFactory('Black Shoes of Death', 1, 1, 1, 'armor', 'img/itens/defenses/blackshoesofdeath.png');
-const db2 = new defensesFactory('Royal Costume Shoes', 1, 1, 1, 'armor', 'img/itens/defenses/royalcostumeshoes.png');
-const db3 = new defensesFactory('Snow Storm Boots', 1, 1, 1, 'armor', 'img/itens/defenses/snowstormboots.png');
-const db4 = new defensesFactory('Shadow Sandals', 1, 1, 1, 'armor', 'img/itens/defenses/shadowsandals.png');
-const db5 = new defensesFactory('Steel Greaves', 1, 1, 1, 'armor', 'img/itens/defenses/steelgreaves.png');
-const db6 = new defensesFactory('Silver Chain Boots', 1, 1, 1, 'armor', 'img/itens/defenses/silverchainboots.png');
-const db7 = new defensesFactory('Gold Chain Boots', 1, 1, 1, 'armor', 'img/itens/defenses/goldchainboots.png');
-const db8 = new defensesFactory('Bronze Greaves', 1, 1, 1, 'armor', 'img/itens/defenses/bronzegreaves.png');
-const db9 = new defensesFactory('Dark War Boots', 1, 1, 1, 'armor', 'img/itens/defenses/darkwarboots.png');
-const db10 = new defensesFactory('Gold War Boots', 1, 1, 1, 'armor', 'img/itens/defenses/goldwarboots.png');
-const db11 = new defensesFactory('Timeless Moonsteead', 1, 1, 1, 'armor', 'img/itens/defenses/timelessmoonsteead.png');
-const db12 = new defensesFactory('Reverse Grabbe', 1, 1, 1, 'armor', 'img/itens/defenses/reversegrabbe.png');
-const db13 = new defensesFactory('Aran Combat Shoes', 1, 1, 1, 'armor', 'img/itens/defenses/arancombatshoes.png');
-const db14 = new defensesFactory('Brave Soldier Shoes', 1, 1, 1, 'armor', 'img/itens/defenses/bravesoldiershoes.png');
-const db15 = new defensesFactory('Musashi Shoes', 1, 1, 1, 'armor', 'img/itens/defenses/musashishoes.png');
-const db16 = new defensesFactory('Powerful Visitor Boots', 1, 1, 1, 'armor', 'img/itens/defenses/powerfulvisitorboots.png');
-const db17 = new defensesFactory('Wise Visitor Boots', 1, 1, 1, 'armor', 'img/itens/defenses/wisevisitorboots.png');
-const db18 = new defensesFactory('Dexterous Visitor Boots', 1, 1, 1, 'armor', 'img/itens/defenses/dexterousvisitorboots.png');
-const db19 = new defensesFactory('Lucky Visitor Boots', 1, 1, 1, 'armor', 'img/itens/defenses/luckyvisitorboots.png');
-const db20 = new defensesFactory('Arcane Umbra Knight Shoes', 1, 1, 1, 'armor', 'img/itens/defenses/arcaneumbraknightshoes.png');
-const db21 = new defensesFactory('Bosshunter Greaves', 1, 1, 1, 'armor', 'img/itens/defenses/bosshuntergreaves.png');
-const db22 = new defensesFactory('Cursed Huntershoes', 1, 1, 1, 'armor', 'img/itens/defenses/cursedhuntershoes.png');
+const db1 = new defensesFactory('Black Shoes of Death', 1, 1, 1, 'boots', 'img/itens/defenses/blackshoesofdeath.png');
+const db2 = new defensesFactory('Royal Costume Shoes', 1, 1, 1, 'boots', 'img/itens/defenses/royalcostumeshoes.png');
+const db3 = new defensesFactory('Snow Storm Boots', 1, 1, 1, 'boots', 'img/itens/defenses/snowstormboots.png');
+const db4 = new defensesFactory('Shadow Sandals', 1, 1, 1, 'boots', 'img/itens/defenses/shadowsandals.png');
+const db5 = new defensesFactory('Steel Greaves', 1, 1, 1, 'boots', 'img/itens/defenses/steelgreaves.png');
+const db6 = new defensesFactory('Silver Chain Boots', 1, 1, 1, 'boots', 'img/itens/defenses/silverchainboots.png');
+const db7 = new defensesFactory('Gold Chain Boots', 1, 1, 1, 'boots', 'img/itens/defenses/goldchainboots.png');
+const db8 = new defensesFactory('Bronze Greaves', 1, 1, 1, 'boots', 'img/itens/defenses/bronzegreaves.png');
+const db9 = new defensesFactory('Dark War Boots', 1, 1, 1, 'boots', 'img/itens/defenses/darkwarboots.png');
+const db10 = new defensesFactory('Gold War Boots', 1, 1, 1, 'boots', 'img/itens/defenses/goldwarboots.png');
+const db11 = new defensesFactory('Timeless Moonsteead', 1, 1, 1, 'boots', 'img/itens/defenses/timelessmoonsteead.png');
+const db12 = new defensesFactory('Reverse Grabbe', 1, 1, 1, 'boots', 'img/itens/defenses/reversegrabbe.png');
+const db13 = new defensesFactory('Aran Combat Shoes', 1, 1, 1, 'boots', 'img/itens/defenses/arancombatshoes.png');
+const db14 = new defensesFactory('Brave Soldier Shoes', 1, 1, 1, 'boots', 'img/itens/defenses/bravesoldiershoes.png');
+const db15 = new defensesFactory('Musashi Shoes', 1, 1, 1, 'boots', 'img/itens/defenses/musashishoes.png');
+const db16 = new defensesFactory('Powerful Visitor Boots', 1, 1, 1, 'boots', 'img/itens/defenses/powerfulvisitorboots.png');
+const db17 = new defensesFactory('Wise Visitor Boots', 1, 1, 1, 'boots', 'img/itens/defenses/wisevisitorboots.png');
+const db18 = new defensesFactory('Dexterous Visitor Boots', 1, 1, 1, 'boots', 'img/itens/defenses/dexterousvisitorboots.png');
+const db19 = new defensesFactory('Lucky Visitor Boots', 1, 1, 1, 'boots', 'img/itens/defenses/luckyvisitorboots.png');
+const db20 = new defensesFactory('Arcane Umbra Knight Shoes', 1, 1, 1, 'boots', 'img/itens/defenses/arcaneumbraknightshoes.png');
+const db21 = new defensesFactory('Bosshunter Greaves', 1, 1, 1, 'boots', 'img/itens/defenses/bosshuntergreaves.png');
+const db22 = new defensesFactory('Cursed Huntershoes', 1, 1, 1, 'boots', 'img/itens/defenses/cursedhuntershoes.png');
 const dp1 = new defensesFactory('Black Jangoon Pants', 1, 1, 1, 'pants', 'img/itens/defenses/blackjangoonpants.png');
 const dp2 = new defensesFactory('Black Suit Pants', 1, 1, 1, 'pants', 'img/itens/defenses/blacksuitpants.png');
 const dp3 = new defensesFactory('Grey Thick Sweat Pants', 1, 1, 1, 'pants', 'img/itens/defenses/greythicksweatpants.png');
@@ -240,7 +240,7 @@ function potionsFactory(name, level, attribute, price, type, img) {
   this.price = price;
   this.type = type;
   this.img = img;
-  this.id = 'potion';
+  this.id = `potion_${this.type}`;
   potions.push(this);
 }
 

@@ -1,34 +1,54 @@
 const inventory = document.querySelector('#inventory')
 const bagInventory = document.querySelectorAll('#bag li');
-const emptySlot = Array.from(bagInventory).findIndex(slot => slot.innerHTML === "");
 const equipInventory = document.querySelectorAll('.equip li')
 
+/** FUNÇÕES USADAS DENTRO DE OUTRAS FUNÇÕES */
+
+// Verifica os slots vazios na bag do player - Usada nas funções buyItem(), equipItem(), unequipItem();
+function emptySlot() {
+  return Array.from(bagInventory).findIndex(slot => slot.innerHTML === "");
+}
+
+/** FUNÇÕES PRINCIPAIS */
+
+// Abre e fecha a janela do inventorio
 function windowInventory() {
   inventory.classList.toggle('desativado');
 }
 
-function teste(teste, teste2) {
-  teste_equip.appendChild(teste2)
-}
-
 // Equipar item
 function equipItem(event) {
-  // const itemID = event.currentTarget.firstElementChild.getAttribute('class');
-  let selectedItem = event.currentTarget.firstElementChild;
-  // teste(itens[itemID].id, selectedItem)
 
-  equipInventory[0].appendChild(selectedItem)
+  // Só vai executar a função caso o item selecionado não esteja vazio
+  if(event.currentTarget.innerHTML) {
+    const indexItem = event.currentTarget.firstElementChild.getAttribute('class');
+    let selectedItem = event.currentTarget.firstElementChild;
+
+    equipInventory.forEach((equip) => {
+      const equipType = equip.getAttribute('id').split('-')[0];
+
+      // Desequipa o item e equipa o item selecionado
+      if((itens[indexItem].id.includes(equipType)) && !!equip.innerHTML) {
+        bagInventory[emptySlot()].appendChild(document.querySelector(("#"+equip.getAttribute('id'))).firstElementChild);
+        equip.appendChild(selectedItem)
+
+      // Equipa o item
+      } else if((itens[indexItem].id.includes(equipType))) {
+        equip.appendChild(selectedItem)
+      }
+    })
+  }
 }
 
 bagInventory.forEach((item) => {
   item.addEventListener('click', equipItem) 
 })
 
+
 // Desequipar iten
 function unequipItem(event) {
   let selectedItem = event.currentTarget.firstElementChild;
-  bagInventory[emptySlot].appendChild(selectedItem)
-  
+  bagInventory[emptySlot()].appendChild(selectedItem)
 }
 
 equipInventory.forEach((slot) => {
