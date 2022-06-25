@@ -3,7 +3,7 @@ const player = {
   xpCurrent : 0,
   atk: 1,
   def: 0,
-  meso: 1000,
+  meso: 0,
 
   hp() {
     return Math.floor((this.level / 0.08) * 1);

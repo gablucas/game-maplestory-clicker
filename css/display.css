@@ -33,34 +33,77 @@
   grid-template-rows: repeat(4, auto);
   justify-items: center;
   align-self: end;
-}
-
-.danoMonstro {
-  height: 200px;
-  width: 200px;
   position: relative;
 }
 
-.danoMonstro li {
+.damageMonster {
+  height: 200px;
+  width: 200px;
   position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.damageMonster li {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 3rem;
   font-weight: 900;
   background: linear-gradient(#e4310f, #eacc11 50%);
-  bottom: 0px;
-  left: 50%;
-  z
-  position: absolute;
-  animation: animacao 1s normal;
-
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #00000;
+  -webkit-text-stroke-color: #000000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: animation 1s normal;
 }
 
-@keyframes animacao {
-  from {opacity: 1; bottom: 0;}
-  to   {opacity: 0; bottom: 100px;}
+.rewardMonster {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rewardMonster li {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  animation: animation2 2s normal;
+}
+
+.rewardMonster div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rewardMonster span {
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+.rewardMonster img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes animation {
+  from {opacity: 1; bottom: 70px;}
+  to   {opacity: 0; bottom: 200px;}
+}
+
+@keyframes animation2 {
+  from {opacity: 1; bottom: 50px;}
+  to   {opacity: 0; bottom: 200px;}
 }
 
 .imgMonstro {

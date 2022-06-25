@@ -104,13 +104,27 @@ function atalhos(event) {
 window.addEventListener('keydown', atalhos)
 
 /** EXIBIR DANO MONSTRO */
-const danoMonstro = document.querySelector('.js-danoMonstro');
+const damageMonster = document.querySelector('.js-damageMonster');
 
 function mostrarDano() {
 
-  danoMonstro.innerHTML = `<li>${player.atk}</li>`;
-  danoMonstro.addEventListener('animationend', () => {
-  danoMonstro.innerText = ``;
+  damageMonster.innerHTML = `<li>${player.atk}</li>`;
+  damageMonster.addEventListener('animationend', () => {
+  damageMonster.innerHTML = ``;
+  })
+}
+
+
+/** EXIBIR RECOMPENSA DO MONSTRO */
+const rewardMonster = document.querySelector('.js-rewardMonster');
+
+function showReward() {
+  
+  rewardMonster.innerHTML = `<li><div><img src="../img/itens/meso/meso1.png">${monstros[indexMonster].meso}</div>
+                                  <div><span>XP</span> ${monstros[indexMonster].xp}</div></li>`;
+
+  rewardMonster.addEventListener('animationend', () => {
+  rewardMonster.innerText = ``;
   })
 }
 
