@@ -111,18 +111,18 @@
   
 }
 
-.item-shop-filter li {
+.item-shop-filter button {
   background: #999999;
   padding: 4px;
   font:600 .75rem/1 'Courier';
   color: #FFFFFF;
   text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
-  border: 1px solid #999999;
+  border: 1px sobuttond #999999;
   border-radius: 5px 5px 0px 0px;
   position: relative;
 }
 
-.item-shop-filter li::before {
+.item-shop-filter button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -132,7 +132,7 @@
   box-shadow: inset 0px 10px rgba(255, 255, 255, 0.3);
 }
 
-.item-shop-filter li.checked {
+.item-shop-filter button.checked {
   background: #FFA802;
   border: 1px solid #EA9844;
 }

@@ -6,19 +6,25 @@ const setaVoltar = document.querySelector('#shop .voltar-shop');
 const menuShop = document.querySelector('.menu-shop');
 const menuShopOpcoes = document.querySelectorAll('.menu-shop li');
 const menuShopMesoPlayer = document.querySelector('#shop .meso');
-let menuSelected;
 
 // Variaveis dos itens do Menu Shop
 const itemShop = document.querySelector('.item-shop');
-const descriptionItemElement = document.querySelector('.item-shop-descricao')
+const descriptionItemElement = document.querySelector('.item-shop-descricao');
 const selectedItens = document.querySelectorAll('.item-shop-exibir li');
-const filterItens = document.querySelector('.item-shop-filter');
-const filterTab = new Set(itens.map(arrayItens => arrayItens.id));
+const tabFilterContainer = document.querySelector('.item-shop-filter');
+const nameTabFilter = new Set(itens.map(arrayItens => arrayItens.id));
 
 let arrayItem = 0;
 
 
 /** FUNÇÕES USADAS DENTRO DE OUTRAS FUNÇÕES */
+
+// Reseta o filtro de itens - Usada nas funções inicialShopScreen()
+function resetFilter() {
+  selectedItens.forEach((item) => {
+      item.classList.add('nofilter');
+  })
+}
 
 // Exibe a tela inicial do shop e reseta o filtro de itens - Usada nas funções windowShop() e returnShop();
 function inicialShopScreen() {
@@ -27,11 +33,7 @@ function inicialShopScreen() {
   menuShopMesoPlayer.classList.add('desativado');
   menuShop.classList.remove('desativado');
 
-  selectedItens.forEach((item) => {
-    if(!item.classList.contains('nofilter')) {
-      item.classList.add('nofilter')
-    }
-  })
+  resetFilter();
 }
 
 // Mostra o item selecionado - Usado na função itemDescription()
@@ -46,7 +48,7 @@ function displaySelectedItem(action) {
 }
 
 // Exibe a descrição do item - Usada na função itemDescription()
-function descriptionItem(item) {
+function insertItemDescription(item) {
   descriptionItemElement.innerHTML = `<span>${item.name}</span>
                               <span>${item.attribute[1]}: ${item.attribute[0]}</span>
                               <span>Level: ${item.level}</span>
@@ -76,18 +78,18 @@ function returnShop() {
 function selectMenu(event) {
   menuShop.classList.add('desativado'); 
   itemShop.classList.remove('desativado');
-  menuSelected = event.currentTarget.getAttribute('id');
-  descriptionItem(itens[0]);
+  const menuSelected = event.currentTarget.getAttribute('id');
+  insertItemDescription(itens[0]);
+  
 
   // Adiciona as tabs de filtro de acordo com o tipo do item
-  filterItens.innerHTML = `<li class="all checked">All</li>`;
-  filterTab.forEach((type) => {
+  tabFilterContainer.innerHTML = `<button class="checked" onclick="filterItem('${menuSelected}')">All</button>`;
+  nameTabFilter.forEach((type) => {
     const arrayType = type.split('_');
     if(arrayType[0] === menuSelected) {
-      filterItens.innerHTML += `<li class="${arrayType[1]}">${arrayType[1]}</li>`;
+      tabFilterContainer.innerHTML += `<button onclick="filterItem('${arrayType[1]}')">${arrayType[1]}</button>`;
     }
   })
-
 
   // Exibe os itens de acordo com o tipo de item selecionado 
   itens.forEach((tipoItem, index) => {
@@ -95,36 +97,6 @@ function selectMenu(event) {
       selectedItens[index].classList.remove('nofilter')
     }
   });
-
-  // Filtrar os itens
-  const listFilterItens = document.querySelectorAll('.item-shop-filter li')
-
-
-  function filter(event) {
-
-  selectedItens.forEach((item) => {
-    if(!item.classList.contains('nofilter')) {
-      item.classList.add('nofilter')
-    }
-  })
-
-    const classFilter = event.currentTarget.getAttribute('class');
-    event.currentTarget.classList.add('checked');
-
-
-    itens.forEach((tipoItem, index) => {
-      if(classFilter.includes(tipoItem.type)) {
-        selectedItens[index].classList.remove('nofilter')
-      } else if(classFilter.includes('all') && tipoItem.id.includes(menuSelected)) {
-        selectedItens[index].classList.remove('nofilter')
-      }
-    });
-    
-  }
-  
-  listFilterItens.forEach((tab) => {
-    tab.addEventListener('click', filter)
-  })
 
   // Ativar elementos
   setaVoltar.classList.remove('desativado');
@@ -138,16 +110,16 @@ menuShopOpcoes.forEach((menu) => {
 // Ação para filtrar os itens
 
 // Mostra a descrição dos item quando selecionado
-function itemDescription(event) {
+function showItemDescription(event) {
   displaySelectedItem("remove")
 
   arrayItem = event.currentTarget.getAttribute('id')
-  descriptionItem(itens[arrayItem])
+  insertItemDescription(itens[arrayItem])
   displaySelectedItem("add")
 }
 
 selectedItens.forEach((item) => {
-  item.addEventListener('click', itemDescription)
+  item.addEventListener('click', showItemDescription)
 })
 
 // Comprar item
@@ -158,4 +130,30 @@ function buyItem() {
     hud.atualizar();
     bagInventory[emptySlot()].innerHTML = `<img class="${arrayItem}" src=${itens[arrayItem].img}>`;
   }
+}
+
+// Filtar o item
+function filterItem(type) {
+  const tabs =  document.querySelectorAll('.item-shop-filter button');
+
+  tabs.forEach((tab) => {
+    const tabOnclick = tab.getAttribute('onclick');
+    console.log(tabOnclick)
+
+    if(tabOnclick.includes(type)) {
+      tab.classList.add('checked');
+    } else {
+      tab.classList.remove('checked');
+    }
+  })
+
+  itens.forEach((item, index) => {
+    if(item.id.includes(type)) {
+      selectedItens[index].classList.remove('nofilter');
+    } else {
+      selectedItens[index].classList.add('nofilter');
+    }
+  })
+
+
 }
