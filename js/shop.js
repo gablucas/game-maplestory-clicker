@@ -128,7 +128,18 @@ function buyItem() {
   if(player.meso >= itens[arrayItem].price){
     player.meso -= itens[arrayItem].price
     hud.atualizar();
-    bagInventory[emptySlot()].innerHTML = `<img class="${arrayItem}" src=${itens[arrayItem].img}>`;
+
+    // Caso o item ja exista (itens de consumo) ele adiciona na quantidade
+    if(itens[arrayItem].id.includes('potion') && playerItens.length) {
+      playerItens.forEach((itensBag) => {
+        if(itensBag.id.includes('potion') && itensBag.name === itens[arrayItem].name) {
+          playerItens[playerItens.length - 1].teste += 1;
+        }
+      })
+    } else {
+      playerItens.push(itens[arrayItem])
+      bagInventory[emptySlot()].innerHTML = `<img src=${playerItens[playerItens.length - 1].img}>`;
+    }
   }
 }
 

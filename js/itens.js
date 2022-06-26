@@ -245,20 +245,20 @@ function potionsFactory(name, level, attribute, price, type, img) {
 }
 
 const hp1 = new potionsFactory('Begginner HP', 1, 10, 5, 'HP', 'img/itens/potions/hp1.png');
-const mp1 = new potionsFactory('Begginner MP', 1, 10, 5, 'MP', 'img/itens/potions/mp1.png');
 const hp2 = new potionsFactory('Adventurer HP', 10, 40, 10, 'HP', 'img/itens/potions/hp2.png');
-const mp2 = new potionsFactory('Adventurer MP', 10, 40, 10, 'MP', 'img/itens/potions/mp2.png');
 const hp3 = new potionsFactory('Brave HP', 10, 40, 10, 'HP', 'img/itens/potions/hp3.png');
-const mp3 = new potionsFactory('Brave MP', 10, 40, 10, 'MP', 'img/itens/potions/mp3.png');
 const hp4 = new potionsFactory('Hero HP', 10, 40, 10, 'HP', 'img/itens/potions/hp4.png');
-const mp4 = new potionsFactory('Hero MP', 10, 40, 10, 'MP', 'img/itens/potions/mp4.png');
 const hp5 = new potionsFactory('Transcendent HP', 10, 40, 10, 'HP', 'img/itens/potions/hp5.png');
-const mp5 = new potionsFactory('Transcendent MP', 10, 40, 10, 'MP', 'img/itens/potions/mp5.png');
 const hp6 = new potionsFactory('Godness HP', 10, 40, 10, 'HP', 'img/itens/potions/hp6.png');
-const mp6 = new potionsFactory('Godness MP', 10, 40, 10, 'MP', 'img/itens/potions/mp6.png');
 const hp7 = new potionsFactory('Overpower HP', 10, 40, 10, 'HP', 'img/itens/potions/hp7.png');
-const mp7 = new potionsFactory('Overpower MP', 10, 40, 10, 'MP', 'img/itens/potions/mp7.png');
 const hp8 = new potionsFactory('Forged By Gods HP', 10, 40, 10, 'HP', 'img/itens/potions/hp8.png');
+const mp1 = new potionsFactory('Begginner MP', 1, 10, 5, 'MP', 'img/itens/potions/mp1.png');
+const mp2 = new potionsFactory('Adventurer MP', 10, 40, 10, 'MP', 'img/itens/potions/mp2.png');
+const mp3 = new potionsFactory('Brave MP', 10, 40, 10, 'MP', 'img/itens/potions/mp3.png');
+const mp4 = new potionsFactory('Hero MP', 10, 40, 10, 'MP', 'img/itens/potions/mp4.png');
+const mp5 = new potionsFactory('Transcendent MP', 10, 40, 10, 'MP', 'img/itens/potions/mp5.png');
+const mp6 = new potionsFactory('Godness MP', 10, 40, 10, 'MP', 'img/itens/potions/mp6.png');
+const mp7 = new potionsFactory('Overpower MP', 10, 40, 10, 'MP', 'img/itens/potions/mp7.png');
 const mp8 = new potionsFactory('Forged By Gods MP', 10, 40, 10, 'MP', 'img/itens/potions/mp8.png');
 
 

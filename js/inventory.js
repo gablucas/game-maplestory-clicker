@@ -22,9 +22,9 @@ function equipItem(event) {
 
   // Só vai executar a função caso o item selecionado não esteja vazio
   if(!!event.currentTarget.innerHTML) {
-    const indexItem = event.currentTarget.firstElementChild.getAttribute('class');
     let selectedItem = event.currentTarget.firstElementChild;
-
+    const indexItem = selectedItem.getAttribute('class');
+    
     equipInventory.forEach((equip) => {
       const equipType = equip.getAttribute('id').split('-')[1];
 
