@@ -35,17 +35,6 @@ function inicialShopScreen() {
   resetFilter();
 }
 
-// Mostra o item selecionado - Usado na função itemDescription()
-function displaySelectedItem(action) {
-  if(action === "remove") {
-    selectedItens[arrayItem].children[1].classList.remove('selected');
-    selectedItens[arrayItem].children[2].classList.remove('selected');
-  } else if(action === "add") {
-    selectedItens[arrayItem].children[1].classList.add('selected');
-    selectedItens[arrayItem].children[2].classList.add('selected');
-  }
-}
-
 // Exibe a descrição do item - Usada na função itemDescription()
 function insertItemDescription(item) {
   descriptionItemElement.innerHTML = `<span>${item.name}</span>
@@ -110,11 +99,9 @@ menuShopOpcoes.forEach((menu) => {
 
 // Mostra a descrição dos item quando selecionado
 function showItemDescription(event) {
-  displaySelectedItem("remove")
-
   arrayItem = event.currentTarget.getAttribute('id')
   insertItemDescription(itens[arrayItem])
-  displaySelectedItem("add")
+
 }
 
 selectedItens.forEach((item) => {
@@ -129,15 +116,22 @@ function buyItem() {
     hud.atualizar();
 
     // Caso o item ja exista (itens de consumo) ele adiciona na quantidade
-    if(itens[arrayItem].id.includes('potion') && playerItens.some(item => item.name === itens[arrayItem].name)) {
-      playerItens.some((item) => {
-        if(item.name === itens[arrayItem].name) {
-          item.teste += 1;
-        }
-      })
+    if(itens[arrayItem].id.includes('potion') && playerItens.some(item => item.id === itens[arrayItem].id)) {
+      const itemAmount = playerItens.find(item => item.id === itens[arrayItem].id);
+      itemAmount.amount += 1; // Aumenta a quantidade do item potion
+      document.querySelector(`.${itemAmount.id} .amount-item`).innerHTML = itemAmount.amount; // Exibe graficamente a quantidade de itens
+      
+    // Caso não exista, adiciona a potion no inventario e exibe a quantidade do mesmo
+    }else if(itens[arrayItem].id.includes('potion')){
+      playerItens.push(itens[arrayItem])
+      const itemAmount = playerItens.find(item => item.id === itens[arrayItem].id);
+      itemAmount.amount = 1; // Pega o item potion e adiciona uma propriedade de quantidade
+      bagInventory[emptySlot()].innerHTML = `<div class="${playerItens[playerItens.length - 1].id}"><img src=${playerItens[playerItens.length - 1].img}><span class="amount-item">${playerItens[playerItens.length - 1].amount}</span></div>`;
+
+    // Caso seja outro tipo de item, adiciona no inventario
     } else {
       playerItens.push(itens[arrayItem])
-      bagInventory[emptySlot()].innerHTML = `<img class="${playerItens[playerItens.length - 1].id}" src=${playerItens[playerItens.length - 1].img}>`;
+      bagInventory[emptySlot()].innerHTML = `<div class="${playerItens[playerItens.length - 1].id}"><img src=${playerItens[playerItens.length - 1].img}></div>`;
     }
   }
 }
@@ -146,9 +140,9 @@ function buyItem() {
 function filterItem(type) {
   const tabs =  document.querySelectorAll('.item-shop-filter button');
 
+  // Exibe graficamente o filtro selecionado
   tabs.forEach((tab) => {
     const tabOnclick = tab.getAttribute('onclick');
-    console.log(tabOnclick)
 
     if(tabOnclick.includes(type)) {
       tab.classList.add('checked');
@@ -157,6 +151,7 @@ function filterItem(type) {
     }
   })
 
+  // Filtra os itens de acordo com o item selecionado
   itens.forEach((item, index) => {
     if(item.id.includes(type)) {
       selectedItens[index].classList.remove('nofilter');

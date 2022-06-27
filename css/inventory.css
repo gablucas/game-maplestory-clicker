@@ -5,8 +5,6 @@
 /* Ajusta o tamanho de todos os itens no inventario */
 #inventory img {
   width: 32px;
-  margin: auto;
-  z-index: 2;
 }
 
 /* Bordas pretas do inventario */
@@ -105,24 +103,36 @@
   background: url('../img/itens/weapons/arcaneumbra.png') no-repeat center/32px;
 }
 
-
-
-
-
 /* Bau de itens do player */
-#inventory #bag {
+#bag {
   display: grid;
   grid-template-columns: repeat(5, 44px);
   grid-auto-rows: 44px;
   gap: 4px;
 }
 
-#inventory #bag li { 
+#bag li { 
   display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
   box-shadow: inset 0px 6px 8px #CCCCCC, 
               inset 1px 1px #888888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#bag li div {
+  position: relative;
+}
+
+#bag li span {
+  position: absolute;
+  bottom: 0px;
+  text-align: end;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-shadow: -1px 0 #666666, 0 1px #666666, 1px 0 #666666, 0 -1px #666666;
+  color: #FFFFFF;
+}
 
 
 @media(max-width: 720px) {
