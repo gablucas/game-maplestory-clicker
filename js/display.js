@@ -1,5 +1,6 @@
 /** BACKGROUND */
 const background = document.querySelector('.js-game');
+const hotkeys = document.querySelectorAll('#hotkeys li')
 
 function switchMap() {
   if(indexMonster > 0 && (indexMonster) % 10 === 0) {
@@ -7,7 +8,6 @@ function switchMap() {
 
   } else if(indexMonster > 1 && (indexMonster - 1) % 10 === 0) {
     background.style.backgroundImage = `url('img/mapa/stage${(indexMonster - 1) / 10 + 1}.jpg')`;
-    
   }
 }
 
@@ -89,15 +89,15 @@ function atalhos(event) {
 
   // Atalho das hotkeys
   if(event.key === '1') {
-    new Function('return ' + document.querySelector('#hotkeys li:first-child img').getAttribute('onclick'))();
+    new Function('return ' + hotkeys[0].firstElementChild.firstElementChild.getAttribute('onclick'))();
   } else if(event.key === '2') {
-    new Function('return ' + document.querySelector('#hotkeys li:nth-child(2) img').getAttribute('onclick'))();
+    new Function('return ' + hotkeys[1].firstElementChild.firstElementChild.getAttribute('onclick'))();
   } else if(event.key === '3') {
-    new Function('return ' + document.querySelector('#hotkeys li:nth-child(3) img').getAttribute('onclick'))();
+    new Function('return ' + hotkeys[2].firstElementChild.firstElementChild.getAttribute('onclick'))();
   } else if(event.key === '4') {
-    new Function('return ' + document.querySelector('#hotkeys li:nth-child(4) img').getAttribute('onclick'))();
+    new Function('return ' + hotkeys[3].firstElementChild.firstElementChild.getAttribute('onclick'))();
   } else if(event.key === '5') {
-    new Function('return ' + document.querySelector('#hotkeys li:nth-child(5) img').getAttribute('onclick'))();
+    new Function('return ' + hotkeys[4].firstElementChild.firstElementChild.getAttribute('onclick'))();
   }
 }
 

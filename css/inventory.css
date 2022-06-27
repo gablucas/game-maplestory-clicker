@@ -67,7 +67,13 @@
   box-shadow: inset 2px 2px 2px #888888;
   display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
   position: relative;
-  background: linear-gradient(#aaaaaa, #d6d6d6);;
+  background: linear-gradient(#aaaaaa, #d6d6d6);
+}
+
+#inventory .equip li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #defense-helmet-equip:before,

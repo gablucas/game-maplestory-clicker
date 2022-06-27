@@ -31,12 +31,14 @@ function equipItem(event) {
       // Desequipa o item e equipa o item selecionado
       if((itemID.includes(equipType)) && !!equip.innerHTML) {
         equip.appendChild(selectedItem)
-        bagInventory[emptySlot()].appendChild(document.querySelector(("#"+equip.getAttribute('id'))).firstElementChild);
+        bagInventory[emptySlot()].appendChild(document.querySelector((`#${equip.getAttribute('id')}`)).firstElementChild);
         
-
       // Equipa o item
-      } else if((itemID.includes(equipType))) {
+      }else if((itemID.includes(equipType))) {
         equip.appendChild(selectedItem)
+
+      } else if(itemID.includes('potion')) {
+        hotkeys[0].appendChild(selectedItem)
       }
     })
     

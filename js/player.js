@@ -73,11 +73,18 @@ function heal() {
 }
 
 /** HEAL */
-function healhp() {
+function healhp(hpid) {
 
-  playerHP = player.hp();
-  calcPlayerHP = 0;
-  hud.atualizar();
+  if(playerItens.some(item => item.id === hpid)) {
+    let useItem = playerItens.find(item => item.id === hpid);
+
+    if(useItem.amount > 0) {
+      useItem.amount -= 1;
+      document.querySelector(`.${useItem.id} .amount-item`).innerText = useItem.amount;
+      playerHP += useItem.attribute[0];
+      hud.atualizar();
+    }
+  }
 }
 
 function healmp() {
