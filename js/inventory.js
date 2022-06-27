@@ -23,18 +23,19 @@ function equipItem(event) {
   // Só vai executar a função caso o item selecionado não esteja vazio
   if(!!event.currentTarget.innerHTML) {
     let selectedItem = event.currentTarget.firstElementChild;
-    const indexItem = selectedItem.getAttribute('class');
-    
+    const itemID = selectedItem.getAttribute('class');
+
     equipInventory.forEach((equip) => {
       const equipType = equip.getAttribute('id').split('-')[1];
-
+      
       // Desequipa o item e equipa o item selecionado
-      if((itens[indexItem].id.includes(equipType)) && !!equip.innerHTML) {
-        bagInventory[emptySlot()].appendChild(document.querySelector(("#"+equip.getAttribute('id'))).firstElementChild);
+      if((itemID.includes(equipType)) && !!equip.innerHTML) {
         equip.appendChild(selectedItem)
+        bagInventory[emptySlot()].appendChild(document.querySelector(("#"+equip.getAttribute('id'))).firstElementChild);
+        
 
       // Equipa o item
-      } else if((itens[indexItem].id.includes(equipType))) {
+      } else if((itemID.includes(equipType))) {
         equip.appendChild(selectedItem)
       }
     })

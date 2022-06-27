@@ -12,8 +12,7 @@ const itemShop = document.querySelector('.item-shop');
 const descriptionItemElement = document.querySelector('.item-shop-descricao');
 const selectedItens = document.querySelectorAll('.item-shop-exibir li');
 const tabFilterContainer = document.querySelector('.item-shop-filter');
-const nameTabFilter = new Set(itens.map(arrayItens => arrayItens.id));
-
+const nameTabFilter = new Set((itens.map(item => item.id.slice(0, -3))))
 let arrayItem = 0;
 
 
@@ -138,7 +137,7 @@ function buyItem() {
       })
     } else {
       playerItens.push(itens[arrayItem])
-      bagInventory[emptySlot()].innerHTML = `<img src=${playerItens[playerItens.length - 1].img}>`;
+      bagInventory[emptySlot()].innerHTML = `<img class="${playerItens[playerItens.length - 1].id}" src=${playerItens[playerItens.length - 1].img}>`;
     }
   }
 }

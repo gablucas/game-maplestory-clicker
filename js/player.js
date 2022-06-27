@@ -93,12 +93,12 @@ function itensAttributes() {
   equipInventory.forEach((equip) => {
     if(!!equip.firstElementChild) {
       const equipType = equip.getAttribute('id').split('-')[0];
-      const idItemEquiped = equip.firstElementChild.getAttribute('class');
-      
+      const itemEquiped = playerItens.find(item => item.id === equip.firstElementChild.getAttribute('class'));
+
       if(equipType === 'weapon'){
-        player.atk += itens[idItemEquiped].attribute[0];
+        player.atk = itemEquiped.attribute[0];
       }else if(equipType === 'defense'){
-        player.def += itens[idItemEquiped].attribute[0];
+        player.def = itemEquiped.attribute[0];
       }
     }
   })
