@@ -140,6 +140,7 @@
 
 .item-shop-exibir {
   display: grid;
+  grid-template-rows: repeat(auto-fill, 44px);
   gap: 4px;
   padding-right: 10px;
   height: 270px;

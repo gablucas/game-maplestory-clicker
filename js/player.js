@@ -3,7 +3,7 @@ const player = {
   xpCurrent : 0,
   atk: 1,
   def: 0,
-  meso: 1000,
+  meso: 0,
 
   hp() {
     return Math.floor((this.level / 0.08) * 1);
@@ -19,7 +19,7 @@ const player = {
   },
 
   xpNextLevel() {
-    return Math.floor((this.level / 0.3) * 2);
+    return Math.floor((this.level / 0.07) * 2);
   },
 
   levelUP() {
@@ -117,13 +117,13 @@ function itensAttributes() {
 
   equipInventory.forEach((equip) => {
     if(!!equip.firstElementChild) {
-      const equipType = equip.getAttribute('id').split('-')[0];
+      // const equipType = equip.getAttribute('id').split('-')[0];
       const itemEquiped = playerItens.find(item => item.id === equip.firstElementChild.getAttribute('class'));
 
-      if(equipType === 'weapon'){
+      if(itemEquiped.attribute[1] === 'Atk'){
         player.atk = itemEquiped.attribute[0];
-      }else if(equipType === 'defense'){
-        player.def = itemEquiped.attribute[0];
+      }else if(itemEquiped.attribute[1] === 'Def'){
+        player.def += itemEquiped.attribute[0];
       }
     }
   })

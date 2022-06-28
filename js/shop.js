@@ -80,8 +80,8 @@ function selectMenu(event) {
   })
 
   // Exibe os itens de acordo com o tipo de item selecionado 
-  itens.forEach((tipoItem, index) => {
-    if(tipoItem.id.includes(menuSelected)) {
+  itens.forEach((item, index) => {
+    if(item.id.includes(menuSelected) && player.level >= item.level) {
       selectedItens[index].classList.remove('nofilter')
     }
   });
