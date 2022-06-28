@@ -79,27 +79,29 @@ function healhp(hpid) {
   if(playerItens.some(item => item.id === hpid)) {
     let useItem = playerItens.find(item => item.id === hpid);
 
-    // Se o player tiver no minimo uma potion
-    if(useItem.amount > 0) {
-      useItem.amount -= 1;
-      document.querySelector(`.${useItem.id} .amount-item`).innerText = useItem.amount;
+    // Diminui uma potion e exibe o novo valor
+    useItem.amount -= 1;
+    document.querySelector(`.${useItem.id} .amount-item`).innerText = useItem.amount;
 
-      // Caso o poder de cura seje maior que o necessario pra encher a vida
-      if(player.hp() - playerHP <= useItem.attribute[0]){
-        playerHP = player.hp();
-        calcPlayerHP = 0; 
+    // Caso o poder de cura seje maior que o necessario pra encher a vida
+    if(player.hp() - playerHP <= useItem.attribute[0]){
+      playerHP = player.hp();
+      calcPlayerHP = 0; 
 
-      // Cura
-      } else {
-        playerHP += useItem.attribute[0];
-        calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * useItem.attribute[0]);
-      }
-      hud.atualizar();
+    // Cura
+    } else {
+      playerHP += useItem.attribute[0];
+      calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * useItem.attribute[0]);
+    }
 
-    } else if(useItem.amount === 0) {
+    // Caso seja acabe a potion, ele retira do inventario e das hotkeys
+    if(useItem.amount === 0) {
       const indexItem = playerItens.findIndex((item) => item.id === useItem.id)
       playerItens.splice(indexItem, 1)
+      Array.from(hotkeys).find(hotkey => hotkey.firstElementChild.getAttribute('class') === useItem.id).innerHTML = "";
     }
+
+    hud.atualizar();
   }
 }
 
