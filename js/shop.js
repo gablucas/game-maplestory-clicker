@@ -126,12 +126,12 @@ function buyItem() {
       playerItens.push(itens[arrayItem])
       const itemAmount = playerItens.find(item => item.id === itens[arrayItem].id);
       itemAmount.amount = 1; // Pega o item potion e adiciona uma propriedade de quantidade
-      bagInventory[emptySlot()].innerHTML = `<div class="${playerItens[playerItens.length - 1].id}"><img src=${playerItens[playerItens.length - 1].img} onclick="healhp('${playerItens[playerItens.length - 1].id}')"><span class="amount-item">${playerItens[playerItens.length - 1].amount}</span></div>`;
+      inventorySlot().innerHTML = `<div class="${playerItens[playerItens.length - 1].id}"><img class="healhp('${playerItens[playerItens.length - 1].id}')" src=${playerItens[playerItens.length - 1].img}><span class="amount-item">${playerItens[playerItens.length - 1].amount}</span></div>`;
 
     // Caso seja outro tipo de item, adiciona no inventario
     } else {
       playerItens.push(itens[arrayItem])
-      bagInventory[emptySlot()].innerHTML = `<div class="${playerItens[playerItens.length - 1].id}"><img src=${playerItens[playerItens.length - 1].img}></div>`;
+      inventorySlot().innerHTML = `<div class="${playerItens[playerItens.length - 1].id}"><img src=${playerItens[playerItens.length - 1].img}></div>`;
     }
   }
 }

@@ -2,6 +2,12 @@
 const background = document.querySelector('.js-game');
 const hotkeys = document.querySelectorAll('#hotkeys li')
 
+/** SLOT HOKEY */
+function hotkeySlot() {
+  return Array.from(hotkeys).find((key) => key.innerHTML === "");
+}
+
+/** TROCA DE MAPA A CADA 10 ESTAGIOS */
 function switchMap() {
   if(indexMonster > 0 && (indexMonster) % 10 === 0) {
     background.style.backgroundImage = `url('img/mapa/stage${indexMonster / 10}.jpg')`;
@@ -64,7 +70,6 @@ function atalhos(event) {
   // Atalho para voltar o monstro
   if(indexMonster > 0 && setaEsquerda.getAttribute('onclick').includes('voltarMonstro') && event.key === 'ArrowLeft') {
     voltarMonstro();
-    console.log(indexMonster)
   }
 
   // Atalho para o próximo monstro
@@ -87,17 +92,17 @@ function atalhos(event) {
     battle();
   }
 
-  // Atalho das hotkeys
+  // // Atalho das hotkeys
   if(event.key === '1') {
-    new Function('return ' + hotkeys[0].firstElementChild.firstElementChild.getAttribute('onclick'))();
+    new Function('return ' + hotkeys[0].firstElementChild.firstElementChild.getAttribute('class'))();
   } else if(event.key === '2') {
-    new Function('return ' + hotkeys[1].firstElementChild.firstElementChild.getAttribute('onclick'))();
+    new Function('return ' + hotkeys[1].firstElementChild.firstElementChild.getAttribute('class'))();
   } else if(event.key === '3') {
-    new Function('return ' + hotkeys[2].firstElementChild.firstElementChild.getAttribute('onclick'))();
+    new Function('return ' + hotkeys[2].firstElementChild.firstElementChild.getAttribute('class'))();
   } else if(event.key === '4') {
-    new Function('return ' + hotkeys[3].firstElementChild.firstElementChild.getAttribute('onclick'))();
+    new Function('return ' + hotkeys[3].firstElementChild.firstElementChild.getAttribute('class'))();
   } else if(event.key === '5') {
-    new Function('return ' + hotkeys[4].firstElementChild.firstElementChild.getAttribute('onclick'))();
+    new Function('return ' + hotkeys[4].firstElementChild.firstElementChild.getAttribute('class'))();
   }
 }
 

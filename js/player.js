@@ -75,14 +75,30 @@ function heal() {
 /** HEAL */
 function healhp(hpid) {
 
+  // Se o player possuir a potion
   if(playerItens.some(item => item.id === hpid)) {
     let useItem = playerItens.find(item => item.id === hpid);
 
+    // Se o player tiver no minimo uma potion
     if(useItem.amount > 0) {
       useItem.amount -= 1;
       document.querySelector(`.${useItem.id} .amount-item`).innerText = useItem.amount;
-      playerHP += useItem.attribute[0];
+
+      // Caso o poder de cura seje maior que o necessario pra encher a vida
+      if(player.hp() - playerHP <= useItem.attribute[0]){
+        playerHP = player.hp();
+        calcPlayerHP = 0; 
+
+      // Cura
+      } else {
+        playerHP += useItem.attribute[0];
+        calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * useItem.attribute[0]);
+      }
       hud.atualizar();
+
+    } else if(useItem.amount === 0) {
+      const indexItem = playerItens.findIndex((item) => item.id === useItem.id)
+      playerItens.splice(indexItem, 1)
     }
   }
 }

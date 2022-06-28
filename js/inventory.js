@@ -1,14 +1,13 @@
 const inventory = document.querySelector('#inventory')
 const bagInventory = document.querySelectorAll('#bag li');
-const equipInventory = document.querySelectorAll('.equip li')
+const equipInventory = document.querySelectorAll('.equip li');
 
 /** FUNÇÕES USADAS DENTRO DE OUTRAS FUNÇÕES */
 
 // Verifica os slots vazios na bag do player - Usada nas funções buyItem(), equipItem(), unequipItem();
-function emptySlot() {
-  return Array.from(bagInventory).findIndex(slot => slot.innerHTML === "");
+function inventorySlot() {
+  return Array.from(bagInventory).find(slot => slot.innerHTML === "");
 }
-
 
 /** FUNÇÕES PRINCIPAIS */
 
@@ -23,25 +22,23 @@ function equipItem(event) {
   // Só vai executar a função caso o item selecionado não esteja vazio
   if(!!event.currentTarget.innerHTML) {
     let selectedItem = event.currentTarget.firstElementChild;
-    const itemID = selectedItem.getAttribute('class');
+    const itemID = selectedItem.getAttribute('class').split('_')[1];
+    const equipSlot = Array.from(equipInventory).find(equip => equip.getAttribute('id').includes(itemID))
 
-    equipInventory.forEach((equip) => {
-      const equipType = equip.getAttribute('id').split('-')[1];
-      
-      // Desequipa o item e equipa o item selecionado
-      if((itemID.includes(equipType)) && !!equip.innerHTML) {
-        equip.appendChild(selectedItem)
-        bagInventory[emptySlot()].appendChild(document.querySelector((`#${equip.getAttribute('id')}`)).firstElementChild);
+    // Equipa o item na hotkey
+    if(itemID === 'HP' || itemID == 'MP' && !!hotkeySlot()) {
+      hotkeySlot().appendChild(selectedItem)
+
+    // Desequipa o item e equipa o item selecionado
+    }else if(equipSlot.innerHTML) {
+      equipSlot.appendChild(selectedItem)
+      inventorySlot().appendChild(document.querySelector((`#${equipSlot.getAttribute('id')}`)).firstElementChild);
         
-      // Equipa o item
-      }else if((itemID.includes(equipType))) {
-        equip.appendChild(selectedItem)
+    // Equipa o item
+    } else {
+      equipSlot.appendChild(selectedItem)
+    }
 
-      } else if(itemID.includes('potion')) {
-        hotkeys[0].appendChild(selectedItem)
-      }
-    })
-    
     itensAttributes();
   }
 }
@@ -55,7 +52,7 @@ bagInventory.forEach((item) => {
 function unequipItem(event) {
   if(!!event.currentTarget.innerHTML) {
     let selectedItem = event.currentTarget.firstElementChild;
-    bagInventory[emptySlot()].appendChild(selectedItem)
+    inventorySlot().appendChild(selectedItem)
     itensAttributes();
   }
 }

@@ -21,7 +21,7 @@ function Monstro(level, nome, hp, atk, xp, meso, img) {
 
 /** MONSTROS */
 const snail = new Monstro(1, 'Snail', 3, 1, 1, 2, 'img/monsters/monster_snail.webp');
-const bluesnail = new Monstro(3, 'Blue Snail', 8, 3, 4, 1, 'img/monsters/monster_bluesnail.webp');
+const bluesnail = new Monstro(3, 'Blue Snail', 8, 3, 4, 4, 'img/monsters/monster_bluesnail.webp');
 const shroom = new Monstro(4, 'Shroom', 12, 4, 6, 1, 'img/monsters/monster_shroom.webp');
 const tino = new Monstro(4, 'Tino', 16, 5, 3,  1, 'img/monsters/monster_tino.webp');
 const stump = new Monstro(5, 'Stump', 20, 6, 5,  1, 'img/monsters/monster_stump.webp');
