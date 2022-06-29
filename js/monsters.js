@@ -76,9 +76,12 @@ switchMonster();
 
 /** DANO AO PLAYER */
 function playerDamage() {
-  if(!!player.def - monstros[indexMonster].atk) {
+  if(player.def < monstros[indexMonster].atk) {
     calcPlayerHP += hud.hpbar.clientWidth / (player.hp() / (monstros[indexMonster].atk - player.def));
     playerHP -= monstros[indexMonster].atk - player.def;
+  } else {
+    calcPlayerHP += hud.hpbar.clientWidth / player.hp();
+    playerHP -= 1;
   }
 }
 

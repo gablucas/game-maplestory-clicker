@@ -39,6 +39,7 @@ const player = {
 
 const playerItens = [];
 
+
 /** VARIAVEIS */
 let playerHP = player.hp();
 let calcPlayerHP = 0;

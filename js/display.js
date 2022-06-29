@@ -125,7 +125,7 @@ const rewardMonster = document.querySelector('.js-rewardMonster');
 
 function showReward() {
   
-  rewardMonster.innerHTML = `<li><div><img src="../img/itens/meso/meso1.png">${monstros[indexMonster].meso}</div>
+  rewardMonster.innerHTML = `<li><div><img src="img/itens/meso/meso1.png">${monstros[indexMonster].meso}</div>
                                   <div><span>XP</span> ${monstros[indexMonster].xp}</div></li>`;
 
   rewardMonster.addEventListener('animationend', () => {
