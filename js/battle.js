@@ -3,15 +3,15 @@ hud.atualizar();
 
 function battle() {
 
-  mostrarDano();  // Exibe o dano desferido ao monstro
   monsterDamage();  // Dano ao monstro
+  hud.showDamage();  // Exibe o dano desferido ao monstro
   playerDamage(); // Dano ao player
 
   // Ação quando o monstro morre
   if(monsterHP <= 0) {
 
-      showReward(); // Mostra o XP e GOLD
       player.earnReward() // Ganha XP e GOLD
+      hud.showReward(); // Mostra o XP e GOLD
       monsterReborn();  // Nasce um novo monstro
       
     // Ação quando sobe de level

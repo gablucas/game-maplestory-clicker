@@ -24,6 +24,10 @@ const hud = {
   mpbar : document.querySelector('.js-barramp'),
   xpbar : document.querySelector('.js-barraxp'),
   goldbar : document.querySelectorAll('.js-barrameso'),
+  damageMonster : document.querySelector('.js-damageMonster'),
+  rewardMonster : document.querySelector('.js-rewardMonster'),
+  rewardXP : 0,
+  rewardMeso : 0,
 
   atualizar() {
     this.levelbar.innerHTML = player.level;
@@ -40,8 +44,22 @@ const hud = {
     this.goldbar.forEach((goldbar) => {
       goldbar.innerText = player.meso;
     })
-
   },
+
+  showDamage() {
+    this.damageMonster.innerHTML = `<li>${player.atk}</li>`;
+    this.damageMonster.addEventListener('animationend', () => {
+    this.damageMonster.innerHTML = ``;
+    })
+  },
+
+  showReward() {
+    this.rewardMonster.innerHTML = `<li><div><img src="img/itens/meso/meso1.png">${hud.rewardMeso}</div>
+                                    <div><span>XP</span> ${hud.rewardXP}</div></li>`;
+    this.rewardMonster.addEventListener('animationend', () => {
+    this.rewardMonster.innerText = ``;
+    })
+  }
 }
 
 /** ARROWS */
@@ -108,30 +126,6 @@ function atalhos(event) {
 
 window.addEventListener('keydown', atalhos)
 
-/** EXIBIR DANO MONSTRO */
-const damageMonster = document.querySelector('.js-damageMonster');
-
-function mostrarDano() {
-
-  damageMonster.innerHTML = `<li>${player.atk}</li>`;
-  damageMonster.addEventListener('animationend', () => {
-  damageMonster.innerHTML = ``;
-  })
-}
-
-
-/** EXIBIR RECOMPENSA DO MONSTRO */
-const rewardMonster = document.querySelector('.js-rewardMonster');
-
-function showReward() {
-  
-  rewardMonster.innerHTML = `<li><div><img src="img/itens/meso/meso1.png">${monstros[indexMonster].meso}</div>
-                                  <div><span>XP</span> ${monstros[indexMonster].xp}</div></li>`;
-
-  rewardMonster.addEventListener('animationend', () => {
-  rewardMonster.innerText = ``;
-  })
-}
 
 /** ATIVAR SETA ESQUERDA */
 function voltarMonstro() {

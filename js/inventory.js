@@ -65,5 +65,5 @@ equipInventory.forEach((slot) => {
 playerItens.push(itens[167])
 playerItens[0].amount = 20;
 hotkeySlot().innerHTML = `<div class="${playerItens[0].id}"><img class="healhp('${playerItens[0].id}')" src=${playerItens[0].img}><span class="amount-item">${playerItens[0].amount}</span></div>`;
-const initialPotion = document.querySelector(`.${playerItens[0].id}`);
+
 
