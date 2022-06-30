@@ -14,19 +14,19 @@ const player = {
   },
 
   earnReward() {
-    if(player.level - monstros[indexMonster].level > 2) {
+    if(player.level - monstros[indexMonster].level > 5) {
       hud.rewardMeso = 0.
       hud.rewardXP = 0;
     } else {
-      hud.rewardMeso = monstros[indexMonster].xp;
-      hud.rewardXP = Math.floor(Math.random() * (monstros[indexMonster].meso - (monstros[indexMonster].meso / 2)) + monstros[indexMonster].meso / 2);
+      hud.rewardMeso = Math.floor(Math.random() * (monstros[indexMonster].meso - (monstros[indexMonster].meso / 2)) + monstros[indexMonster].meso / 2);
+      hud.rewardXP = monstros[indexMonster].xp;
       this.xpCurrent += hud.rewardXP;
       this.meso += hud.rewardMeso;
   }
   },
 
   xpNextLevel() {
-    return Math.floor((this.level / 0.07) * 2);
+    return Math.floor((this.level / 0.06) * 2);
   },
 
   levelUP() {

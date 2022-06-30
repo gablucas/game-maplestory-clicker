@@ -28,4 +28,4 @@ function battle() {
   hud.atualizar();  // Atualiza os eventos no HUD
 }
 
-  monstro.addEventListener('click', battle)
+monstro.addEventListener('click', battle)

@@ -21,14 +21,14 @@ function Monstro(level, nome, hp, atk, xp, meso, img) {
 
 /** MONSTROS */
 const snail = new Monstro(1, 'Snail', 3, 1, 1, 2, 'img/monsters/monster_snail.webp');
-const bluesnail = new Monstro(3, 'Blue Snail', 5, 2, 3, 5, 'img/monsters/monster_bluesnail.webp');
-const shroom = new Monstro(4, 'Shroom', 12, 4, 6, 1, 'img/monsters/monster_shroom.webp');
-const tino = new Monstro(4, 'Tino', 16, 5, 3,  1, 'img/monsters/monster_tino.webp');
-const stump = new Monstro(5, 'Stump', 20, 6, 5,  1, 'img/monsters/monster_stump.webp');
-const orangeMushroom = new Monstro(6, 'Orange Mushroom', 24, 7, 7,  1, 'img/monsters/monster_orangemushroom.webp');
-const slime = new Monstro(7, 'Slime', 28, 8, 9,  1, 'img/monsters/monster_slime.webp');
-const murukun = new Monstro(8, 'Murukum', 32, 9, 9,  1, 'img/monsters/monster_murukun.webp');
-const tiguru = new Monstro(9, 'Tiguru', 36, 10, 11,  1, 'img/monsters/monster_tiguru.webp');
+const bluesnail = new Monstro(3, 'Blue Snail', 5, 3, 3, 4, 'img/monsters/monster_bluesnail.webp');
+const shroom = new Monstro(6, 'Shroom', 9, 6, 5, 6, 'img/monsters/monster_shroom.webp');
+const tino = new Monstro(10, 'Tino', 16, 5, 3,  1, 'img/monsters/monster_tino.webp');
+const stump = new Monstro(10, 'Stump', 20, 6, 5,  1, 'img/monsters/monster_stump.webp');
+const orangeMushroom = new Monstro(10, 'Orange Mushroom', 24, 7, 7,  1, 'img/monsters/monster_orangemushroom.webp');
+const slime = new Monstro(10, 'Slime', 28, 8, 9,  1, 'img/monsters/monster_slime.webp');
+const murukun = new Monstro(10, 'Murukum', 32, 9, 9,  1, 'img/monsters/monster_murukun.webp');
+const tiguru = new Monstro(10, 'Tiguru', 36, 10, 11,  1, 'img/monsters/monster_tiguru.webp');
 const greenmushroom = new Monstro(10, 'Green Mushroom', 40, 10, 13,  1, 'img/monsters/monster_greenmushroom.webp');
 const mano = new Monstro(11, '[BOSS] Mano', 50, 15, 30,  1, 'img/monsters/monster_mano.webp');
 
