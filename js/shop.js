@@ -154,7 +154,7 @@ function filterItem(type) {
 
   // Filtra os itens de acordo com o item selecionado
   itens.forEach((item, index) => {
-    if(item.id.includes(type)) {
+    if(item.id.includes(type) && player.level >= item.level) {
       selectedItens[index].classList.remove('nofilter');
     } else {
       selectedItens[index].classList.add('nofilter');

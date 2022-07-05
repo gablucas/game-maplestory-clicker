@@ -14,7 +14,7 @@ const player = {
   },
 
   earnReward() {
-    if(player.level - monstros[indexMonster].level > 5) {
+    if(player.level - monstros[indexMonster].level >= 5) {
       hud.rewardMeso = 0.
       hud.rewardXP = 0;
     } else {
