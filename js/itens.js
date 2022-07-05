@@ -14,46 +14,46 @@ function weaponsFactory(name, level, attribute, price, id, img) {
 }
 
 const wp1 = new weaponsFactory('Wooden Sword', 1, 2, 150, 'sword_01', 'img/itens/weapons/woodensword.png');
-const wp2 = new weaponsFactory('Two-Handed Sword', 5, 3, 100, 'sword_02', 'img/itens/weapons/twohandedsword.png');
-const wp3 = new weaponsFactory('Scimitar', 10, 4, 100, 'sword_03', 'img/itens/weapons/scimitar.png');
-const wp4 = new weaponsFactory('Lionheart', 15, 5, 100, 'sword_04', 'img/itens/weapons/lionheart.png');
-const wp5 = new weaponsFactory('Sparta', 20, 6, 100, 'sword_05', 'img/itens/weapons/sparta.png');
-// const wp6 = new weaponsFactory('Broadsword', 1, 1, 100, 'sword_06', 'img/itens/weapons/broadsword.png');
-// const wp7 = new weaponsFactory('Zard', 1, 1, 100, 'sword_07', 'img/itens/weapons/zard.png');
-// const wp8 = new weaponsFactory('Berseker', 1, 1, 100, 'sword_08', 'img/itens/weapons/berseker.png');
-// const wp9 = new weaponsFactory('Maple Soul Rohen', 1, 1, 100, 'sword_09', 'img/itens/weapons/maplesoulrohen.png');
-// const wp10 = new weaponsFactory("Devil's Sunrise", 1, 1, 100, 'sword_10', 'img/itens/weapons/devilssunrise.png');
-// const wp11 = new weaponsFactory('The Beheader', 1, 1, 100, 'sword_11', 'img/itens/weapons/thebeheader.png');
-// const wp12 = new weaponsFactory("Heaven's Gate", 1, 1, 100, 'sword_12', 'img/itens/weapons/heavensgate.png');
-// const wp13 = new weaponsFactory("Stonetooth Sword", 1, 1, 100, 'sword_13', 'img/itens/weapons/stonetoothsword.png');
-// const wp14 = new weaponsFactory('Dragon Claymore', 1, 1, 100, 'sword_14', 'img/itens/weapons/dragonclaymore.png');
-// const wp15 = new weaponsFactory('Doombringer', 1, 1, 100, 'sword_15', 'img/itens/weapons/doombringer.png');
-// const wp16 = new weaponsFactory('Blue Screamer', 1, 1, 100, 'sword_16', 'img/itens/weapons/bluescreamer.png');
-// const wp17 = new weaponsFactory("Raven's Wing", 1, 1, 100, 'sword_17', 'img/itens/weapons/ravenswing.png');
-// const wp18 = new weaponsFactory('Blue Screamer', 1, 1, 100, 'sword_18', 'img/itens/weapons/bluescreamer.png');
-// const wp19 = new weaponsFactory("Amaterasu's", 1, 1, 100, 'sword_19', 'img/itens/weapons/amaterasus.png');
-// const wp20 = new weaponsFactory('Beast Bro Zweihander', 1, 1, 100, 'sword_20', 'img/itens/weapons/beastbrozweihander.png');
-// const wp21 = new weaponsFactory('Maple Amethysian Claymore', 1, 1, 100, 'sword_21', 'img/itens/weapons/mapleamethysianclaymore.png');
-// const wp22 = new weaponsFactory('Timeless Nibleheim', 1, 1, 100, 'sword_22', 'img/itens/weapons/timelessnibleheim.png');
-// const wp23 = new weaponsFactory('Bain Sword', 1, 1, 100, 'sword_23', 'img/itens/weapons/bainsword.png');
-// const wp24 = new weaponsFactory('Maple Pyrope Rohen', 1, 1, 100, 'sword_24', 'img/itens/weapons/maplepyroperohen.png');
-// const wp25 = new weaponsFactory('Beryl Maple Lightcaller', 1, 1, 100, 'sword_25', 'img/itens/weapons/berylmaplelightcaller.png');
-// const wp26 = new weaponsFactory('Tempest Claymore', 1, 1, 100, 'sword_26', 'img/itens/weapons/tempestclaymore.png');
-// const wp27 = new weaponsFactory('Cursed Kaiserium', 1, 1, 100, 'sword_27', 'img/itens/weapons/cursedkaiserium.png');
-// const wp28 = new weaponsFactory('Pioner Sword', 1, 1, 100, 'sword_28', 'img/itens/weapons/pionersword.png');
-// const wp29 = new weaponsFactory('Sweetwater', 1, 1, 100, 'sword_29', 'img/itens/weapons/sweetwater.png');
-// const wp30 = new weaponsFactory("Ryude's Sword", 1, 1, 100, 'sword_30', 'img/itens/weapons/ryudessword.png');
-// const wp31 = new weaponsFactory('Maple Saint', 1, 1, 100, 'sword_31', 'img/itens/weapons/maplesaint.png');
-// const wp32 = new weaponsFactory("Zakum's Poisonic", 1, 1, 100, 'sword_32', 'img/itens/weapons/zakumspoisonic.png');
-// const wp33 = new weaponsFactory('Jaihin', 1, 1, 100, 'sword_33', 'img/itens/weapons/jaihin.png');
-// const wp34 = new weaponsFactory('Utgard', 1, 1, 100, 'sword_34', 'img/itens/weapons/utgard.png');
-// const wp35 = new weaponsFactory('Royal Von Leon Sword', 1, 1, 100, 'sword_35', 'img/itens/weapons/royalvonleonsword.png');
-// const wp36 = new weaponsFactory('AbsoLab Broad Saber', 1, 1, 100, 'sword_36', 'img/itens/weapons/absolabbroadsaber.png');
-// const wp37 = new weaponsFactory('Maple Treasure', 1, 1, 100, 'sword_37', 'img/itens/weapons/mapletreasure.png');
-// const wp38 = new weaponsFactory('Arcane Umbra', 1, 1, 100, 'sword_38', 'img/itens/weapons/arcaneumbra.png');
-// const wp39 = new weaponsFactory('AbsoLab Broad Saber', 1, 1, 100, 'sword_39', 'img/itens/weapons/absolabbroadsaber.png');
-// const wp40 = new weaponsFactory('Fafnir Penitent Tears', 1, 1, 100, 'sword_40', 'img/itens/weapons/fafnirpenitenttears.png');
-// const wp41 = new weaponsFactory('Sealed Genesis', 1, 1, 100, 'sword_41', 'img/itens/weapons/sealedgenesis.png');
+const wp2 = new weaponsFactory('Two-Handed Sword', 10, 4, 100, 'sword_02', 'img/itens/weapons/twohandedsword.png');
+const wp3 = new weaponsFactory('Scimitar', 15, 4, 100, 'sword_03', 'img/itens/weapons/scimitar.png');
+const wp4 = new weaponsFactory('Lionheart', 20, 5, 100, 'sword_04', 'img/itens/weapons/lionheart.png');
+const wp5 = new weaponsFactory('Sparta', 25, 6, 100, 'sword_05', 'img/itens/weapons/sparta.png');
+const wp6 = new weaponsFactory('Broadsword', 1, 1, 100, 'sword_06', 'img/itens/weapons/broadsword.png');
+const wp7 = new weaponsFactory('Zard', 1, 1, 100, 'sword_07', 'img/itens/weapons/zard.png');
+const wp8 = new weaponsFactory('Berseker', 1, 1, 100, 'sword_08', 'img/itens/weapons/berseker.png');
+const wp9 = new weaponsFactory('Maple Soul Rohen', 1, 1, 100, 'sword_09', 'img/itens/weapons/maplesoulrohen.png');
+const wp10 = new weaponsFactory("Devil's Sunrise", 1, 1, 100, 'sword_10', 'img/itens/weapons/devilssunrise.png');
+const wp11 = new weaponsFactory('The Beheader', 1, 1, 100, 'sword_11', 'img/itens/weapons/thebeheader.png');
+const wp12 = new weaponsFactory("Heaven's Gate", 1, 1, 100, 'sword_12', 'img/itens/weapons/heavensgate.png');
+const wp13 = new weaponsFactory("Stonetooth Sword", 1, 1, 100, 'sword_13', 'img/itens/weapons/stonetoothsword.png');
+const wp14 = new weaponsFactory('Dragon Claymore', 1, 1, 100, 'sword_14', 'img/itens/weapons/dragonclaymore.png');
+const wp15 = new weaponsFactory('Doombringer', 1, 1, 100, 'sword_15', 'img/itens/weapons/doombringer.png');
+const wp16 = new weaponsFactory('Blue Screamer', 1, 1, 100, 'sword_16', 'img/itens/weapons/bluescreamer.png');
+const wp17 = new weaponsFactory("Raven's Wing", 1, 1, 100, 'sword_17', 'img/itens/weapons/ravenswing.png');
+const wp18 = new weaponsFactory('Blue Screamer', 1, 1, 100, 'sword_18', 'img/itens/weapons/bluescreamer.png');
+const wp19 = new weaponsFactory("Amaterasu's", 1, 1, 100, 'sword_19', 'img/itens/weapons/amaterasus.png');
+const wp20 = new weaponsFactory('Beast Bro Zweihander', 1, 1, 100, 'sword_20', 'img/itens/weapons/beastbrozweihander.png');
+const wp21 = new weaponsFactory('Maple Amethysian Claymore', 1, 1, 100, 'sword_21', 'img/itens/weapons/mapleamethysianclaymore.png');
+const wp22 = new weaponsFactory('Timeless Nibleheim', 1, 1, 100, 'sword_22', 'img/itens/weapons/timelessnibleheim.png');
+const wp23 = new weaponsFactory('Bain Sword', 1, 1, 100, 'sword_23', 'img/itens/weapons/bainsword.png');
+const wp24 = new weaponsFactory('Maple Pyrope Rohen', 1, 1, 100, 'sword_24', 'img/itens/weapons/maplepyroperohen.png');
+const wp25 = new weaponsFactory('Beryl Maple Lightcaller', 1, 1, 100, 'sword_25', 'img/itens/weapons/berylmaplelightcaller.png');
+const wp26 = new weaponsFactory('Tempest Claymore', 1, 1, 100, 'sword_26', 'img/itens/weapons/tempestclaymore.png');
+const wp27 = new weaponsFactory('Cursed Kaiserium', 1, 1, 100, 'sword_27', 'img/itens/weapons/cursedkaiserium.png');
+const wp28 = new weaponsFactory('Pioner Sword', 1, 1, 100, 'sword_28', 'img/itens/weapons/pionersword.png');
+const wp29 = new weaponsFactory('Sweetwater', 1, 1, 100, 'sword_29', 'img/itens/weapons/sweetwater.png');
+const wp30 = new weaponsFactory("Ryude's Sword", 1, 1, 100, 'sword_30', 'img/itens/weapons/ryudessword.png');
+const wp31 = new weaponsFactory('Maple Saint', 1, 1, 100, 'sword_31', 'img/itens/weapons/maplesaint.png');
+const wp32 = new weaponsFactory("Zakum's Poisonic", 1, 1, 100, 'sword_32', 'img/itens/weapons/zakumspoisonic.png');
+const wp33 = new weaponsFactory('Jaihin', 1, 1, 100, 'sword_33', 'img/itens/weapons/jaihin.png');
+const wp34 = new weaponsFactory('Utgard', 1, 1, 100, 'sword_34', 'img/itens/weapons/utgard.png');
+const wp35 = new weaponsFactory('Royal Von Leon Sword', 1, 1, 100, 'sword_35', 'img/itens/weapons/royalvonleonsword.png');
+const wp36 = new weaponsFactory('AbsoLab Broad Saber', 1, 1, 100, 'sword_36', 'img/itens/weapons/absolabbroadsaber.png');
+const wp37 = new weaponsFactory('Maple Treasure', 1, 1, 100, 'sword_37', 'img/itens/weapons/mapletreasure.png');
+const wp38 = new weaponsFactory('Arcane Umbra', 1, 1, 100, 'sword_38', 'img/itens/weapons/arcaneumbra.png');
+const wp39 = new weaponsFactory('AbsoLab Broad Saber', 1, 1, 100, 'sword_39', 'img/itens/weapons/absolabbroadsaber.png');
+const wp40 = new weaponsFactory('Fafnir Penitent Tears', 1, 1, 100, 'sword_40', 'img/itens/weapons/fafnirpenitenttears.png');
+const wp41 = new weaponsFactory('Sealed Genesis', 1, 1, 100, 'sword_41', 'img/itens/weapons/sealedgenesis.png');
 
 function defensesFactory(name, level, attribute, price, id, img) {
   this.name = name;
@@ -232,8 +232,6 @@ const db19 = new defensesFactory('Lucky Visitor Boots', 90, 1, 1, 'boots_20', 'i
 const db21 = new defensesFactory('Bosshunter Greaves', 95, 1, 1, 'boots_22', 'img/itens/defenses/bosshuntergreaves.png');
 const db22 = new defensesFactory('Cursed Huntershoes', 100, 1, 1, 'boots_23', 'img/itens/defenses/cursedhuntershoes.png');
 const db20 = new defensesFactory('Arcane Umbra Knight Shoes', 105, 1, 1, 'boots_21', 'img/itens/defenses/arcaneumbraknightshoes.png');
-
-
 
 
 function potionsFactory(name, level, attribute, price, id, img) {

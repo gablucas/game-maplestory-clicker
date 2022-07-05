@@ -81,26 +81,44 @@ function heal() {
 }
 
 /** HEAL */
-function healhp(hpid) {
+function heal(idHeal) {
 
   // Se o player possuir a potion
-  if(playerItens.some(item => item.id === hpid)) {
-    let useItem = playerItens.find(item => item.id === hpid);
+  if(playerItens.some(item => item.id === idHeal)) {
+    let useItem = playerItens.find(item => item.id === idHeal);
 
     // Diminui uma potion e exibe o novo valor
     useItem.amount -= 1;
     document.querySelector(`.${useItem.id} .amount-item`).innerText = useItem.amount;
 
-    // Caso o poder de cura seje maior que o necessario pra encher a vida
-    if(player.hp() - playerHP <= useItem.attribute[0]){
-      playerHP = player.hp();
-      calcPlayerHP = 0; 
+    if(useItem.id.includes('HP')) {
 
-    // Cura
-    } else {
-      playerHP += useItem.attribute[0];
-      calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * useItem.attribute[0]);
+      // Caso o poder de cura seje maior que o necessario pra encher a vida
+      if(player.hp() - playerHP <= useItem.attribute[0]){
+        playerHP = player.hp();
+        calcPlayerHP = 0; 
+
+      // Cura
+      } else {
+        playerHP += useItem.attribute[0];
+        calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * useItem.attribute[0]);
+      }
+
+    } else if(useItem.id.includes('MP')) {
+
+      // Caso o poder de cura seje maior que o necessario pra encher a vida
+      if(player.mp() - playerMP <= useItem.attribute[0]){
+        playerMP = player.MP();
+        calcPlayerMP = 0; 
+
+      // Cura
+      } else {
+        playerMP += useItem.attribute[0];
+        calcPlayerMP -= (hud.mpbar.clientWidth / player.mp() * useItem.attribute[0]);
+      }
     }
+
+
 
     // Caso seja acabe a potion, ele retira do inventario e das hotkeys
     if(useItem.amount === 0) {
@@ -113,11 +131,6 @@ function healhp(hpid) {
   }
 }
 
-function healmp() {
-  playerMP = player.mp();
-  calcPlayerMP = 0;
-  hud.atualizar();
-}
 
 function itensAttributes() {
   player.atk = 1;

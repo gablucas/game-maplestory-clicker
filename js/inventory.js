@@ -62,8 +62,8 @@ equipInventory.forEach((slot) => {
 })
 
 // 20 potions inciais para o player
-playerItens.push(itens[167])
+playerItens.push(itens[203])
 playerItens[0].amount = 20;
-hotkeySlot().innerHTML = `<div class="${playerItens[0].id}"><img class="healhp('${playerItens[0].id}')" src=${playerItens[0].img}><span class="amount-item">${playerItens[0].amount}</span></div>`;
+hotkeySlot().innerHTML = `<div class="${playerItens[0].id}"><img class="heal('${playerItens[0].id}')" src=${playerItens[0].img}><span class="amount-item">${playerItens[0].amount}</span></div>`;
 
 
