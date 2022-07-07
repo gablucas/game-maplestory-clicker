@@ -23,7 +23,7 @@ function equipItem(event) {
   if(!!event.currentTarget.innerHTML) {
     let selectedItem = event.currentTarget.firstElementChild;
     const itemID = selectedItem.getAttribute('class').split('_')[1];
-    const equipSlot = Array.from(equipInventory).find(equip => equip.getAttribute('id').includes(itemID))
+    const equipSlot = Array.prototype.find.call(equipInventory, equip => equip.getAttribute('id').includes(itemID))
 
     // Equipa o item na hotkey
     if(itemID === 'HP' || itemID == 'MP' && !!hotkeySlot()) {

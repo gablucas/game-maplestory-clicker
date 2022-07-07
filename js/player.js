@@ -6,7 +6,7 @@ const player = {
   meso: 0,
 
   hp() {
-    return Math.floor((this.level / 0.08) * 1);
+    return this.level * 5;
   },
 
   mp() {
@@ -18,7 +18,7 @@ const player = {
       hud.rewardMeso = 0.
       hud.rewardXP = 0;
     } else {
-      hud.rewardMeso = Math.floor(Math.random() * (monstros[indexMonster].meso - (monstros[indexMonster].meso / 2)) + monstros[indexMonster].meso / 2);
+      hud.rewardMeso = Math.floor(Math.random() * (monstros[indexMonster].meso - (monstros[indexMonster].meso / 2)) + (monstros[indexMonster].meso / 2));
       hud.rewardXP = monstros[indexMonster].xp;
       this.xpCurrent += hud.rewardXP;
       this.meso += hud.rewardMeso;
@@ -26,7 +26,7 @@ const player = {
   },
 
   xpNextLevel() {
-    return Math.floor((this.level / 0.06) * 2);
+    return Math.floor(Math.pow((this.level / 0.4), 2));
   },
 
   levelUP() {
