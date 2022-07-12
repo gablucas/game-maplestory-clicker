@@ -25,6 +25,11 @@ function battle() {
     }
   }
 
+  // Ação quando o player morre
+  if(playerHP <= 0) {
+    playerDeath();
+  }
+
   hud.atualizar();  // Atualiza os eventos no HUD
 }
 

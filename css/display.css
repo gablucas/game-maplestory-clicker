@@ -132,10 +132,73 @@
   font-weight: 300;
 }
 
+.game.death {
+  animation: deathBg 1s forwards;
+}
+
+@keyframes deathBg {
+  from{
+    filter: grayscale(0);
+  }
+
+  to {
+    filter: grayscale(1); 
+  }
+}
+
+
+#deathScreen.death {
+  display: flex;
+  animation: deathText 1s forwards;
+}
+
+@keyframes deathText {
+  from{
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#deathScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#deathScreen span {
+  font-size: 3rem;
+  font-weight: 999;
+  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+  color: #FFA802;
+}
+
+#deathScreen button {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 2px #000000;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background: linear-gradient(#FFA802, #b17a14);
+  margin-top: 10px;
+}
+
 @media(max-width: 720px) {
 
   .game {
     grid-template-rows: 1fr auto auto;
   }
-
 }

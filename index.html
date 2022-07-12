@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="game js-game">
+  <section class="game js-game" data-death="">
 
     <!-- TELA GAME -->
     <div class="display js-display">
@@ -55,7 +55,7 @@
   </section>
 
   <!-- Inventario -->
-  <div id="inventory" class="desativado">
+  <div id="inventory" class="desativado" data-dragable>
     <h1>Inventory</h1>
     <img class="fechar-inventario" src="img/buttons/x.png" alt="" onclick="windowInventory()">
 
@@ -114,7 +114,7 @@
   </div>
 
   <!-- Shop -->
-  <div id="shop" class="desativado">
+  <div id="shop" class="desativado" data-dragable>
     <h1>Shop</h1>
     <img class="fechar-shop" src="img/buttons/x.png" alt="" onclick="windowShop()">
     <img class="voltar-shop desativado" src="img/buttons/return.png" alt="" onclick="returnShop()">
@@ -147,6 +147,11 @@
       </div>
     </div>
   </div>
+
+  <section id="deathScreen" data-death>
+    <span>VOCÊ MORREU</span>
+    <button onclick="playerRevive()">REVIVER</button>
+  </section>
 
 
   <script src="js/display.js"></script>
