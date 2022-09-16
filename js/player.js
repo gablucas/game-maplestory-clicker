@@ -61,26 +61,26 @@ function monsterDamage() {
   lifeMonstro.style.boxShadow = `inset -${calcMonsterHP}px 0 rgba(0, 0, 0, 0.6)`;        // Reduz graficamente a barra de vida do monstro
 }
 
-/** SKILLS */
-function heal() {
-  if(playerMP >= 6) {
-    playerMP -= 6;
-    calcPlayerMP += hud.mpbar.clientWidth / player.mp() * 6;
+/** SKILLS - DESATIVADA*/
+// function heal() {
+//   if(playerMP >= 6) {
+//     playerMP -= 6;
+//     calcPlayerMP += hud.mpbar.clientWidth / player.mp() * 6;
 
-    if(player.hp() - playerHP <= 15) {
-      playerHP = player.hp();
-      calcPlayerHP = 0;
+//     if(player.hp() - playerHP <= 15) {
+//       playerHP = player.hp();
+//       calcPlayerHP = 0;
       
-    } else {
-      playerHP += 15;
-      calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * 15);
-    }
+//     } else {
+//       playerHP += 15;
+//       calcPlayerHP -= (hud.hpbar.clientWidth / player.hp() * 15);
+//     }
 
-    hud.atualizar();
-  }
-}
+//     hud.atualizar();
+//   }
+// }
 
-/** HEAL */
+/** POTIONS */
 function heal(idHeal) {
 
   // Se o player possuir a potion
@@ -117,8 +117,6 @@ function heal(idHeal) {
         calcPlayerMP -= (hud.mpbar.clientWidth / player.mp() * useItem.attribute[0]);
       }
     }
-
-
 
     // Caso seja acabe a potion, ele retira do inventario e das hotkeys
     if(useItem.amount === 0) {
