@@ -13,16 +13,16 @@ function weaponsFactory(name, level, attribute, price, id, img) {
   weapons.push(this);
 }
 
-const wp1 = new weaponsFactory('Wooden Sword', 1, 2, 150, 'sword_01', 'img/itens/weapons/woodensword.png');
-const wp2 = new weaponsFactory('Two-Handed Sword', 10, 4, 350, 'sword_02', 'img/itens/weapons/twohandedsword.png');
-const wp3 = new weaponsFactory('Scimitar', 15, 4, 100, 'sword_03', 'img/itens/weapons/scimitar.png');
-const wp4 = new weaponsFactory('Lionheart', 20, 5, 100, 'sword_04', 'img/itens/weapons/lionheart.png');
-const wp5 = new weaponsFactory('Sparta', 25, 6, 100, 'sword_05', 'img/itens/weapons/sparta.png');
-const wp6 = new weaponsFactory('Broadsword', 30, 1, 100, 'sword_06', 'img/itens/weapons/broadsword.png');
-const wp7 = new weaponsFactory('Zard', 35, 1, 100, 'sword_07', 'img/itens/weapons/zard.png');
-const wp8 = new weaponsFactory('Berseker', 40, 1, 100, 'sword_08', 'img/itens/weapons/berseker.png');
-const wp9 = new weaponsFactory('Maple Soul Rohen', 100, 1, 100, 'sword_09', 'img/itens/weapons/maplesoulrohen.png');
-const wp10 = new weaponsFactory("Devil's Sunrise", 100, 1, 100, 'sword_10', 'img/itens/weapons/devilssunrise.png');
+// const wp1 = new weaponsFactory('Wooden Sword', 1, 2, 150, 'sword_01', 'img/itens/weapons/woodensword.png');
+// const wp2 = new weaponsFactory('Two-Handed Sword', 10, 4, 350, 'sword_02', 'img/itens/weapons/twohandedsword.png');
+// const wp3 = new weaponsFactory('Scimitar', 15, 4, 100, 'sword_03', 'img/itens/weapons/scimitar.png');
+// const wp4 = new weaponsFactory('Lionheart', 20, 5, 100, 'sword_04', 'img/itens/weapons/lionheart.png');
+// const wp5 = new weaponsFactory('Sparta', 25, 6, 100, 'sword_05', 'img/itens/weapons/sparta.png');
+// const wp6 = new weaponsFactory('Broadsword', 30, 1, 100, 'sword_06', 'img/itens/weapons/broadsword.png');
+// const wp7 = new weaponsFactory('Zard', 35, 1, 100, 'sword_07', 'img/itens/weapons/zard.png');
+// const wp8 = new weaponsFactory('Berseker', 40, 1, 100, 'sword_08', 'img/itens/weapons/berseker.png');
+// const wp9 = new weaponsFactory('Maple Soul Rohen', 100, 1, 100, 'sword_09', 'img/itens/weapons/maplesoulrohen.png');
+// const wp10 = new weaponsFactory("Devil's Sunrise", 100, 1, 100, 'sword_10', 'img/itens/weapons/devilssunrise.png');
 const wp11 = new weaponsFactory('The Beheader', 100, 1, 100, 'sword_11', 'img/itens/weapons/thebeheader.png');
 const wp12 = new weaponsFactory("Heaven's Gate", 100, 1, 100, 'sword_12', 'img/itens/weapons/heavensgate.png');
 const wp13 = new weaponsFactory("Stonetooth Sword", 100, 1, 100, 'sword_13', 'img/itens/weapons/stonetoothsword.png');

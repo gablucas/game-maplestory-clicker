@@ -1,0 +1,1467 @@
+{
+  "helmet": [
+    {
+      "id": "sw1",
+      "name": "Red Headband",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/redheadband.png"
+      },
+      
+      {
+      "id": "sw2",
+      "name": "Brown Skull Cap",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/brownskullcap.png"
+      },
+      
+      {
+      "id": "sw3",
+      "name": "Brown Bamboo Hat",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/brownbamboohat.png"
+      },
+      
+      {
+      "id": "sw4",
+      "name": "Metal Gear",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/metalgear.png"
+      },
+      
+      {
+      "id": "sw5",
+      "name": "Red Duke",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/redduke.png"
+      },
+      
+      {
+      "id": "sw6",
+      "name": "Metal Coif",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/metalcoif.png"
+      },
+      
+      {
+      "id": "sw7",
+      "name": "Steel Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/steelhelmet.png"
+      },
+      
+      {
+      "id": "sw8",
+      "name": "Silver Crusader Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/silvercrusadehelm.png"
+      },
+      
+      {
+      "id": "sw9",
+      "name": "Old Steel Nordic Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/oldsteelnordichelm.png"
+      },
+      
+      {
+      "id": "sw10",
+      "name": "Steel Sharp Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/steelsharphelm.png"
+      },
+      
+      {
+      "id": "sw11",
+      "name": "Steel Nordic Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/steelnordichelm.png"
+      },
+      
+      {
+      "id": "sw12",
+      "name": "Great Brown Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/greatbrownhelmet.png"
+      },
+      
+      {
+      "id": "sw13",
+      "name": "Iron Viking Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/ironvikinghelm.png"
+      },
+      
+      {
+      "id": "sw14",
+      "name": "Steel Full Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/steelfullhelm.png"
+      },
+      
+      {
+      "id": "sw15",
+      "name": "Silver Planet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/silverplanet.png"
+      },
+      
+      {
+      "id": "sw16",
+      "name": "Red Oriental Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/redorientalhelm.png"
+      },
+      
+      {
+      "id": "sw17",
+      "name": "Dark Falcon",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkfalcon.png"
+      },
+      
+      {
+      "id": "sw18",
+      "name": "Drake Hat",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/drakehat.png"
+      },
+      
+      {
+      "id": "sw19",
+      "name": "Zakum Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/zakumhelmet.png"
+      },
+      
+      {
+      "id": "sw20",
+      "name": "Warrior's Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/warriorshelmet.png"
+      },
+      
+      {
+      "id": "sw21",
+      "name": "Jousting Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/joustinghelmet.png"
+      },
+      
+      {
+      "id": "sw22",
+      "name": "Iron Burgernet Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/ironburgernethelm.png"
+      },
+      
+      {
+      "id": "sw23",
+      "name": "Emerald Dome",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/emeralddome.png"
+      },
+      
+      {
+      "id": "sw24",
+      "name": "Dark Valhalla Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkvalhallahelmet.png"
+      },
+      
+      {
+      "id": "sw25",
+      "name": "Dark Lich Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkarlichelmet.png"
+      },
+      
+      {
+      "id": "sw26",
+      "name": "Maple Hat",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/maplehat.png"
+      },
+      
+      {
+      "id": "sw27",
+      "name": "Dark Grace Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkgracehelmet.png"
+      },
+      
+      {
+      "id": "sw28",
+      "name": "Blue Dragon Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bluedragonhelmet.png"
+      },
+      
+      {
+      "id": "sw29",
+      "name": "Herculean Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/herculeanhelmet.png"
+      },
+      
+      {
+      "id": "sw30",
+      "name": "Bosshunter Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bosshunterhelm.png"
+      },
+      
+      {
+      "id": "sw31",
+      "name": "Bosshunter Faceguard",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bosshunterfaceguard.png"
+      },
+      
+      {
+      "id": "sw32",
+      "name": "Blitz Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blitzhelm.png"
+      },
+      
+      {
+      "id": "sw33",
+      "name": "Aran Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/aranhelmet.png"
+      },
+      
+      {
+      "id": "sw34",
+      "name": "Lucky Visitor Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/luckyvisitorhelmet.png"
+      },
+      
+      {
+      "id": "sw35",
+      "name": "Wise Visitor Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/wisevisitorhelmet.png"
+      },
+      
+      {
+      "id": "sw36",
+      "name": "Dexterious Visitor Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/dexterousvisitorhelmet.png"
+      },
+      
+      {
+      "id": "sw37",
+      "name": "Powerfull Visitor Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/powerfullvisitorhelm.png"
+      },
+      
+      {
+      "id": "sw38",
+      "name": "Max Von Leon Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/marxvonleonhelmet.png"
+      },
+      
+      {
+      "id": "sw39",
+      "name": "Hideyoshi's Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/hideyoshishelm.png"
+      },
+      
+      {
+      "id": "sw40",
+      "name": "Amaterasu's Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/amaterasushelm.png"
+      },
+      
+      {
+      "id": "sw41",
+      "name": "Oyamatsumis Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/oyamatsumishelm.png"
+      },
+      
+      {
+      "id": "sw42",
+      "name": "Yukimura's Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/yukimurashelm.png"
+      },
+      
+      {
+      "id": "sw43",
+      "name": "Kanetsuku's Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/kanetsukushelm.png"
+      },
+      
+      {
+      "id": "sw44",
+      "name": "High Knight's Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/highknightshelm.png"
+      },
+      
+      {
+      "id": "sw45",
+      "name": "Legendary Ravana Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/legendaryravanahelmet.png"
+      },
+      
+      {
+      "id": "sw46",
+      "name": "Muneshiges Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/muneshigeshelm.png"
+      },
+      
+      {
+      "id": "sw47",
+      "name": "The Bladed Falcon's helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/thebladedfalconshelm.png"
+      },
+      
+      {
+      "id": "sw48",
+      "name": "Viking Helmet",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/vikinghelmet.png"
+      },
+      
+      {
+      "id": "sw49",
+      "name": "Shadow Thanatos Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/shadowthanatoshelm.png"
+      },
+      
+      {
+      "id": "sw50",
+      "name": "Necromancer Warrior Hat",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/necromancerwarriorhat.png"
+      },
+      
+      {
+      "id": "sw51",
+      "name": "Couples Army Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/couplesarmyhelm.png"
+      },
+      
+      {
+      "id": "sw52",
+      "name": "Dragon Emperor's Helm",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/dragonemperorshelm.png"
+      },
+      
+      {
+      "id": "sw53",
+      "name": "Arcane Umbra Knight Hat",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/arcaneumbraknighthat.png"
+      }
+  ],
+
+  "armor": [
+    {
+      "id": "sw54",
+      "name": "Red Hwarang Shirt",
+      "level": 0,
+      "attribute": [2,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/redhwarangshirt.png"
+      },
+      
+      {
+      "id": "sw55",
+      "name": "Brown Hard Leather Top",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/brownhardleathertop.png"
+      },
+      
+      {
+      "id": "sw56",
+      "name": "Dark Night Shift",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darknightshift.png"
+      },
+      
+      {
+      "id": "sw57",
+      "name": "Dark Shadow",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkshadow.png"
+      },
+      
+      {
+      "id": "sw58",
+      "name": "Black Bennis Chain Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blackbennischainmail.png"
+      },
+      
+      {
+      "id": "sw59",
+      "name": "Dark Brown Stealer",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkbrownstealer.png"
+      },
+      
+      {
+      "id": "sw60",
+      "name": "Red Orientican",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/redorientican.png"
+      },
+      
+      {
+      "id": "sw61",
+      "name": "Dark Scorpio",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darlscorpio.png"
+      },
+      
+      {
+      "id": "sw62",
+      "name": "Red Legolier",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/redlegolier.png"
+      },
+      
+      {
+      "id": "sw63",
+      "name": "Dark Studded Top",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkstuddedtop.png"
+      },
+      
+      {
+      "id": "sw64",
+      "name": "Steel Corporal",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/steelcorporal.png"
+      },
+      
+      {
+      "id": "sw65",
+      "name": "Brown Corporal",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/browncorporal.png"
+      },
+      
+      {
+      "id": "sw66",
+      "name": "Orihalcon Master Sergeant",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/orihalconmastersergeant.png"
+      },
+      
+      {
+      "id": "sw67",
+      "name": "Blue Lolico Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bluelolicoarmor.png"
+      },
+      
+      {
+      "id": "sw68",
+      "name": "Yellow Jangoon Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/yellowjangoonarmor.png"
+      },
+      
+      {
+      "id": "sw69",
+      "name": "Dark Master Sergeant",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkmastersergeant.png"
+      },
+      
+      {
+      "id": "sw70",
+      "name": "Umber Shouder Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/umbershoudermail.png"
+      },
+      
+      {
+      "id": "sw71",
+      "name": "Bronze Platine",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bronzeplatine.png"
+      },
+      
+      {
+      "id": "sw72",
+      "name": "Mithril Platine",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/mithrilplatine.png"
+      },
+      
+      {
+      "id": "sw73",
+      "name": "Orihalcon Platine",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/orihalconplatine.png"
+      },
+      
+      {
+      "id": "sw74",
+      "name": "Green Commodore Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/greencommodore.png"
+      },
+      
+      {
+      "id": "sw75",
+      "name": "Blue Commodore Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bluecommodore.png"
+      },
+      
+      {
+      "id": "sw76",
+      "name": "Dark Commodore Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkcommodore.png"
+      },
+      
+      {
+      "id": "sw77",
+      "name": "Eagle Eye Assassin Shirt",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/eagleeyeassassinshirt.png"
+      },
+      
+      {
+      "id": "sw78",
+      "name": "Eagle Eye Warrior Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/eagleeyewarriorarmor.png"
+      },
+      
+      {
+      "id": "sw79",
+      "name": "Blizzard Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blizzardarmor.png"
+      },
+      
+      {
+      "id": "sw80",
+      "name": "Golden Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/goldenarmor.png"
+      },
+      
+      {
+      "id": "sw81",
+      "name": "Golden Armor2",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/goldenarmor2.png"
+      },
+      
+      {
+      "id": "sw82",
+      "name": "Bosshunter Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bosshunterarmor.png"
+      },
+      
+      {
+      "id": "sw83",
+      "name": "Galatic Hero suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/galaticherosuit.png"
+      },
+      
+      {
+      "id": "sw84",
+      "name": "Stealth Suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/stealthsuit.png"
+      },
+      
+      {
+      "id": "sw85",
+      "name": "Aran Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/aranarmor.png"
+      },
+      
+      {
+      "id": "sw86",
+      "name": "Brave Soldier Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bravesoldierarmor.png"
+      },
+      
+      {
+      "id": "sw87",
+      "name": "Chaos Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/chaosarmor.png"
+      },
+      
+      {
+      "id": "sw88",
+      "name": "Nox Von Leon Battle Suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/noxvonleonbattlesuit.png"
+      },
+      
+      {
+      "id": "sw89",
+      "name": "Falcon Wing Sentinel Suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/falconwingsentinelsuit.png"
+      },
+      
+      {
+      "id": "sw90",
+      "name": "Agares Bloody Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/agaresbloodymail.png"
+      },
+      
+      {
+      "id": "sw91",
+      "name": "Force Walker Plate Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/forcewalkerplatemail.png"
+      },
+      
+      {
+      "id": "sw92",
+      "name": "Lionheart Battle Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/lionheartbattlemail.png"
+      },
+      
+      {
+      "id": "sw93",
+      "name": "Crown Suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/crownsuit.png"
+      },
+      
+      {
+      "id": "sw94",
+      "name": "Abyss Taragon",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/abysstaragon.png"
+      },
+      
+      {
+      "id": "sw95",
+      "name": "Musashi's armor'",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/musashisarmor.png"
+      },
+      
+      {
+      "id": "sw96",
+      "name": "Fearless Warriors Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/fearlesswarriorsarmor.png"
+      },
+      
+      {
+      "id": "sw97",
+      "name": "The Bladed Falcons Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/thebladedfalconsarmor.png"
+      },
+      
+      {
+      "id": "sw98",
+      "name": "Legendary Knight Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/legendaryknightarmor.png"
+      },
+      
+      {
+      "id": "sw99",
+      "name": "Grand Agares Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/grandagaresmail.png"
+      },
+      
+      {
+      "id": "sw100",
+      "name": "The Bladed Falcons Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/thebladedfalconsarmor2.png"
+      },
+      
+      {
+      "id": "sw101",
+      "name": "Old Kaiser Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/oldkaiserarmor.png"
+      },
+      
+      {
+      "id": "sw102",
+      "name": "High Knight's Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/highknightsarmor.png"
+      },
+      
+      {
+      "id": "sw103",
+      "name": "Kaiser Brave Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/kaiserbravemail.png"
+      },
+      
+      {
+      "id": "sw104",
+      "name": "Luminous Memory Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/luminousmemorymail.png"
+      },
+      
+      {
+      "id": "sw105",
+      "name": "Gold Label Knight",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/goldlabelknight.png"
+      },
+      
+      {
+      "id": "sw106",
+      "name": "Shadow Thanatos Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/shadowthanatosarmor.png"
+      },
+      
+      {
+      "id": "sw107",
+      "name": "Ecletic Taragon",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/ecletictaragon.png"
+      },
+      
+      {
+      "id": "sw108",
+      "name": "Muspell Warrior Suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/muspellwarriorsuit.png"
+      },
+      
+      {
+      "id": "sw109",
+      "name": "Pensalir Battle Mail",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/pensalirbattlemail.png"
+      },
+      
+      {
+      "id": "sw110",
+      "name": "Pensalir Sentinel Suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/pensalirsentinelsuit.png"
+      },
+      
+      {
+      "id": "sw111",
+      "name": "Warriors Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/warriorsarmor.png"
+      },
+      
+      {
+      "id": "sw112",
+      "name": "Kasumigiri Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/kasumigiriarmor.png"
+      },
+      
+      {
+      "id": "sw113",
+      "name": "Lake Monster Invincible Armor",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/lakemonsterinvinciblearmor.png"
+      },
+      
+      {
+      "id": "sw114",
+      "name": "Arcane Umbra Knight Suit",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/arcaneumbraknightsuit.png"
+      }
+  ],
+
+  "pants": [
+    {
+      "id": "sw115",
+      "name": "Black Suit Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blacksuitpants.png"
+      },
+      
+      {
+      "id": "sw116",
+      "name": "Grey Thick Sweat Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/greythicksweatpants.png"
+      },
+      
+      {
+      "id": "sw117",
+      "name": "Black Split Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blacksplitpants.png"
+      },
+      
+      {
+      "id": "sw118",
+      "name": "Black Jangoon Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blackjangoonpants.png"
+      },
+      
+      {
+      "id": "sw119",
+      "name": "Blue Nightshift Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bluenightshiftpants.png"
+      },
+      
+      {
+      "id": "sw120",
+      "name": "Brown Lolico Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/brownlolicopants.png"
+      },
+      
+      {
+      "id": "sw121",
+      "name": "Steel Corporal Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/steelcorporalpants.png"
+      },
+      
+      {
+      "id": "sw122",
+      "name": "Blue Lolico Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bluelolicopants.png"
+      },
+      
+      {
+      "id": "sw123",
+      "name": "Black Stealer Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blackstealerpants.png"
+      },
+      
+      {
+      "id": "sw124",
+      "name": "Dark Hunter's Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkhunterspants.png"
+      },
+      
+      {
+      "id": "sw125",
+      "name": "Dark Legolier Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darklegolierpants.png"
+      },
+      
+      {
+      "id": "sw126",
+      "name": "Dark Shadow Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkshadowpants.png"
+      },
+      
+      {
+      "id": "sw127",
+      "name": "Umber Shouldermail Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/umbershouderlmailpants.png"
+      },
+      
+      {
+      "id": "sw128",
+      "name": "Dark Orientican Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkorienticanpants.png"
+      },
+      
+      {
+      "id": "sw129",
+      "name": "Dark Scorpio Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkscorpiopants.png"
+      },
+      
+      {
+      "id": "sw130",
+      "name": "Bronze Platine Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bronzeplatinepants.png"
+      },
+      
+      {
+      "id": "sw131",
+      "name": "Mithril Platine Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/mithrilplatinepants.png"
+      },
+      
+      {
+      "id": "sw132",
+      "name": "Orihalcon Platine Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/orihalconplatinepants.png"
+      },
+      
+      {
+      "id": "sw133",
+      "name": "Dark Studded Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkstuddedpants.png"
+      },
+      
+      {
+      "id": "sw134",
+      "name": "Green Commodore Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/greencommodorepants.png"
+      },
+      
+      {
+      "id": "sw135",
+      "name": "Blue Commodore Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bluecommodorepants.png"
+      },
+      
+      {
+      "id": "sw136",
+      "name": "Dark Commodore Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkcommodorepants.png"
+      },
+      
+      {
+      "id": "sw137",
+      "name": "Black Neos Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blackneopants.png"
+      },
+      
+      {
+      "id": "sw138",
+      "name": "Dark Legolier Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darklegoilerpants.png"
+      },
+      
+      {
+      "id": "sw139",
+      "name": "Black Knucklevest Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blackknucklevestpants.png"
+      },
+      
+      {
+      "id": "sw140",
+      "name": "Dark Brown Stealer Pants",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkbrownstealerpants.png"
+      }  
+  ],
+
+  "boots": {
+    {
+      "id": "sw141",
+      "name": "Black Shoes of Death",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/blackshoesofdeath.png"
+      },
+      
+      {
+      "id": "sw142",
+      "name": "Royal Costume Shoes",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/royalcostumeshoes.png"
+      },
+      
+      {
+      "id": "sw143",
+      "name": "Snow Storm Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/snowstormboots.png"
+      },
+      
+      {
+      "id": "sw144",
+      "name": "Shadow Sandals",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/shadowsandals.png"
+      },
+      
+      {
+      "id": "sw145",
+      "name": "Steel Greaves",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/steelgreaves.png"
+      },
+      
+      {
+      "id": "sw146",
+      "name": "Silver Chain Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/silverchainboots.png"
+      },
+      
+      {
+      "id": "sw147",
+      "name": "Gold Chain Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/goldchainboots.png"
+      },
+      
+      {
+      "id": "sw148",
+      "name": "Bronze Greaves",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bronzegreaves.png"
+      },
+      
+      {
+      "id": "sw149",
+      "name": "Dark War Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/darkwarboots.png"
+      },
+      
+      {
+      "id": "sw150",
+      "name": "Gold War Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/goldwarboots.png"
+      },
+      
+      {
+      "id": "sw151",
+      "name": "Timeless Moonsteead",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/timelessmoonsteead.png"
+      },
+      
+      {
+      "id": "sw152",
+      "name": "Reverse Grabbe",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/reversegrabbe.png"
+      },
+      
+      {
+      "id": "sw153",
+      "name": "Aran Combat Shoes",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/arancombatshoes.png"
+      },
+      
+      {
+      "id": "sw154",
+      "name": "Brave Soldier Shoes",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bravesoldiershoes.png"
+      },
+      
+      {
+      "id": "sw155",
+      "name": "Musashi Shoes",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/musashishoes.png"
+      },
+      
+      {
+      "id": "sw156",
+      "name": "Powerful Visitor Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/powerfulvisitorboots.png"
+      },
+      
+      {
+      "id": "sw157",
+      "name": "Wise Visitor Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/wisevisitorboots.png"
+      },
+      
+      {
+      "id": "sw158",
+      "name": "Dexterous Visitor Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/dexterousvisitorboots.png"
+      },
+      
+      {
+      "id": "sw159",
+      "name": "Lucky Visitor Boots",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/luckyvisitorboots.png"
+      },
+      
+      {
+      "id": "sw160",
+      "name": "Bosshunter Greaves",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/bosshuntergreaves.png"
+      },
+      
+      {
+      "id": "sw161",
+      "name": "Cursed Huntershoes",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/cursedhuntershoes.png"
+      },
+      
+      {
+      "id": "sw162",
+      "name": "Arcane Umbra Knight Shoes",
+      "level": 0,
+      "attribute": [1,"Def"],
+      "price": 0,
+      "img": "img/itens/defenses/arcaneumbraknightshoes.png"
+      }
+  }
+}
