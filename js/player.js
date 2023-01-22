@@ -1,65 +1,11 @@
-const player = {
-  level: 1,
-  xpCurrent : 0,
-  atk: 1,
-  def: 0,
-  meso: 0,
 
-  hp() {
-    return this.level * 5;
-  },
-
-  mp() {
-    return Math.floor((this.level / 0.15) * 1);
-  },
-
-  earnReward() {
-    if(player.level - monstros[indexMonster].level >= 5) {
-      hud.rewardMeso = 0.
-      hud.rewardXP = 0;
-    } else {
-      hud.rewardMeso = Math.floor(Math.random() * (monstros[indexMonster].meso - (monstros[indexMonster].meso / 2)) + (monstros[indexMonster].meso / 2));
-      hud.rewardXP = monstros[indexMonster].xp;
-      this.xpCurrent += hud.rewardXP;
-      this.meso += hud.rewardMeso;
-  }
-  },
-
-  xpNextLevel() {
-    return Math.floor(Math.pow((this.level / 0.4), 2));
-  },
-
-  levelUP() {
-    do{
-      this.xpCurrent -= this.xpNextLevel();
-      ++this.level;
-      this.xpNextLevel();
-    }while(this.xpCurrent > this.xpNextLevel())
-    
-    playerHP = player.hp();
-    calcPlayerHP = 0;
-
-    playerMP = player.mp();
-    calcPlayerMP = 0;
-  }
-}
-
-const playerItens = [];
+export default function loadPlayer() {
 
 
-/** VARIAVEIS */
-let playerHP = player.hp();
-let calcPlayerHP = 0;
 
-let playerMP = player.mp();
-let calcPlayerMP = 0;
 
-/** DANO AO MONSTRO */
-function monsterDamage() {
-  monsterHP -= player.atk;                                                               // Reduz a vida do monstro
-  calcMonsterHP += lifeMonstro.clientWidth / (monstros[indexMonster].hp / player.atk);   // Define a porcentagem da barra de vida 
-  lifeMonstro.style.boxShadow = `inset -${calcMonsterHP}px 0 rgba(0, 0, 0, 0.6)`;        // Reduz graficamente a barra de vida do monstro
-}
+
+
 
 /** SKILLS - DESATIVADA*/
 // function heal() {
@@ -148,4 +94,4 @@ function itensAttributes() {
   })
 }
 
-
+}

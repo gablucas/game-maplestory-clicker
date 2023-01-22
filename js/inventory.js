@@ -1,6 +1,9 @@
-const inventory = document.querySelector('#inventory')
-const bagInventory = document.querySelectorAll('#bag li');
-const equipInventory = document.querySelectorAll('.equip li');
+import { bagInventory, equipInventory } from "./inventory/inventoryElements.js";
+import { playerItens } from "./player/playerData.js";
+import itens from "./itens.js";
+import { hotkeySlot } from "./display/hotkeys.js";
+
+export default function loadInventory() {
 
 /** FUNÇÕES USADAS DENTRO DE OUTRAS FUNÇÕES */
 
@@ -67,3 +70,4 @@ playerItens[0].amount = 999;
 hotkeySlot().innerHTML = `<div class="${playerItens[0].id}"><img class="heal('${playerItens[0].id}')" src=${playerItens[0].img}><span class="amount-item">${playerItens[0].amount}</span></div>`;
 
 
+}

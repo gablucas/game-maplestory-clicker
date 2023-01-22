@@ -14,7 +14,7 @@
 
     <!-- TELA GAME -->
     <div class="display js-display">
-      <img class="display-seta js-display-seta-esquerda" src="" width="32px" alt="" onclick="voltarMonstro()">
+      <img class="display-seta stageLeftArrow" src="" width="32px" alt="">
 
       <div class="monstro js-monstro">
         <span class="damageMonster js-damageMonster"></span>
@@ -25,7 +25,7 @@
         
     </div>
     
-      <img class="display-seta js-display-seta-direita" src="img/buttons/seta_direita_lock.png" width="32px" alt="" onclick="">
+      <img class="display-seta stageRightArrow" src="img/buttons/seta_direita_lock.png" width="32px" alt="">
     </div>
     
     <!-- HOTKEYS -->
@@ -50,7 +50,7 @@
       </div>
       <div class="menu-hud">
         <button><img src="img/buttons/user.png" alt="" width="24px" height="24px" onclick="windowInventory()"></button>
-        <button><img src="img/buttons/store.png" alt="" width="24px" height="24px" onclick="windowShop()"></button>
+        <button id="buttonShop"><img src="img/buttons/store.png" alt="" width="24px" height="24px"></button>
         <button><img src="img/buttons/gear.png" alt="" width="24px" height="24px"></button>
       </div>
     </div>
@@ -153,16 +153,17 @@
 
   <section id="deathScreen" data-death>
     <span>VOCÊ MORREU</span>
-    <button onclick="playerRevive()">REVIVER</button>
+    <button id="btnRevive">REVIVER</button>
   </section>
 
+<script type="module" src="game.js"></script>
 
-  <script src="js/display.js"></script>
+  <!-- <script src="js/display.js"></script>
   <script src="js/player.js"></script>
   <script src="js/monsters.js"></script>
   <script src="js/battle.js"></script>
   <script src="js/itens.js"></script>
   <script src="js/shop.js"></script>
-  <script src="js/inventory.js"></script>
+  <script src="js/inventory.js"></script> -->
 </body>
 </html>

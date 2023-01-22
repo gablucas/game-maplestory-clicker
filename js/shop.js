@@ -1,3 +1,7 @@
+import itens from "./itens.js";
+
+export default function loadShop() {
+
 // Variaveis do Shop
 const shop = document.querySelector('#shop');
 const setaVoltar = document.querySelector('#shop .voltar-shop');
@@ -161,5 +165,6 @@ function filterItem(type) {
     }
   })
 
+}
 
 }

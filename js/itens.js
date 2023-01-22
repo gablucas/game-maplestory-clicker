@@ -1,3 +1,5 @@
+
+
 const weapons = [];
 const defenses = [];
 const potions = [];
@@ -269,7 +271,7 @@ const hp8 = new potionsFactory('Forged By Gods HP', 175, 40, 10, 'HP_08', 'img/i
 const mp8 = new potionsFactory('Forged By Gods MP', 175, 40, 10, 'MP_08', 'img/itens/potions/mp8.png');
 
 
-const itens = weapons.concat(defenses, potions);
+const itens = [...weapons, ...defenses, ...potions];
 const exibirItens = document.querySelector('.item-shop-exibir');
 
 
@@ -280,6 +282,6 @@ itens.forEach((item, index) => {
      <span class="item-info">${item.price} mesos</span></li>`
 })
 
-
+export default itens;
 
 

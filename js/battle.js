@@ -1,32 +1,41 @@
+import hud from "./display/hud.js";
+import { monstro } from "./monster/monsterElements.js";
+import { playerAttack } from "./player/playerAttack.js";
+import { monsterVariables } from "./monster/switchMonster.js";
+import { monsterReborn } from "./monster/rebornMonster.js";
+import { monsterAttack } from "./monster/monsterAttack.js";
+import { monstros } from "./monster/arrayMonsters.js";
+import { playerData, playerVariables } from "./player/playerData.js";
+import { playerDeath } from "./display/playerDeath.js";
+import { verifyStage } from "./display/switchStage.js";
+
+export default function loadBattle() {
+
 // Atualizar a HUD inicialmente
 hud.atualizar();
 
 function battle() {
 
-  monsterDamage();  // Dano ao monstro
+  playerAttack();  // Dano ao monstro
   hud.showDamage();  // Exibe o dano desferido ao monstro
-  playerDamage(); // Dano ao player
+  monsterAttack(); // Dano ao player
 
   // Ação quando o monstro morre
-  if(monsterHP <= 0) {
+  if(monsterVariables.monsterHP <= 0) {
 
-      player.earnReward() // Ganha XP e GOLD
+      playerData.earnReward() // Ganha XP e GOLD
       hud.showReward(); // Mostra o XP e GOLD
       monsterReborn();  // Nasce um novo monstro
       
     // Ação quando sobe de level
-    if(player.xpCurrent >= player.xpNextLevel()) {
-      player.levelUP(); // Sobre o level do player
-    }
-
-    // Verifica se o proximo monstro tem o mesmo level que o persosagem
-    if(indexMonster + 1 < monstros.length && player.level >= monstros[indexMonster + 1].level) {
-      activeRightArrow();
+    if(playerData.xpCurrent >= playerData.xpNextLevel()) {
+      playerData.levelUP(); // Sobre o level do player
+      verifyStage();
     }
   }
 
   // Ação quando o player morre
-  if(playerHP <= 0) {
+  if(playerVariables.playerHP <= 0) {
     playerDeath();
   }
 
@@ -34,3 +43,5 @@ function battle() {
 }
 
 monstro.addEventListener('click', battle)
+
+}
