@@ -2,24 +2,6 @@
 export const monstros = [
 
   {
-    level:	1,
-    name:	'Snail',
-    hp: 2,
-    atk: 1,
-    xp:	1,
-    meso:	2,
-    img: 'img/monsters/monster_snail.webp',
-  },
-  {
-    level:	3,
-    name:	'Blue Snail',
-    hp: 10,
-    atk: 3,
-    xp:	3,
-    meso:	4,
-    img: 'img/monsters/monster_bluesnail.webp',
-  },
-  {
     level: 1,
     name: 'Snail',
     hp: 2,

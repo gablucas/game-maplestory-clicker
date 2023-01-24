@@ -3,7 +3,7 @@ import { monsterVariables } from "../monster/monstersData.js";
 import hud from "../display/hud.js";
 
 const playerData = {
-    level: 1,
+    level: 1  ,
     xpCurrent : 0,
     atk: 1,
     def: 0,
