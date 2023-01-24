@@ -1,33 +1,29 @@
-import { monstros } from "../monster/arrayMonsters.js";
-import { monsterVariables } from "../monster/switchMonster.js";
+import { battle } from "../battle.js";
+import { playerVariables } from "../player/playerData.js";
+import { heal } from "../player/playerHeal.js";
+import { hotkeys } from "./displayElements.js";
 import { nextStage, previousStage } from "./switchStage.js";
+import { windowInventory } from "./windowInventory.js";
 import { windowShop } from "./windowShop.js";
-
-
-/** SLOT HOTKEY */
-const hotkeys = document.querySelectorAll('#hotkeys li')
-
-export function hotkeySlot() {
-    return Array.from(hotkeys).find((key) => key.innerHTML === "");
-}
 
 /** ATALHOS */
 // Essa função usa variaveis que foram declaradas e inicializadas depois, mas o motivo desta função ter acesso a essas variaveis deve-se ao fato de que o evento é adicionado antes das variaveis, mas a execução dele é depois.
-function atalhos(event) {
+export function atalhos(event) {
 
+  if(!playerVariables.isPlayerDead) {
     // Atalho para voltar o monstro
     if(event.key === 'ArrowLeft') {
-      nextStage();
+      previousStage();
     }
   
     // Atalho para o próximo monstro
     if(event.key === 'ArrowRight') {
-      previousStage();
+      nextStage();
     }
   
     // Atalho para abrir o inventario
     if(event.key === 'i' || event.key === 'I') {
-      windowInventory();
+      windowInventory()
     }
   
     // Atalho para abrir o shop
@@ -42,17 +38,10 @@ function atalhos(event) {
   
     // // Atalho das hotkeys
     if(event.key === '1') {
-      new Function('return ' + hotkeys[0].firstElementChild.firstElementChild.getAttribute('class'))();
+      heal(hotkeys[0])
     } else if(event.key === '2') {
-      new Function('return ' + hotkeys[1].firstElementChild.firstElementChild.getAttribute('class'))();
-    } else if(event.key === '3') {
-      new Function('return ' + hotkeys[2].firstElementChild.firstElementChild.getAttribute('class'))();
-    } else if(event.key === '4') {
-      new Function('return ' + hotkeys[3].firstElementChild.firstElementChild.getAttribute('class'))();
-    } else if(event.key === '5') {
-      new Function('return ' + hotkeys[4].firstElementChild.firstElementChild.getAttribute('class'))();
-    }
+      heal(hotkeys[1])
+    } 
   }
+}
 
-  
-  window.addEventListener('keydown', atalhos)

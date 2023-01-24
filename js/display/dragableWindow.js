@@ -1,27 +1,30 @@
 // ARRASTAR JANELAS
-const dragable = document.querySelectorAll('[data-dragable]');
-
-function moveWindow(event) {
+export function moveWindow(event) {
   const selectedWindow = event.currentTarget;
 
   // Quando arrasta a janela
-  selectedWindow.addEventListener('mousemove', positionWindow)
   function positionWindow(event) {
-    console.log(event)
-    const elementPosition = getComputedStyle(selectedWindow);
-    const top = parseInt(elementPosition.top);
-    const left = parseInt(elementPosition.left);
     
-    selectedWindow.style.top = top + event.movementY + 'px';
-    selectedWindow.style.left = left + event.movementX + 'px';
+    if (selectedWindow === event.target) {
+      const elementPosition = getComputedStyle(selectedWindow);
+      const top = parseInt(elementPosition.top);
+      const left = parseInt(elementPosition.left);
+      
+      selectedWindow.style.top = top + event.movementY + 'px';
+      selectedWindow.style.left = left + event.movementX + 'px';
+    }
+  }
+  
+  selectedWindow.addEventListener('mousemove', positionWindow)
+
+  // Remove o evento de mover e de segurar com o mouse a tela do shop
+  function removeEvent() {
+    selectedWindow.removeEventListener('mousemove', positionWindow);
+    document.removeEventListener('mouseup', removeEvent)
   }
 
-  // Quando solta o mouse
-  document.addEventListener('mouseup', () => {
-    selectedWindow.removeEventListener('mousemove', positionWindow)
-  })
+  // Evento que executa a função acima
+  document.addEventListener('mouseup', removeEvent)
 }
 
-dragable.forEach((item) => {
-  item.addEventListener('mousedown', moveWindow)
-})
+

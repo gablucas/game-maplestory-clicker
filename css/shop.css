@@ -18,11 +18,11 @@
   z-index: 2;
 }
 
-#shop h1 {
-  grid-column: 1/-1;
+#shop::before {
+  content: "Shop";
+  display: block;
   padding-top: 4px;
   padding-bottom: 4px;
-  justify-self: center;
   text-align: center;
   font: 600 .75rem/1 'Courier';
   color: #F2DA3A;
@@ -105,24 +105,24 @@
   gap: 4px;
 }
 
-.item-shop-filter {
+#item-shop-filter {
   display: flex;
   gap: 4px;
   
 }
 
-.item-shop-filter button {
+#item-shop-filter li {
   background: #999999;
   padding: 4px;
   font:600 .75rem/1 'Courier';
   color: #FFFFFF;
   text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
-  border: 1px sobuttond #999999;
+  border: 1px solid #999999;
   border-radius: 5px 5px 0px 0px;
   position: relative;
 }
 
-.item-shop-filter button::before {
+#item-shop-filter li::before {
   content: "";
   position: absolute;
   top: 0;
@@ -132,7 +132,7 @@
   box-shadow: inset 0px 10px rgba(255, 255, 255, 0.3);
 }
 
-.item-shop-filter button.checked {
+#item-shop-filter li.checked {
   background: #FFA802;
   border: 1px solid #EA9844;
 }
@@ -145,10 +145,6 @@
   padding-right: 10px;
   height: 270px;
   overflow-y: scroll;
-}
-
-.item-shop-exibir li.nofilter {
-  display: none;
 }
 
 .item-shop-exibir li {
@@ -185,6 +181,7 @@
   display: grid;
   grid-template-columns: auto 1fr 1fr;
   column-gap: 8px;
+  height: 4rem;
   padding: 4px 0px 4px 10px;
   border-radius: 0px 0px 7px 7px;
   font-size: .8rem;

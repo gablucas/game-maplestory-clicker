@@ -1,5 +1,5 @@
-import { monstros } from "../monster/arrayMonsters.js";
-import { monsterVariables } from "../monster/switchMonster.js";
+import { monstros } from "../monster/monstersData.js";
+import { monsterVariables } from "../monster/monstersData.js";
 import hud from "../display/hud.js";
 
 const playerData = {
@@ -7,7 +7,8 @@ const playerData = {
     xpCurrent : 0,
     atk: 1,
     def: 0,
-    meso: 0,
+    meso: 1000,
+    itens: [],
   
     hp() {
       return this.level * 5;
@@ -26,7 +27,7 @@ const playerData = {
         hud.rewardXP = monstros[monsterVariables.indexMonster].xp;
         this.xpCurrent += hud.rewardXP;
         this.meso += hud.rewardMeso;
-    }
+      }
     },
   
     xpNextLevel() {
@@ -34,18 +35,18 @@ const playerData = {
     },
   
     levelUP() {
-      do{
+      do {
         this.xpCurrent -= this.xpNextLevel();
         ++this.level;
         this.xpNextLevel();
-      }while(this.xpCurrent > this.xpNextLevel())
+      } while (this.xpCurrent > this.xpNextLevel())
       
       playerVariables.playerHP = playerData.hp();
       playerVariables.calcPlayerHP = 0;
   
       playerVariables.playerMP = playerData.mp();
       playerVariables.calcPlayerMP = 0;
-    }
+    },
   }
 
   /** VARIAVEIS */
@@ -54,8 +55,8 @@ const playerData = {
     playerMP: playerData.mp(),
     calcPlayerHP: 0,
     calcPlayerMP: 0,
+    isPlayerDead: false,
   }
 
-const playerItens = [];
 
-export  {playerData, playerVariables, playerItens};
+export  { playerData, playerVariables };

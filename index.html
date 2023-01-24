@@ -33,10 +33,6 @@
       <ul id="hotkeys">
         <li></li>
         <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
       </ul>
       
     </div>
@@ -49,7 +45,7 @@
         <span class="titulo">MP.</span><span class="barramana js-barramp"></span>
       </div>
       <div class="menu-hud">
-        <button><img src="img/buttons/user.png" alt="" width="24px" height="24px" onclick="windowInventory()"></button>
+        <button id="buttonInventory"><img src="img/buttons/user.png" alt="" width="24px" height="24px"></button>
         <button id="buttonShop"><img src="img/buttons/store.png" alt="" width="24px" height="24px"></button>
         <button><img src="img/buttons/gear.png" alt="" width="24px" height="24px"></button>
       </div>
@@ -59,8 +55,7 @@
 
   <!-- Inventario -->
   <div id="inventory" class="desativado" data-dragable>
-    <h1>Inventory</h1>
-    <img class="fechar-inventario" src="img/buttons/x.png" alt="" onclick="windowInventory()">
+    <img class="fechar-inventario" src="img/buttons/x.png" alt="">
 
     <div class="container">
       <ul class="equip">
@@ -69,6 +64,10 @@
         <li id="pants-equip"></li>
         <li id="boots-equip"></li>
         <li id="sword-axe-equip"></li>
+        <li id="player-stats">
+          <div>Atk <span>1</span></div>
+          <div>Def <span>0</span></div>
+        </li>
       </ul>
 
       <ul id="bag">
@@ -118,9 +117,8 @@
 
   <!-- Shop -->
   <div id="shop" class="desativado" data-dragable>
-    <h1>Shop</h1>
-    <img class="fechar-shop" src="img/buttons/x.png" alt="" onclick="windowShop()">
-    <img class="voltar-shop desativado" src="img/buttons/return.png" alt="" onclick="returnShop()">
+    <img class="fechar-shop" src="img/buttons/x.png" alt="">
+    <img class="voltar-shop desativado" src="img/buttons/return.png" alt="">
 
     <div class="container">
 
@@ -133,14 +131,23 @@
 
       <!-- ITENS EXIBIDOS -->
       <div class="item-shop desativado">
-        <ul class="item-shop-filter">
-          <!-- <li class="checked">All</li> -->
+        <ul id="item-shop-filter">
+          <li class="checked">All</li>
+          <li id="filter-weapon-sword">Sword</li>
+          <li id="filter-defense-helmet">Helmet</li>
+          <li id="filter-defense-armor">Armor</li>
+          <li id="filter-defense-pants">Pants</li>
+          <li id="filter-defense-boots">Boots</li>
+          <li id="filter-potion-life">HP</li>
+          <li id="filter-potion-mana">Mana</li>
         </ul>
+
         <ul class="item-shop-exibir">
+          <!-- O itens serão adicionados pela função addItensShop -->
         </ul>
 
         <div class="item-shop-descricao">
-          
+          <!-- A descrição será adicionada pela função showItemDescription -->
         </div>
 
       </div>
@@ -157,13 +164,5 @@
   </section>
 
 <script type="module" src="game.js"></script>
-
-  <!-- <script src="js/display.js"></script>
-  <script src="js/player.js"></script>
-  <script src="js/monsters.js"></script>
-  <script src="js/battle.js"></script>
-  <script src="js/itens.js"></script>
-  <script src="js/shop.js"></script>
-  <script src="js/inventory.js"></script> -->
 </body>
 </html>

@@ -9,20 +9,22 @@
 
 /* Bordas pretas do inventario */
 #inventory {
+  display: grid;
+  justify-content: center;
   position: absolute;
   top: 40px;
-  left: 100px;
+  left: 500px;
   padding: 4px 10px 20px 10px;
   border-radius: 7px;
   box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.7);
 }
 
-#inventory h1 {
-  /* grid-column: 1/-1; */
+#inventory::before {
+  content: "Inventory";
+  display: block;
   padding-top: 4px;
   padding-bottom: 4px;
-  justify-self: center;
   text-align: center;
   font: 600 .75rem/1 'Courier';
   color: #F2DA3A;
@@ -53,27 +55,18 @@
 }
 
 /* Equipamentos do player */
-#inventory .equip {
-  display: grid;
-  grid-template-rows: repeat(5, 44px);
-  gap: 20px;
-  font: 600 .65rem/1 'Courier';
-}
-
-#inventory .equip li {
-  width: 44px;
-  height: 44px;
-  border-radius: 4px;
-  box-shadow: inset 2px 2px 2px #888888;
-  display: flex; /* Por algum motivo essa propriedade permite alinhar a imagem no centro da li */
-  position: relative;
-  background: linear-gradient(#aaaaaa, #d6d6d6);
-}
-
 #inventory .equip li {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  box-shadow: inset 2px 2px 2px #888888;
+  position: relative;
+  background: linear-gradient(#aaaaaa, #d6d6d6);
 }
 
 #helmet-equip:before,
@@ -108,6 +101,24 @@
 #sword-axe-equip:before {
   background: url('../img/itens/weapons/arcaneumbra.png') no-repeat center/32px;
 }
+
+#inventory #player-stats {
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  height: max-content;
+  font: 800 .70rem/1 'Inter';
+  text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
+  color: orange;
+  box-shadow: none;
+  background: none;
+}
+
+
+#inventory #player-stats span {
+  color: #FFFFFF;
+}
+
 
 /* Bau de itens do player */
 #bag {

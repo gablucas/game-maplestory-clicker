@@ -74,3 +74,7 @@ button {
 #shop .meso {
   margin-top: 4px;
 }
+
+.hide {
+  display: none !important;
+}

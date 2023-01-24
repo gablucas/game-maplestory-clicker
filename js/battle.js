@@ -1,20 +1,17 @@
 import hud from "./display/hud.js";
-import { monstro } from "./monster/monsterElements.js";
 import { playerAttack } from "./player/playerAttack.js";
-import { monsterVariables } from "./monster/switchMonster.js";
 import { monsterReborn } from "./monster/rebornMonster.js";
 import { monsterAttack } from "./monster/monsterAttack.js";
-import { monstros } from "./monster/arrayMonsters.js";
 import { playerData, playerVariables } from "./player/playerData.js";
 import { playerDeath } from "./display/playerDeath.js";
-import { verifyStage } from "./display/switchStage.js";
+import { verifyStage } from "./display/verifyStage.js";
+import { monsterVariables } from "./monster/monstersData.js";
 
-export default function loadBattle() {
 
 // Atualizar a HUD inicialmente
 hud.atualizar();
 
-function battle() {
+ export function battle() {
 
   playerAttack();  // Dano ao monstro
   hud.showDamage();  // Exibe o dano desferido ao monstro
@@ -42,6 +39,4 @@ function battle() {
   hud.atualizar();  // Atualiza os eventos no HUD
 }
 
-monstro.addEventListener('click', battle)
 
-}
