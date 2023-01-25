@@ -34,7 +34,7 @@
   justify-items: center;
   align-self: end;
   position: relative;
-  margin-bottom: 74px;
+  margin-bottom: 10.3vh;
 }
 
 .damageMonster {
@@ -201,5 +201,9 @@
 
   .game {
     grid-template-rows: 1fr auto auto;
+  }
+
+  .monstro {
+    margin-bottom: 1vh;
   }
 }

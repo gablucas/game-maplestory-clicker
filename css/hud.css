@@ -160,9 +160,6 @@
   .menu-hud > span {
     padding: 12px;
   }
-}
-
-@media(max-width: 425px) {
 
   #hotkeys {
     grid-template-columns: 1fr;
@@ -174,5 +171,4 @@
     height: 66px;
     width: 66px;
   }
-
 }
