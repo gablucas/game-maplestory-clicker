@@ -1,10 +1,12 @@
 #hotkeys {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 44px);
+  grid-template-columns: 1fr 1fr;
   gap: 4px;
   justify-content: center;
-  margin-top: 20px;
-  padding-left: 8px;
+
+  position: absolute;
+  bottom: 90px;
+  left: calc(50vw - 96px);
 }
 
 #hotkeys li {
@@ -158,4 +160,19 @@
   .menu-hud > span {
     padding: 12px;
   }
+}
+
+@media(max-width: 425px) {
+
+  #hotkeys {
+    grid-template-columns: 1fr;
+    left: 10px;
+    bottom: 160px;
+  }
+
+  #hotkeys li {
+    height: 66px;
+    width: 66px;
+  }
+
 }

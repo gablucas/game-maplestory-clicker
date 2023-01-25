@@ -5,7 +5,6 @@ import { playerData, playerVariables } from "./playerData.js";
 export function heal(healElement) {
   const potionID = healElement.firstElementChild?.getAttribute('class');
 
-
   // Se o player possuir a potion
   if(playerData.itens.some(item => item.id === potionID)) {
     let useItem = playerData.itens.find(item => item.id === potionID);
