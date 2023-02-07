@@ -11,7 +11,7 @@ export const monstros = [
     img: 'img/monsters/monster_snail.webp',
   },
   {
-    level: 1,
+    level: 2,
     name: 'Blue Snail',
     hp: 5,
     atk: 3,
@@ -20,7 +20,7 @@ export const monstros = [
     img: 'img/monsters/monster_bluesnail.webp',
   },
   {
-    level: 1,
+    level: 3,
     name: 'Shroom',
     hp: 9,
     atk: 7,
@@ -29,7 +29,7 @@ export const monstros = [
     img: 'img/monsters/monster_shroom.webp',
   },
   {
-    level: 1,
+    level: 4,
     name: 'Tino',
     hp: 12,
     atk: 10,
@@ -38,7 +38,7 @@ export const monstros = [
     img: 'img/monsters/monster_tino.webp',
   },
   {
-    level: 1,
+    level: 5,
     name: 'Stump',
     hp: 20,
     atk: 6,
@@ -47,7 +47,7 @@ export const monstros = [
     img: 'img/monsters/monster_stump.webp',
   },
   {
-    level: 1,
+    level: 6,
     name: 'Orange Mushroom',
     hp: 24,
     atk: 7,
@@ -56,7 +56,7 @@ export const monstros = [
     img: 'img/monsters/monster_orangemushroom.webp',
   },
   {
-    level: 1,
+    level: 7,
     name: 'Slime',
     hp: 28,
     atk: 8,
@@ -65,7 +65,7 @@ export const monstros = [
     img: 'img/monsters/monster_slime.webp',
   },
   {
-    level: 1,
+    level: 8,
     name: 'Murukum',
     hp: 32,
     atk: 9,
@@ -74,7 +74,7 @@ export const monstros = [
     img: 'img/monsters/monster_murukun.webp',
   },
   {
-    level: 1,
+    level: 9,
     name: 'Tiguru',
     hp: 36,
     atk: 10,
@@ -83,7 +83,7 @@ export const monstros = [
     img: 'img/monsters/monster_tiguru.webp',
   },
   {
-    level: 1,
+    level: 10,
     name: 'Green Mushroom',
     hp: 40,
     atk: 10,
@@ -92,7 +92,7 @@ export const monstros = [
     img: 'img/monsters/monster_greenmushroom.webp',
   },
   {
-    level: 1,
+    level: 11,
     name: '[BOSS] Mano',
     hp: 50,
     atk: 15,
@@ -101,7 +101,7 @@ export const monstros = [
     img: 'img/monsters/monster_mano.webp',
   },
   {
-    level: 1,
+    level: 12,
     name: 'Stranger Pig',
     hp: 24,
     atk: 1,
@@ -110,7 +110,7 @@ export const monstros = [
     img: 'img/monsters/monster_strangerpig.webp',
   },
   {
-    level: 1,
+    level: 13,
     name: 'Horny Mushroom',
     hp: 26,
     atk: 1,
@@ -119,7 +119,7 @@ export const monstros = [
     img: 'img/monsters/monster_hornymushroom.webp',
   },
   {
-    level: 1,
+    level: 14,
     name: 'Rotting Kobold',
     hp: 28,
     atk: 1,
@@ -128,7 +128,7 @@ export const monstros = [
     img: 'img/monsters/monster_rottingkobold.webp',
   },
   {
-    level: 1,
+    level: 15,
     name: 'Patrol Robot',
     hp: 30,
     atk: 1,
@@ -137,7 +137,7 @@ export const monstros = [
     img: 'img/monsters/monster_patrolrobot.webp',
   },
   {
-    level: 1,
+    level: 16,
     name: 'Stone Golem',
     hp: 32,
     atk: 1,
@@ -146,7 +146,7 @@ export const monstros = [
     img: 'img/monsters/monster_stonegolem.webp',
   },
   {
-    level: 1,
+    level: 17,
     name: 'Dark Stone Golem',
     hp: 34,
     atk: 1,
@@ -155,7 +155,7 @@ export const monstros = [
     img: 'img/monsters/monster_darkstonegolem.webp',
   },
   {
-    level: 1,
+    level: 18,
     name: 'Mixed Golem',
     hp: 36,
     atk: 1,
@@ -164,7 +164,7 @@ export const monstros = [
     img: 'img/monsters/monster_mixedgolem.webp',
   },
   {
-    level: 1,
+    level: 19,
     name: 'Oda Scout',
     hp: 38,
     atk: 1,
@@ -173,7 +173,7 @@ export const monstros = [
     img: 'img/monsters/monster_odascout.webp',
   },
   {
-    level: 1,
+    level: 20,
     name: 'Oda Advanced Scout',
     hp: 40,
     atk: 1,
@@ -182,7 +182,7 @@ export const monstros = [
     img: 'img/monsters/monster_odaadvancedscout.webp',
   },
   {
-    level: 1,
+    level: 21,
     name: '[BOSS] Mushmom',
     hp: 100,
     atk: 1,
@@ -191,7 +191,7 @@ export const monstros = [
     img: 'img/monsters/monster_mushmom.webp',
   },
   {
-    level: 1,
+    level: 22,
     name: 'Oda Warrior',
     hp: 24,
     atk: 1,
@@ -200,7 +200,7 @@ export const monstros = [
     img: 'img/monsters/monster_odawarrior.webp',
   },
   {
-    level: 1,
+    level: 23,
     name: 'Dust Box',
     hp: 26,
     atk: 1,
@@ -209,7 +209,7 @@ export const monstros = [
     img: 'img/monsters/monster_dustbox.webp',
   },
   {
-    level: 1,
+    level: 24,
     name: 'Ghost Stump',
     hp: 28,
     atk: 1,
@@ -218,7 +218,7 @@ export const monstros = [
     img: 'img/monsters/monster_ghoststump.webp',
   },
   {
-    level: 1,
+    level: 25,
     name: 'Giant Shadow Blade',
     hp: 30,
     atk: 1,
@@ -227,7 +227,7 @@ export const monstros = [
     img: 'img/monsters/monster_giantshadowblade.webp',
   },
   {
-    level: 1,
+    level: 26,
     name: 'Evil Eye',
     hp: 32,
     atk: 1,
@@ -236,7 +236,7 @@ export const monstros = [
     img: 'img/monsters/monster_evileye.webp',
   },
   {
-    level: 1,
+    level: 27,
     name: 'Ruins Sentinel',
     hp: 34,
     atk: 1,
@@ -245,7 +245,7 @@ export const monstros = [
     img: 'img/monsters/monster_ruinssentinel.webp',
   },
   {
-    level: 1,
+    level: 28,
     name: 'Nefarious Monk Apprentice',
     hp: 36,
     atk: 1,
@@ -254,7 +254,7 @@ export const monstros = [
     img: 'img/monsters/monster_nefariousmonkapprentice.webp',
   },
   {
-    level: 1,
+    level: 29,
     name: 'Nefarious Monk Master',
     hp: 38,
     atk: 1,
@@ -263,7 +263,7 @@ export const monstros = [
     img: 'img/monsters/monster_nefariousmonkmaster.webp',
   },
   {
-    level: 1,
+    level: 30,
     name: 'Counts Swordsman',
     hp: 40,
     atk: 1,
@@ -272,7 +272,7 @@ export const monstros = [
     img: 'img/monsters/monster_countsswordsman.webp',
   },
   {
-    level: 1,
+    level: 31,
     name: '[BOSS] Stumpy',
     hp: 100,
     atk: 1,
