@@ -218,8 +218,8 @@
       width: 360px;
       left: 50%; 
       transform: translateX(-50%);
-    }
   }
+}
 
 @media(max-width: 375px) {
 
@@ -227,17 +227,17 @@
       width: 340px;
       left: 50%; 
       transform: translateX(-50%);
-    }
   }
+}
 
-  @media(max-width: 320px) {
+@media(max-width: 320px) {
 
-    #shop {
-        width: 290px;
-        left: 50%; 
-        transform: translateX(-50%);
-      }
-    }
+  #shop {
+      width: 290px;
+      left: 50%; 
+      transform: translateX(-50%);
+  }
+}
 
 
 

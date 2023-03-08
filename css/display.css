@@ -200,11 +200,12 @@
 .windowGame {
   position: absolute;
   top: 40px;
-  left: 100px;
+  left: 880px;
   padding: 4px 10px 20px 10px;
   border-radius: 7px;
   box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
 }
 
 .windowGame::before {
@@ -273,6 +274,25 @@
   }
 }
 
+#showItemStats {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: .8rem;
+  padding: 12px;
+  border-radius: 7px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0px 1px 4px rgba(255, 255, 255, 0.5);
+}
+
+#showItemStats span:first-child {
+  font-weight: 600;
+  color: #FFA500;
+}
+
 @media(max-width: 720px) {
 
   .game {
@@ -281,5 +301,31 @@
 
   .monstro {
     margin-bottom: 1vh;
+  }
+
+  #shortcuts {
+    width: 360px;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+}
+
+
+
+@media(max-width: 375px) {
+
+  #shortcuts {
+      width: 340px;
+      left: 50%; 
+      transform: translateX(-50%);
+  }
+}
+
+@media(max-width: 320px) {
+
+  #shortcuts {
+      width: 290px;
+      left: 50%; 
+      transform: translateX(-50%);
   }
 }

@@ -5,7 +5,7 @@ import { hotkeys } from "./displayElements.js";
 import { nextStage, previousStage } from "./switchStage.js";
 import { windowInventory } from "./windowInventory.js";
 import { windowShop } from "./windowShop.js";
-import { handleCloseShortcuts } from "./windowGame.js";
+import { handleCloseShortcuts } from "./windowShortcuts.js";
 
 /** HOTKEYS */
 const gameKeys = {

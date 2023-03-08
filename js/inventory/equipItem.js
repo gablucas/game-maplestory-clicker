@@ -5,6 +5,7 @@ import { inventorySlot } from "./inventorySlot.js";
 
 // Equipar item
 export function equipItem({ currentTarget }) {
+  const itemStats = document.querySelector('#showItemStats');
 
   // Só vai executar a função caso o item selecionado não esteja vazio
   if (currentTarget.innerHTML) {
@@ -35,6 +36,7 @@ export function equipItem({ currentTarget }) {
       equipItem.appendChild(selectedItem)
     }
 
+    itemStats.remove();
     playerAttributes();
   }
 }
