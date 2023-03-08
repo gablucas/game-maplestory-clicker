@@ -34,7 +34,7 @@
   justify-items: center;
   align-self: end;
   position: relative;
-  margin-bottom: 10.3vh;
+  margin-bottom: 70px;
 }
 
 .damageMonster {
@@ -195,6 +195,58 @@
   color: #FFFFFF;
   background: linear-gradient(#FFA802, #b17a14);
   margin-top: 10px;
+}
+
+.windowGame {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  padding: 4px 10px 20px 10px;
+  border-radius: 7px;
+  box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.windowGame::before {
+  content: "Atalhos";
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+  font: 600 .75rem/1 'Courier';
+  color: #F2DA3A;
+}
+
+.windowGame .close-window {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 10px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.windowGame.closed {
+  display: none;
+}
+
+.windowGame .windowContainer {
+  margin: auto;
+
+  border-radius: 7px;
+  background: #EEEEEE;
+  padding: 12px;
+}
+
+#shortcuts span {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
+  color: orange;
+}
+
+#shortcuts img {
+  display: inline-block;
 }
 
 @media(max-width: 720px) {

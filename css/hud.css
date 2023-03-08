@@ -137,7 +137,36 @@
   border-radius: 7px;
   cursor: pointer;
   background: linear-gradient(#42C5F1, #0790D5);
+
+  position: relative;
 }
+
+.menu-hud > button:hover::before {
+  
+  position: absolute;
+  left: 0px;
+  top: -30px;
+  font-size: 1rem;
+  padding: 4px 6px;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  color: #FFFFFF;
+  background: darkslategray;
+}
+
+#buttonInventory:hover::before {
+  content: "Inventário";
+}
+
+#buttonShop:hover::before {
+  content: "Loja";
+}
+
+#buttonShortcuts:hover::before {
+  content: "Atalhos";
+}
+
+
 
 @media(max-width: 720px) {
 
