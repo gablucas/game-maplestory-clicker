@@ -200,7 +200,7 @@
 .windowGame {
   position: absolute;
   top: 40px;
-  left: 880px;
+  left: 820px;
   padding: 4px 10px 20px 10px;
   border-radius: 7px;
   box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3);
@@ -293,6 +293,16 @@
   color: #FFA500;
 }
 
+
+@media(max-width: 1240px) {
+
+  #shortcuts {
+    width: 360px;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+}
+
 @media(max-width: 720px) {
 
   .game {
@@ -302,14 +312,7 @@
   .monstro {
     margin-bottom: 1vh;
   }
-
-  #shortcuts {
-    width: 360px;
-    left: 50%; 
-    transform: translateX(-50%);
-  }
 }
-
 
 
 @media(max-width: 375px) {

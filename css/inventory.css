@@ -13,7 +13,7 @@
   justify-content: center;
   position: absolute;
   top: 40px;
-  left: 500px;
+  left: 440px;
   padding: 4px 10px 20px 10px;
   border-radius: 7px;
   box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3);
@@ -152,7 +152,7 @@
 }
 
 
-@media(max-width: 720px) {
+@media(max-width: 1240px) {
   #inventory {
     top: 20px;
     left: 50%;
