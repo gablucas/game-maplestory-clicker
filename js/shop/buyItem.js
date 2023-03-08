@@ -1,10 +1,10 @@
 import hud from "../display/hud.js";
+import { showMessage } from "../display/showMessage.js";
 import { windowInventory } from "../display/windowInventory.js";
 import { inventory } from "../inventory/inventoryElements.js";
 import { inventorySlot } from "../inventory/inventorySlot.js";
 import { itens } from "../itens.js";
 import { playerData } from "../player/playerData.js";
-
 
 // Função de comprar um item - É utilizada no modulo showItemDescription
 export function buyItem({ currentTarget }) {
@@ -13,7 +13,7 @@ export function buyItem({ currentTarget }) {
 
   const selectedItem = itens[typeItem].find((item) => item.id === idItem)
     
-  if(playerData.meso >= selectedItem.price){
+  if(playerData.meso >= selectedItem.price && playerData.level >= selectedItem.level){
     playerData.meso -= selectedItem.price
     hud.atualizar();
     if (inventory.classList.contains('desativado')) {
@@ -38,5 +38,9 @@ export function buyItem({ currentTarget }) {
       playerData.itens.push(selectedItem)
       inventorySlot().innerHTML = `<div class="${selectedItem.id}"><img src=${selectedItem.img}></div>`;
     }
+  }
+
+  if (playerData.level < selectedItem.level) {
+    showMessage('Você não possui nível suficiente para comprar este item')
   }
 }

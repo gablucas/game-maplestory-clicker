@@ -249,6 +249,30 @@
   display: inline-block;
 }
 
+.showMessage {
+  position: absolute;
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: -1px 0 darkslategrey, 0 1px darkslategrey, 1px 0 darkslategrey, 0 -1px darkslategrey;
+  color: orange;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  animation: toDown 3s;
+}
+
+@keyframes toDown {
+  50% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 300%);
+  }
+}
+
 @media(max-width: 720px) {
 
   .game {
