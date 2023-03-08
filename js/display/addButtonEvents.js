@@ -17,7 +17,7 @@ import { showItemStats } from "../inventory/showItemStats.js";
 export function addButtonEvents() {
   leftArrow.addEventListener('click', previousStage);
   rightArrow.addEventListener('click', nextStage);
-  window.addEventListener('keydown', atalhos);
+  window.addEventListener('keyup', atalhos);
   monstro.addEventListener('click', battle);
   closeShop.addEventListener('click', windowShop);
   buttonShop.addEventListener('click', windowShop);
