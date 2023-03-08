@@ -25,3 +25,7 @@ Mate monstros, ganhe dinheiro, compre equipamentos melhores, ganhe XP, suba de n
 ### Comprando itens e os equipando
 ![ComprandoeEquipando](https://user-images.githubusercontent.com/96196591/214407589-04807585-c5b7-4225-9642-2a62c433a411.gif)
 
+## Tecnologias utilizadas
+- HTML
+- CSS
+- JavaScript
