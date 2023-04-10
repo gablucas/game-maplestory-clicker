@@ -200,9 +200,15 @@
   color: #FFA500;
 }
 
-.item-shop-descricao button {
-  grid-area: 2 / 3 / 5;
+.item-shop-descricao .shopButtons {
+  grid-area: 1 / 3 / 7;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   place-self: center;
+}
+
+.item-shop-descricao button {
   cursor: pointer;
   padding: 4px;
   font-weight: 800;

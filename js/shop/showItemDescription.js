@@ -1,5 +1,6 @@
 import { itens } from "../itens.js";
 import { buyItem } from "./buyItem.js";
+import { sellItem } from "./sellItem.js";
 import { descriptionItemElement } from "./shopElements.js";
 
 // Mostra a descrição dos item quando selecionado
@@ -18,12 +19,19 @@ export function showItemDescription() {
                                         <span>Level: ${selectedItem.level}</span>
                                         <span>Price: ${selectedItem.price} mesos</span>
                                         <img src=${selectedItem.img} alt="">
-                                        <button class='${id}' id='buyItem'>COMPRAR</button>`
+                                        <div class=shopButtons>
+                                          <button class='${id}' id='buyItem'>COMPRAR</button>
+                                          <button class='${id}' id='sellItem'>VENDER</button>
+                                        </div>
+                                        `
 
 
-    // Assim que o player clica no item, é adicionado um evento para compra do mesmo
+    // Assim que o player clica no item, é adicionado um evento para compra e venda do mesmo
     const btnBuy = document.querySelector('#buyItem');
     btnBuy.addEventListener('click', buyItem);
+
+    const btnSell = document.querySelector('#sellItem');
+    btnSell.addEventListener('click', sellItem);
 }
 
   itensElements.forEach((item) => {
