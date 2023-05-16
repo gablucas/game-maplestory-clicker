@@ -137,7 +137,6 @@
   border: 1px solid #EA9844;
 }
 
-
 .item-shop-exibir {
   display: grid;
   grid-template-rows: repeat(auto-fill, 44px);
@@ -221,27 +220,25 @@
 @media(max-width: 1240px) {
 
   #shop {
-      width: 360px;
       left: 50%; 
       transform: translateX(-50%);
+  }
+}
+
+@media(max-width: 720px) {
+
+  #shop {
+      width: max-content;
+  }
+
+  .menu-shop div h2 {
+    font-size: 1.1rem;
   }
 }
 
 @media(max-width: 375px) {
-
   #shop {
-      width: 340px;
-      left: 50%; 
-      transform: translateX(-50%);
-  }
-}
-
-@media(max-width: 320px) {
-
-  #shop {
-      width: 290px;
-      left: 50%; 
-      transform: translateX(-50%);
+    width: 280px;
   }
 }
 

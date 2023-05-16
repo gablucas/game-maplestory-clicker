@@ -159,3 +159,19 @@
     transform: translateX(-50%);
   }
 }
+
+@media(max-width: 375px) {
+  #inventory {
+    width: 280px;
+  }
+
+  #inventory .container {
+    width: 260px;
+  }
+
+  #bag {
+    grid-template-columns: repeat(4, 44px);
+    height: 300px;
+    overflow-y: scroll;
+  }
+}
