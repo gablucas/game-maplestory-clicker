@@ -259,6 +259,7 @@
   color: orange;
   top: 100px;
   left: 50%;
+  width: max-content;
   transform: translate(-50%, -100%);
   animation: toDown 3s;
 }
@@ -311,6 +312,18 @@
 
   .monstro {
     margin-bottom: 1vh;
+  }
+
+  .showMessage {
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width: 425px) {
+
+  .showMessage {
+    width: 300px;
+    text-align: center;
   }
 }
 
